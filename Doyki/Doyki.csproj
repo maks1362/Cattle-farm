@@ -47,21 +47,72 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataTable.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\TableFormAnalysis_of_blood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\TableFormAnalysis_of_blood.Designer.cs">
+      <DependentUpon>TableFormAnalysis_of_blood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\TableFormReproductive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\TableFormReproductive.Designer.cs">
+      <DependentUpon>TableFormReproductive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\TableFormLactation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\TableFormLactation.Designer.cs">
+      <DependentUpon>TableFormLactation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\TableFormApparat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\TableFormApparat.Designer.cs">
+      <DependentUpon>TableFormApparat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TableForms\TableFormCattle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\TableFormCattle.Designer.cs">
+      <DependentUpon>TableFormCattle.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TableForms\TableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\TableForm.Designer.cs">
+      <DependentUpon>TableForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uchot_udoevDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Uchot_udoevDataSet1.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\TableFormAnalysis_of_blood.resx">
+      <DependentUpon>TableFormAnalysis_of_blood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\TableFormReproductive.resx">
+      <DependentUpon>TableFormReproductive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\TableFormLactation.resx">
+      <DependentUpon>TableFormLactation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\TableFormApparat.resx">
+      <DependentUpon>TableFormApparat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\TableFormCattle.resx">
+      <DependentUpon>TableFormCattle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,6 +123,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TableForms\TableForm.resx">
+      <DependentUpon>TableForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
