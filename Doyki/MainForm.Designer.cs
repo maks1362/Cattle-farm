@@ -47,7 +47,7 @@
             this.lactationTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.LactationTableAdapter();
             this.analysis_of_bloodTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.Analysis_of_bloodTableAdapter();
             this.reproductiveTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.ReproductiveTableAdapter();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).BeginInit();
@@ -60,7 +60,7 @@
             this.reportsToolStripMenuItem,
             this.диаграммаToolStripMenuItem,
             this.tablesToolStripMenuItem,
-            this.оПрограммеToolStripMenuItem});
+            this.aboutToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -72,6 +72,7 @@
             this.rowToolStripMenuItem.Name = "rowToolStripMenuItem";
             this.rowToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.rowToolStripMenuItem.Text = "Выход";
+            this.rowToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -174,9 +175,9 @@
             // 
             // оПрограммеToolStripMenuItem
             // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.оПрограммеToolStripMenuItem.Text = "О программе...";
+            this.aboutToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.aboutToolStripMenuItem.Text = "О программе...";
             // 
             // MainForm
             // 
@@ -219,7 +220,7 @@
         private Uchot_udoevDataSet1TableAdapters.LactationTableAdapter lactationTableAdapter1;
         private Uchot_udoevDataSet1TableAdapters.Analysis_of_bloodTableAdapter analysis_of_bloodTableAdapter1;
         private Uchot_udoevDataSet1TableAdapters.ReproductiveTableAdapter reproductiveTableAdapter1;
-        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
