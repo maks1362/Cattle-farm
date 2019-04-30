@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.rowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.delRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.reportsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.диаграммаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.treeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +47,7 @@
             this.lactationTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.LactationTableAdapter();
             this.analysis_of_bloodTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.Analysis_of_bloodTableAdapter();
             this.reproductiveTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.ReproductiveTableAdapter();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).BeginInit();
@@ -60,7 +59,8 @@
             this.rowToolStripMenuItem,
             this.reportsToolStripMenuItem,
             this.диаграммаToolStripMenuItem,
-            this.tablesToolStripMenuItem});
+            this.tablesToolStripMenuItem,
+            this.оПрограммеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -69,27 +69,13 @@
             // 
             // rowToolStripMenuItem
             // 
-            this.rowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addRowToolStripMenuItem1,
-            this.delRowToolStripMenuItem1});
             this.rowToolStripMenuItem.Name = "rowToolStripMenuItem";
-            this.rowToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.rowToolStripMenuItem.Text = "&Правка";
-            // 
-            // addRowToolStripMenuItem1
-            // 
-            this.addRowToolStripMenuItem1.Name = "addRowToolStripMenuItem1";
-            this.addRowToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.addRowToolStripMenuItem1.Text = "Добавить";
-            // 
-            // delRowToolStripMenuItem1
-            // 
-            this.delRowToolStripMenuItem1.Name = "delRowToolStripMenuItem1";
-            this.delRowToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.delRowToolStripMenuItem1.Text = "Удалить";
+            this.rowToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.rowToolStripMenuItem.Text = "Выход";
             // 
             // reportsToolStripMenuItem
             // 
+            this.reportsToolStripMenuItem.Enabled = false;
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.reportsToolStripMenuItem.Text = "Отчёты";
@@ -98,6 +84,7 @@
             // 
             this.диаграммаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.treeToolStripMenuItem});
+            this.диаграммаToolStripMenuItem.Enabled = false;
             this.диаграммаToolStripMenuItem.Name = "диаграммаToolStripMenuItem";
             this.диаграммаToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
             this.диаграммаToolStripMenuItem.Text = "Диаграмма";
@@ -105,7 +92,7 @@
             // treeToolStripMenuItem
             // 
             this.treeToolStripMenuItem.Name = "treeToolStripMenuItem";
-            this.treeToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.treeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.treeToolStripMenuItem.Text = "Tree";
             // 
             // tablesToolStripMenuItem
@@ -185,6 +172,12 @@
             // 
             this.reproductiveTableAdapter1.ClearBeforeFill = true;
             // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе...";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,8 +202,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem reportsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rowToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addRowToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem delRowToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem диаграммаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem treeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tablesToolStripMenuItem;
@@ -228,6 +219,7 @@
         private Uchot_udoevDataSet1TableAdapters.LactationTableAdapter lactationTableAdapter1;
         private Uchot_udoevDataSet1TableAdapters.Analysis_of_bloodTableAdapter analysis_of_bloodTableAdapter1;
         private Uchot_udoevDataSet1TableAdapters.ReproductiveTableAdapter reproductiveTableAdapter1;
+        private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
     }
 }
 

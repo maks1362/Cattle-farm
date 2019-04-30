@@ -29,7 +29,7 @@ namespace Doyki
         private void ChangeListCattle(object sender, EventArgs e)
         {
             AllCattle = AllCattle ? false : true;
-            changeToolStripMenuItem.Text = AllCattle ? "Отобразить весь скот" : "Скот только с датой рождения";
+            changeToolStripMenuItem.Text = AllCattle ? "Скот только с датой рождения" : "Отобразить весь скот";
             Refresh_Click(null, null);
         }
         override protected void Refresh_Click(object sender, EventArgs e)
