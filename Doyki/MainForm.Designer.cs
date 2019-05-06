@@ -105,7 +105,7 @@
             // treeToolStripMenuItem
             // 
             this.treeToolStripMenuItem.Name = "treeToolStripMenuItem";
-            this.treeToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.treeToolStripMenuItem.Size = new System.Drawing.Size(95, 22);
             this.treeToolStripMenuItem.Text = "Tree";
             // 
             // tablesToolStripMenuItem
@@ -117,7 +117,7 @@
             this.lactationToolStripMenuItem,
             this.reproductiveToolStripMenuItem});
             this.tablesToolStripMenuItem.Name = "tablesToolStripMenuItem";
-            this.tablesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.tablesToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.tablesToolStripMenuItem.Text = "&Таблицы";
             // 
             // cattleToolStripMenuItem
@@ -193,7 +193,9 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
-            this.Text = "Cattle Manager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "l";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

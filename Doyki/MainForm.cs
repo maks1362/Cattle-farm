@@ -46,22 +46,7 @@ namespace Doyki
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "uchot_udoevDataSet1.Cattle". При необходимости она может быть перемещена или удалена.
-            try
-            {
-                //this.cattleTableAdapter1.Fill(this.uchot_udoevDataSet1.Cattle);
-
-                //this.uchot_udoevDataSet1.
-                
-
-                //this.cattleTableAdapter1.Insert(123, "Хуинная", "asdas", "asdas", null, null, new DateTime(), new DateTime(), "qqq", "qqq", "qqq", 1, "qqq");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
-
+            this.Hide();
         }
 
         private void CattleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,6 +78,11 @@ namespace Doyki
         {
             TableForm tableForm = new TableFormReproductive(this.uchot_udoevDataSet1.Reproductive, this.reproductiveTableAdapter1);
             tableForm.Show();
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
