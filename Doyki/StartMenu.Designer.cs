@@ -57,7 +57,7 @@
             // 
             this.status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.status.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.status.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.status.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.status.ForeColor = System.Drawing.SystemColors.Window;
             this.status.Location = new System.Drawing.Point(50, 310);
             this.status.Margin = new System.Windows.Forms.Padding(0);
