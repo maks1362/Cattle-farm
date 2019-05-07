@@ -34,8 +34,11 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.loading_B = new System.Windows.Forms.Panel();
+            this.loading_L = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.loading_B.SuspendLayout();
             this.SuspendLayout();
             // 
             // connect
@@ -122,12 +125,34 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // loading_B
+            // 
+            this.loading_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.loading_B.Controls.Add(this.loading_L);
+            this.loading_B.Location = new System.Drawing.Point(50, 270);
+            this.loading_B.Margin = new System.Windows.Forms.Padding(0);
+            this.loading_B.Name = "loading_B";
+            this.loading_B.Size = new System.Drawing.Size(300, 10);
+            this.loading_B.TabIndex = 6;
+            this.loading_B.Visible = false;
+            // 
+            // loading_L
+            // 
+            this.loading_L.BackColor = System.Drawing.Color.OrangeRed;
+            this.loading_L.Location = new System.Drawing.Point(220, 0);
+            this.loading_L.Margin = new System.Windows.Forms.Padding(0);
+            this.loading_L.Name = "loading_L";
+            this.loading_L.Size = new System.Drawing.Size(80, 10);
+            this.loading_L.TabIndex = 7;
+            this.loading_L.Visible = false;
+            // 
             // StartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(400, 500);
+            this.Controls.Add(this.loading_B);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.status);
@@ -138,9 +163,9 @@
             this.Name = "StartMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";
-            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.loading_B.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +179,7 @@
         private System.Windows.Forms.TextBox status;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel loading_B;
+        private System.Windows.Forms.Panel loading_L;
     }
 }
