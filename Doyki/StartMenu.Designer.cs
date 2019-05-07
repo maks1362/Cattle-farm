@@ -66,6 +66,7 @@
             this.status.Margin = new System.Windows.Forms.Padding(0);
             this.status.Multiline = true;
             this.status.Name = "status";
+            this.status.ReadOnly = true;
             this.status.Size = new System.Drawing.Size(300, 70);
             this.status.TabIndex = 3;
             this.status.Text = "\r\n";
