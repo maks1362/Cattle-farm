@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.connectButton = new System.Windows.Forms.Button();
-            this.statusTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ErrorPictureBox = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loadingBackgroundPanel = new System.Windows.Forms.Panel();
             this.loadingLinePanel = new System.Windows.Forms.Panel();
+            this.statusLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.loadingBackgroundPanel.SuspendLayout();
@@ -55,22 +55,6 @@
             this.connectButton.Text = "Подключиться к БД";
             this.connectButton.UseVisualStyleBackColor = false;
             this.connectButton.Click += new System.EventHandler(this.connect_Click);
-            // 
-            // statusTextBox
-            // 
-            this.statusTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.statusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.statusTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.statusTextBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.statusTextBox.Location = new System.Drawing.Point(50, 310);
-            this.statusTextBox.Margin = new System.Windows.Forms.Padding(0);
-            this.statusTextBox.Multiline = true;
-            this.statusTextBox.Name = "statusTextBox";
-            this.statusTextBox.ReadOnly = true;
-            this.statusTextBox.Size = new System.Drawing.Size(300, 70);
-            this.statusTextBox.TabIndex = 3;
-            this.statusTextBox.Text = "\r\n";
-            this.statusTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox1
             // 
@@ -147,16 +131,26 @@
             this.loadingLinePanel.TabIndex = 7;
             this.loadingLinePanel.Visible = false;
             // 
+            // statusLabel
+            // 
+            this.statusLabel.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.statusLabel.ForeColor = System.Drawing.Color.White;
+            this.statusLabel.Location = new System.Drawing.Point(50, 310);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(300, 90);
+            this.statusLabel.TabIndex = 7;
+            this.statusLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // StartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(400, 500);
+            this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.loadingBackgroundPanel);
             this.Controls.Add(this.ErrorPictureBox);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.statusTextBox);
             this.Controls.Add(this.connectButton);
             this.Controls.Add(this.close);
             this.Controls.Add(this.pictureBox1);
@@ -178,10 +172,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button close;
         private System.Windows.Forms.Button connectButton;
-        private System.Windows.Forms.TextBox statusTextBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox ErrorPictureBox;
         private System.Windows.Forms.Panel loadingBackgroundPanel;
         private System.Windows.Forms.Panel loadingLinePanel;
+        private System.Windows.Forms.Label statusLabel;
     }
 }

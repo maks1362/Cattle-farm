@@ -56,7 +56,7 @@ namespace Doyki
             loadingLinePanel.Show();
             //Всё остальное
             ErrorPictureBox.Hide();
-            statusTextBox.Text = "Подключение...";
+            statusLabel.Text = "\r\nПодключение...";
             SqlConnection testConnection = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);
             try
             {
@@ -64,7 +64,7 @@ namespace Doyki
             }
             catch
             {
-                statusTextBox.Text = "Ошибка \r\n 1. Нет подкл. к интернету \r\n 2. SQL сервер не запущен";
+                statusLabel.Text = "Ошибка \r\n 1. Нет подкл. к интернету \r\n 2. SQL сервер не запущен";
                 loadingBackgroundPanel.Hide();
                 loadingLinePanel.Hide();
                 ErrorPictureBox.Show();
