@@ -52,7 +52,20 @@ namespace Doyki
             
         }
 
-        private void connect_Click(object sender, EventArgs e)
+        static void SQL_connect()
+        {
+            SqlConnection Test = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);
+            try
+            {
+                Test.Open();
+            }
+            catch
+            {
+
+            }
+        }
+
+        private async void connect_Click(object sender, EventArgs e)
         {
             //Запуск загрузки
             loading_B.Show();   //B- background
@@ -61,25 +74,24 @@ namespace Doyki
             pictureBox2.Hide();
             status.Text = "Подключение...";
             status.Refresh();
-            SqlConnection Test = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);
+            
+
             try
             {
-                Test.Open();
+                    await Task.Run(() =>
+                    {
+                        SQL_connect();
+                    });
             }
-            catch
-            {
-                status.Text = "Ошибка \r\n 1. Нет подкл. к интернету \r\n 2. SQL сервер не запущен";
-                loading_B.Hide();
-                loading_L.Hide();
-                pictureBox2.Show();
-            }
-            if (Test.State == System.Data.ConnectionState.Open)
-            {
-                this.Hide();
-                MainForm Main = new MainForm();
-                Main.Show();
-                timer1.Stop();
-            }
+                catch
+                {
+                    status.Text = "Ошибка \r\n 1. Нет подкл. к интернету \r\n 2. SQL сервер не запущен";
+                    loading_B.Hide();
+                    loading_L.Hide();
+                    pictureBox2.Show();
+                }
+            
+            
         }
     }
 }
