@@ -25,12 +25,12 @@ namespace Doyki
 
         void move(object sender, EventArgs e)
         {
-            loading_L.Left = loading_L.Left + offset;
-            if (loading_L.Left > 305)
+            loadingLinePanel.Left = loadingLinePanel.Left + offset;
+            if (loadingLinePanel.Left > 320)
             {
-                loading_L.Left = -80;
+                loadingLinePanel.Left = -80;
             }
-            if (loading_L.Left < -100)
+            if (loadingLinePanel.Left < -80)
             {
                 offset = 2;
             }
@@ -43,7 +43,7 @@ namespace Doyki
 
         private void StartMenu_Load(object sender, EventArgs e)
         {
-            loading_L.Left = 0;
+            loadingLinePanel.Left = 0;
             timer1.Tick += new EventHandler(move);
             timer1.Interval = 5;
             timer1.Start();
@@ -52,25 +52,24 @@ namespace Doyki
         private async void connect_Click(object sender, EventArgs e)
         {
             //Запуск загрузки
-            loading_B.Show();   //B- background
-            loading_L.Show();   //L- line
+            loadingBackgroundPanel.Show();
+            loadingLinePanel.Show();
             //Всё остальное
-            pictureBox2.Hide();
-            status.Text = "Подключение...";
-            status.Refresh();
-            SqlConnection Test = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);
+            ErrorPictureBox.Hide();
+            statusTextBox.Text = "Подключение...";
+            SqlConnection testConnection = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);
             try
             {
-                await Task.Run(() => Test.Open());  //Мультипоток
+               await Task.Run(() => testConnection.Open());  //Мультипоток
             }
             catch
             {
-                status.Text = "Ошибка \r\n 1. Нет подкл. к интернету \r\n 2. SQL сервер не запущен";
-                loading_B.Hide();
-                loading_L.Hide();
-                pictureBox2.Show();
+                statusTextBox.Text = "Ошибка \r\n 1. Нет подкл. к интернету \r\n 2. SQL сервер не запущен";
+                loadingBackgroundPanel.Hide();
+                loadingLinePanel.Hide();
+                ErrorPictureBox.Show();
             }
-            if (Test.State == System.Data.ConnectionState.Open)
+            if (testConnection.State == System.Data.ConnectionState.Open)
             {
                 this.Hide();
                 MainForm Main = new MainForm();

@@ -28,49 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.connect = new System.Windows.Forms.Button();
-            this.status = new System.Windows.Forms.TextBox();
+            this.connectButton = new System.Windows.Forms.Button();
+            this.statusTextBox = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ErrorPictureBox = new System.Windows.Forms.PictureBox();
             this.close = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.loading_B = new System.Windows.Forms.Panel();
-            this.loading_L = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.loadingBackgroundPanel = new System.Windows.Forms.Panel();
+            this.loadingLinePanel = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.loading_B.SuspendLayout();
+            this.loadingBackgroundPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // connect
+            // connectButton
             // 
-            this.connect.BackColor = System.Drawing.Color.White;
-            this.connect.FlatAppearance.BorderSize = 0;
-            this.connect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.connect.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.connect.Location = new System.Drawing.Point(50, 400);
-            this.connect.Margin = new System.Windows.Forms.Padding(0);
-            this.connect.Name = "connect";
-            this.connect.Size = new System.Drawing.Size(300, 50);
-            this.connect.TabIndex = 2;
-            this.connect.Text = "Подключиться к БД";
-            this.connect.UseVisualStyleBackColor = false;
-            this.connect.Click += new System.EventHandler(this.connect_Click);
+            this.connectButton.BackColor = System.Drawing.Color.White;
+            this.connectButton.FlatAppearance.BorderSize = 0;
+            this.connectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.connectButton.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectButton.Location = new System.Drawing.Point(50, 400);
+            this.connectButton.Margin = new System.Windows.Forms.Padding(0);
+            this.connectButton.Name = "connectButton";
+            this.connectButton.Size = new System.Drawing.Size(300, 50);
+            this.connectButton.TabIndex = 2;
+            this.connectButton.Text = "Подключиться к БД";
+            this.connectButton.UseVisualStyleBackColor = false;
+            this.connectButton.Click += new System.EventHandler(this.connect_Click);
             // 
-            // status
+            // statusTextBox
             // 
-            this.status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.status.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.status.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.status.ForeColor = System.Drawing.SystemColors.Window;
-            this.status.Location = new System.Drawing.Point(50, 310);
-            this.status.Margin = new System.Windows.Forms.Padding(0);
-            this.status.Multiline = true;
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            this.status.Size = new System.Drawing.Size(300, 70);
-            this.status.TabIndex = 3;
-            this.status.Text = "\r\n";
-            this.status.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.statusTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.statusTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.statusTextBox.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.statusTextBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.statusTextBox.Location = new System.Drawing.Point(50, 310);
+            this.statusTextBox.Margin = new System.Windows.Forms.Padding(0);
+            this.statusTextBox.Multiline = true;
+            this.statusTextBox.Name = "statusTextBox";
+            this.statusTextBox.ReadOnly = true;
+            this.statusTextBox.Size = new System.Drawing.Size(300, 70);
+            this.statusTextBox.TabIndex = 3;
+            this.statusTextBox.Text = "\r\n";
+            this.statusTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox1
             // 
@@ -85,17 +85,17 @@
             this.textBox1.Text = "Племенные животные";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox2
+            // ErrorPictureBox
             // 
-            this.pictureBox2.Image = global::Doyki.Properties.Resources.error;
-            this.pictureBox2.Location = new System.Drawing.Point(175, 250);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
+            this.ErrorPictureBox.Image = global::Doyki.Properties.Resources.error;
+            this.ErrorPictureBox.Location = new System.Drawing.Point(175, 250);
+            this.ErrorPictureBox.Margin = new System.Windows.Forms.Padding(0);
+            this.ErrorPictureBox.Name = "ErrorPictureBox";
+            this.ErrorPictureBox.Size = new System.Drawing.Size(50, 50);
+            this.ErrorPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.ErrorPictureBox.TabIndex = 5;
+            this.ErrorPictureBox.TabStop = false;
+            this.ErrorPictureBox.Visible = false;
             // 
             // close
             // 
@@ -126,26 +126,26 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // loading_B
+            // loadingBackgroundPanel
             // 
-            this.loading_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.loading_B.Controls.Add(this.loading_L);
-            this.loading_B.Location = new System.Drawing.Point(50, 270);
-            this.loading_B.Margin = new System.Windows.Forms.Padding(0);
-            this.loading_B.Name = "loading_B";
-            this.loading_B.Size = new System.Drawing.Size(300, 10);
-            this.loading_B.TabIndex = 6;
-            this.loading_B.Visible = false;
+            this.loadingBackgroundPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.loadingBackgroundPanel.Controls.Add(this.loadingLinePanel);
+            this.loadingBackgroundPanel.Location = new System.Drawing.Point(50, 270);
+            this.loadingBackgroundPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.loadingBackgroundPanel.Name = "loadingBackgroundPanel";
+            this.loadingBackgroundPanel.Size = new System.Drawing.Size(300, 10);
+            this.loadingBackgroundPanel.TabIndex = 6;
+            this.loadingBackgroundPanel.Visible = false;
             // 
-            // loading_L
+            // loadingLinePanel
             // 
-            this.loading_L.BackColor = System.Drawing.Color.OrangeRed;
-            this.loading_L.Location = new System.Drawing.Point(220, 0);
-            this.loading_L.Margin = new System.Windows.Forms.Padding(0);
-            this.loading_L.Name = "loading_L";
-            this.loading_L.Size = new System.Drawing.Size(80, 10);
-            this.loading_L.TabIndex = 7;
-            this.loading_L.Visible = false;
+            this.loadingLinePanel.BackColor = System.Drawing.Color.OrangeRed;
+            this.loadingLinePanel.Location = new System.Drawing.Point(220, 0);
+            this.loadingLinePanel.Margin = new System.Windows.Forms.Padding(0);
+            this.loadingLinePanel.Name = "loadingLinePanel";
+            this.loadingLinePanel.Size = new System.Drawing.Size(80, 10);
+            this.loadingLinePanel.TabIndex = 7;
+            this.loadingLinePanel.Visible = false;
             // 
             // StartMenu
             // 
@@ -153,11 +153,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ClientSize = new System.Drawing.Size(400, 500);
-            this.Controls.Add(this.loading_B);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.loadingBackgroundPanel);
+            this.Controls.Add(this.ErrorPictureBox);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.status);
-            this.Controls.Add(this.connect);
+            this.Controls.Add(this.statusTextBox);
+            this.Controls.Add(this.connectButton);
             this.Controls.Add(this.close);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -165,9 +165,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";
             this.Load += new System.EventHandler(this.StartMenu_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.loading_B.ResumeLayout(false);
+            this.loadingBackgroundPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,11 +177,11 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button close;
-        private System.Windows.Forms.Button connect;
-        private System.Windows.Forms.TextBox status;
+        private System.Windows.Forms.Button connectButton;
+        private System.Windows.Forms.TextBox statusTextBox;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel loading_B;
-        private System.Windows.Forms.Panel loading_L;
+        private System.Windows.Forms.PictureBox ErrorPictureBox;
+        private System.Windows.Forms.Panel loadingBackgroundPanel;
+        private System.Windows.Forms.Panel loadingLinePanel;
     }
 }
