@@ -23,7 +23,23 @@ namespace Doyki
             InitializeComponent();
         }
 
-        void move(object sender, EventArgs e)
+        //Переопределение WndProc для перемещение окна
+        protected override void WndProc(ref Message m)
+        {
+            switch (m.Msg)
+            {
+                case 0x84:
+                    base.WndProc(ref m);
+                    if ((int)m.Result == 0x1)
+                        m.Result = (IntPtr)0x2;
+                    return;
+            }
+
+            base.WndProc(ref m);
+        }
+
+        //Функця смещения полосы загрузки
+        private void move(object sender, EventArgs e)
         {
             loadingLinePanel.Left = loadingLinePanel.Left + offset;
             if (loadingLinePanel.Left > 320)
@@ -36,6 +52,7 @@ namespace Doyki
             }
         }
 
+        //Ивент кнопки "Закрыть"
         private void close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -49,6 +66,7 @@ namespace Doyki
             timer1.Start();
         }
 
+        //Ивент кнопки "Подключиться"
         private async void connect_Click(object sender, EventArgs e)
         {
             //Запуск загрузки
@@ -57,7 +75,7 @@ namespace Doyki
             //Всё остальное
             ErrorPictureBox.Hide();
             statusLabel.Text = "\r\nПодключение...";
-            SqlConnection testConnection = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);
+            SqlConnection testConnection = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);   //Переменная прописана в Settings.settings
             try
             {
                await Task.Run(() => testConnection.Open());  //Мультипоток
