@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 /*
  * Макс 26.03.19: Первая пункт меню будет комбо бокс из выбираемых таблиц(скот или доильные аппараты)
@@ -14,15 +15,24 @@ using System.Windows.Forms;
  * Далее пункты отчётов и диаграмм(отдельные формы будут открываться)
  * */
 
-    //this.CommandCollection[1] = this.CommandCollection[1].Clone();
-    //this.CommandCollection[1].CommandText = "SELECT ID, Breed, Purity_of_breed, Gender, ID_mother, ID_father, Date_of_birth, D" +
-    //"ate_of_death, Cause_of_death, Belongs, Place_of_birth, Generation_number, Line F" +
-    //"ROM dbo.Cattle WHERE Date_of_birth IS NOT NULL";
+//this.CommandCollection[1] = this.CommandCollection[1].Clone();
+//this.CommandCollection[1].CommandText = "SELECT ID, Breed, Purity_of_breed, Gender, ID_mother, ID_father, Date_of_birth, D" +
+//"ate_of_death, Cause_of_death, Belongs, Place_of_birth, Generation_number, Line F" +
+//"ROM dbo.Cattle WHERE Date_of_birth IS NOT NULL";
 
 namespace Doyki
 {
     public partial class MainForm : Form
     {
+        //Для захвата позиции мышки
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         //static Form form = MainForm.ActiveForm;
         /*private static IList<string> dataTables = new List<string>
             {
@@ -46,7 +56,7 @@ namespace Doyki
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Hide();
+
         }
 
         private void CattleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,9 +90,24 @@ namespace Doyki
             tableForm.Show();
         }
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
+        private void minimizeButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
     }
 }

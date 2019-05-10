@@ -58,6 +58,12 @@
     <Compile Include="StartMenu.Designer.cs">
       <DependentUpon>StartMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="TableForms\TableFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TableForms\TableFormTest.Designer.cs">
+      <DependentUpon>TableFormTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="TableForms\TableFormAnalysis_of_blood.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StartMenu.resx">
       <DependentUpon>StartMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TableForms\TableFormTest.resx">
+      <DependentUpon>TableFormTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableForms\TableFormAnalysis_of_blood.resx">
       <DependentUpon>TableFormAnalysis_of_blood.cs</DependentUpon>
@@ -163,9 +172,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\close_icon.png" />
     <Content Include="images\cow_logo.png" />
     <Content Include="images\error.png" />
-    <Content Include="images\X.png" />
+    <Content Include="images\minim_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

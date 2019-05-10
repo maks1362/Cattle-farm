@@ -63,6 +63,16 @@ namespace Doyki.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_icon {
+            get {
+                object obj = ResourceManager.GetObject("close_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cow_logo {
             get {
                 object obj = ResourceManager.GetObject("cow_logo", resourceCulture);
@@ -83,9 +93,9 @@ namespace Doyki.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap X {
+        internal static System.Drawing.Bitmap minim_icon {
             get {
-                object obj = ResourceManager.GetObject("X", resourceCulture);
+                object obj = ResourceManager.GetObject("minim_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -31,11 +31,11 @@
             this.connectButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ErrorPictureBox = new System.Windows.Forms.PictureBox();
-            this.close = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loadingBackgroundPanel = new System.Windows.Forms.Panel();
             this.loadingLinePanel = new System.Windows.Forms.Panel();
             this.statusLabel = new System.Windows.Forms.Label();
+            this.close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.loadingBackgroundPanel.SuspendLayout();
@@ -81,24 +81,6 @@
             this.ErrorPictureBox.TabStop = false;
             this.ErrorPictureBox.Visible = false;
             // 
-            // close
-            // 
-            this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.close.BackgroundImage = global::Doyki.Properties.Resources.X;
-            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.close.FlatAppearance.BorderSize = 0;
-            this.close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.close.ForeColor = System.Drawing.SystemColors.Control;
-            this.close.Location = new System.Drawing.Point(370, 0);
-            this.close.Margin = new System.Windows.Forms.Padding(0);
-            this.close.Name = "close";
-            this.close.Size = new System.Drawing.Size(30, 30);
-            this.close.TabIndex = 1;
-            this.close.UseVisualStyleBackColor = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Doyki.Properties.Resources.cow_logo;
@@ -141,6 +123,24 @@
             this.statusLabel.TabIndex = 7;
             this.statusLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.close.BackgroundImage = global::Doyki.Properties.Resources.close_icon;
+            this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.close.FlatAppearance.BorderSize = 0;
+            this.close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.close.ForeColor = System.Drawing.SystemColors.Control;
+            this.close.Location = new System.Drawing.Point(370, 0);
+            this.close.Margin = new System.Windows.Forms.Padding(0);
+            this.close.Name = "close";
+            this.close.Size = new System.Drawing.Size(30, 30);
+            this.close.TabIndex = 1;
+            this.close.UseVisualStyleBackColor = false;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // StartMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -170,12 +170,12 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button close;
         private System.Windows.Forms.Button connectButton;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox ErrorPictureBox;
         private System.Windows.Forms.Panel loadingBackgroundPanel;
         private System.Windows.Forms.Panel loadingLinePanel;
         private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Button close;
     }
 }
