@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChildForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForm.Designer.cs">
+      <DependentUpon>ChildForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,15 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Uchot_udoevDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UCTableCattle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTableCattle.Designer.cs">
+      <DependentUpon>UCTableCattle.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChildForm.resx">
+      <DependentUpon>ChildForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,6 +153,9 @@
     <EmbeddedResource Include="TableForms\TableForm.resx">
       <DependentUpon>TableForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCTableCattle.resx">
+      <DependentUpon>UCTableCattle.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,9 +182,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\close_icon.png" />
+    <Content Include="images\close_icon_b.png" />
     <Content Include="images\cow_logo.png" />
     <Content Include="images\error.png" />
     <Content Include="images\minim_icon.png" />
+    <Content Include="images\minim_icon_b.png" />
+    <Content Include="images\plus_icon.png" />
+    <Content Include="images\plus_icon_b.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

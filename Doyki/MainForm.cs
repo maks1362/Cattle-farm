@@ -90,17 +90,24 @@ namespace Doyki
             tableForm.Show();
         }
 
-        private void closeButton_Click(object sender, EventArgs e)
+        protected virtual void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void minimizeButton_Click(object sender, EventArgs e)
+        private void MinimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        private void PlusWindowButton_Click(object sender, EventArgs e)
+        {
+            Form Child  = new ChildForm();
+            Child.Owner = this;
+            Child.Show();
+        }
+
+        private void NameLabel_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
             {
@@ -108,6 +115,5 @@ namespace Doyki
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
     }
 }
