@@ -37,27 +37,15 @@
             this.analysis_of_bloodTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.Analysis_of_bloodTableAdapter();
             this.reproductiveTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.ReproductiveTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.fullScreenButton = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
             this.plusWindowButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.rowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.delRowToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.диаграммаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.treeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cattleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.apparatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.analysisOfBloodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lactationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reproductiveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ucTableCattle1 = new Doyki.UCTableCattle();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cattleBindingSource1
@@ -93,6 +81,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.panel1.Controls.Add(this.fullScreenButton);
             this.panel1.Controls.Add(this.nameLabel);
             this.panel1.Controls.Add(this.plusWindowButton);
             this.panel1.Controls.Add(this.minimizeButton);
@@ -103,6 +92,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1000, 30);
             this.panel1.TabIndex = 0;
+            // 
+            // fullScreenButton
+            // 
+            this.fullScreenButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.fullScreenButton.BackgroundImage = global::Doyki.Properties.Resources.minim_icon;
+            this.fullScreenButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.fullScreenButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.fullScreenButton.FlatAppearance.BorderSize = 0;
+            this.fullScreenButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.fullScreenButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fullScreenButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.fullScreenButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.fullScreenButton.Location = new System.Drawing.Point(910, 0);
+            this.fullScreenButton.Margin = new System.Windows.Forms.Padding(0, 0, 100, 0);
+            this.fullScreenButton.Name = "fullScreenButton";
+            this.fullScreenButton.Padding = new System.Windows.Forms.Padding(0, 0, 100, 0);
+            this.fullScreenButton.Size = new System.Drawing.Size(30, 30);
+            this.fullScreenButton.TabIndex = 7;
+            this.fullScreenButton.UseVisualStyleBackColor = false;
+            this.fullScreenButton.Click += new System.EventHandler(this.FullScreenButton_Click);
             // 
             // nameLabel
             // 
@@ -176,103 +185,12 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.rowToolStripMenuItem,
-            this.диаграммаToolStripMenuItem,
-            this.tablesToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 30);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(88, 470);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // rowToolStripMenuItem
-            // 
-            this.rowToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addRowToolStripMenuItem1,
-            this.delRowToolStripMenuItem1});
-            this.rowToolStripMenuItem.Name = "rowToolStripMenuItem";
-            this.rowToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
-            this.rowToolStripMenuItem.Text = "&Правка";
-            // 
-            // addRowToolStripMenuItem1
-            // 
-            this.addRowToolStripMenuItem1.Name = "addRowToolStripMenuItem1";
-            this.addRowToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.addRowToolStripMenuItem1.Text = "Добавить";
-            // 
-            // delRowToolStripMenuItem1
-            // 
-            this.delRowToolStripMenuItem1.Name = "delRowToolStripMenuItem1";
-            this.delRowToolStripMenuItem1.Size = new System.Drawing.Size(126, 22);
-            this.delRowToolStripMenuItem1.Text = "Удалить";
-            // 
-            // диаграммаToolStripMenuItem
-            // 
-            this.диаграммаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.treeToolStripMenuItem});
-            this.диаграммаToolStripMenuItem.Name = "диаграммаToolStripMenuItem";
-            this.диаграммаToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
-            this.диаграммаToolStripMenuItem.Text = "Диаграмма";
-            // 
-            // treeToolStripMenuItem
-            // 
-            this.treeToolStripMenuItem.Name = "treeToolStripMenuItem";
-            this.treeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.treeToolStripMenuItem.Text = "Tree";
-            // 
-            // tablesToolStripMenuItem
-            // 
-            this.tablesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cattleToolStripMenuItem,
-            this.apparatToolStripMenuItem,
-            this.analysisOfBloodToolStripMenuItem,
-            this.lactationToolStripMenuItem,
-            this.reproductiveToolStripMenuItem});
-            this.tablesToolStripMenuItem.Name = "tablesToolStripMenuItem";
-            this.tablesToolStripMenuItem.Size = new System.Drawing.Size(75, 19);
-            this.tablesToolStripMenuItem.Text = "&Таблицы";
-            // 
-            // cattleToolStripMenuItem
-            // 
-            this.cattleToolStripMenuItem.Name = "cattleToolStripMenuItem";
-            this.cattleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cattleToolStripMenuItem.Text = "Скот";
-            this.cattleToolStripMenuItem.Click += new System.EventHandler(this.CattleToolStripMenuItem_Click);
-            // 
-            // apparatToolStripMenuItem
-            // 
-            this.apparatToolStripMenuItem.Name = "apparatToolStripMenuItem";
-            this.apparatToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.apparatToolStripMenuItem.Text = "Аппараты";
-            // 
-            // analysisOfBloodToolStripMenuItem
-            // 
-            this.analysisOfBloodToolStripMenuItem.Name = "analysisOfBloodToolStripMenuItem";
-            this.analysisOfBloodToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.analysisOfBloodToolStripMenuItem.Text = "Анализы крови";
-            // 
-            // lactationToolStripMenuItem
-            // 
-            this.lactationToolStripMenuItem.Name = "lactationToolStripMenuItem";
-            this.lactationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.lactationToolStripMenuItem.Text = "Лактации";
-            // 
-            // reproductiveToolStripMenuItem
-            // 
-            this.reproductiveToolStripMenuItem.Name = "reproductiveToolStripMenuItem";
-            this.reproductiveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.reproductiveToolStripMenuItem.Text = "Репродуктивность";
-            // 
             // ucTableCattle1
             // 
             this.ucTableCattle1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucTableCattle1.Location = new System.Drawing.Point(88, 30);
+            this.ucTableCattle1.Location = new System.Drawing.Point(0, 30);
             this.ucTableCattle1.Name = "ucTableCattle1";
-            this.ucTableCattle1.Size = new System.Drawing.Size(912, 470);
+            this.ucTableCattle1.Size = new System.Drawing.Size(1000, 470);
             this.ucTableCattle1.TabIndex = 4;
             // 
             // MainForm
@@ -281,8 +199,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
             this.Controls.Add(this.ucTableCattle1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(640, 360);
             this.Name = "MainForm";
@@ -292,10 +210,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -310,23 +225,12 @@
         private Uchot_udoevDataSet1TableAdapters.Analysis_of_bloodTableAdapter analysis_of_bloodTableAdapter1;
         private Uchot_udoevDataSet1TableAdapters.ReproductiveTableAdapter reproductiveTableAdapter1;
         protected System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem rowToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem addRowToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem delRowToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem диаграммаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem treeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tablesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cattleToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem apparatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem analysisOfBloodToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem lactationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reproductiveToolStripMenuItem;
         protected System.Windows.Forms.Button closeButton;
         protected System.Windows.Forms.Button minimizeButton;
         protected System.Windows.Forms.Button plusWindowButton;
         private UCTableCattle ucTableCattle1;
         protected System.Windows.Forms.Label nameLabel;
+        protected System.Windows.Forms.Button fullScreenButton;
     }
 }
 

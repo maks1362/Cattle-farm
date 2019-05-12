@@ -25,13 +25,18 @@ namespace Doyki
     public partial class MainForm : Form
     {
         //Для захвата позиции мышки
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
+        private const int WM_NCLBUTTONDOWN = 0xA1;
+        private const int HT_CAPTION = 0x2;
+        private const int cGrip = 300;
+        private const int cCaption = 600;
+
 
         [DllImportAttribute("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        private static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
-        public static extern bool ReleaseCapture();
+        private static extern bool ReleaseCapture();
+
+        //Переменные
 
         //static Form form = MainForm.ActiveForm;
         /*private static IList<string> dataTables = new List<string>
@@ -47,6 +52,7 @@ namespace Doyki
         public MainForm()
         {
             InitializeComponent();
+            this.SetStyle(ControlStyles.ResizeRedraw, true);
         }
 
         /*public void Mess(string mes)
@@ -56,7 +62,7 @@ namespace Doyki
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void CattleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,6 +120,39 @@ namespace Doyki
                 ReleaseCapture();
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
+        }
+
+        private void FullScreenButton_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+        }
+
+        //Resize - не работает  
+        protected override void WndProc(ref Message m)
+        {
+            if (m.Msg == 0x84)
+            {
+                Point pos = new Point(m.LParam.ToInt32());
+                pos = this.PointToClient(pos);
+                if (pos.Y < cCaption)
+                {
+                    m.Result = (IntPtr)2;
+                    return;
+                }
+                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
+                {
+                    m.Result = (IntPtr)17;
+                    return;
+                }
+            }
+            base.WndProc(ref m);
         }
     }
 }

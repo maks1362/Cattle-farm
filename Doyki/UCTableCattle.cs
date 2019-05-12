@@ -22,7 +22,6 @@ namespace Doyki
             this.Validate();
             this.cattleBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.uchot_udoevDataSet1);
-
         }
     }
 }
