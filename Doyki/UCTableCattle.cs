@@ -23,5 +23,10 @@ namespace Doyki
             this.cattleBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.uchot_udoevDataSet1);
         }
+
+        private void AverageYieldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
