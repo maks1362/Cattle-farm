@@ -23,5 +23,13 @@ namespace Doyki
             this.cattleBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.uchot_udoevDataSet1);
         }
+
+        private void BreedsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChartForm chartForm = new ChartForm();
+            this.Hide();
+            chartForm.ShowDialog();
+            this.Show();
+        }
     }
 }
