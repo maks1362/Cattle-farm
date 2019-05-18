@@ -54,7 +54,7 @@
             this.connectButton.TabIndex = 2;
             this.connectButton.Text = "Подключиться к БД";
             this.connectButton.UseVisualStyleBackColor = false;
-            this.connectButton.Click += new System.EventHandler(this.connect_Click);
+            this.connectButton.Click += new System.EventHandler(this.Connect_Click);
             // 
             // textBox1
             // 

@@ -67,7 +67,7 @@ namespace Doyki
         }
 
         //Ивент кнопки "Подключиться"
-        private async void connect_Click(object sender, EventArgs e)
+        private async void Connect_Click(object sender, EventArgs e)
         {
             //Запуск загрузки
             loadingBackgroundPanel.Show();

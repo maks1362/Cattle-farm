@@ -12,9 +12,15 @@ namespace Doyki
 {
     public partial class UCTableCattle : UserControl
     {
-        public UCTableCattle()
+        Uchot_udoevDataSet1TableAdapters.CattleTableAdapter adapter;
+        protected Uchot_udoevDataSet1.CattleDataTable dataTable;
+        public UCTableCattle(Uchot_udoevDataSet1.CattleDataTable dataTable, Uchot_udoevDataSet1TableAdapters.CattleTableAdapter adapter)
         {
             InitializeComponent();
+            this.dataTable = dataTable;
+            this.adapter = adapter;
+            adapter.Fill(dataTable);
+            this.cattleDataGridView.DataSource = dataTable;
         }
 
         private void CattleBindingNavigatorSaveItem_Click(object sender, EventArgs e)

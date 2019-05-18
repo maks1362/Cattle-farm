@@ -37,7 +37,7 @@ namespace Doyki
             if (AllCattle)
             {
                 adapter.Fill(dataTable);
-            }
+            } 
             else
             {
                 adapter.FillMain(dataTable);

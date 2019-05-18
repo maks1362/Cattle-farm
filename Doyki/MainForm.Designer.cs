@@ -42,7 +42,7 @@
             this.plusWindowButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
-            this.ucTableCattle1 = new Doyki.UCTableCattle();
+            this.ucTableCattle1 = new Doyki.UCTableCattle(this.uchot_udoevDataSet1.Cattle, this.cattleTableAdapter1);
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
