@@ -42,10 +42,16 @@
             this.plusWindowButton = new System.Windows.Forms.Button();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.treeView1 = new System.Windows.Forms.TreeView();
             this.ucTableCattle1 = new Doyki.UCTableCattle();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cattleBindingSource1
@@ -185,6 +191,44 @@
             this.closeButton.UseVisualStyleBackColor = false;
             this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(360, 220);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(202, 175);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(365, 220);
+            this.panel2.TabIndex = 6;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(615, 175);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 100);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // treeView1
+            // 
+            this.treeView1.Location = new System.Drawing.Point(615, 298);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(121, 97);
+            this.treeView1.TabIndex = 8;
+            // 
             // ucTableCattle1
             // 
             this.ucTableCattle1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -198,6 +242,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.treeView1);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.ucTableCattle1);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
@@ -210,6 +257,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -231,6 +281,10 @@
         private UCTableCattle ucTableCattle1;
         protected System.Windows.Forms.Label nameLabel;
         protected System.Windows.Forms.Button fullScreenButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TreeView treeView1;
     }
 }
 
