@@ -64,8 +64,15 @@
             this.uchot_udoevDataSet11 = new Doyki.Uchot_udoevDataSet1();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.диаграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.averageYieldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.analysisOfMilkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cowsLactatingInTheMonthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numberOfDaysInLactationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aBloodTestForCowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportOfReproductionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportOnTheOffspringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theMilkFlowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.диаграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingNavigator)).BeginInit();
@@ -350,23 +357,72 @@
             // отчётыToolStripMenuItem
             // 
             this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.averageYieldToolStripMenuItem});
+            this.averageYieldToolStripMenuItem,
+            this.analysisOfMilkToolStripMenuItem,
+            this.cowsLactatingInTheMonthToolStripMenuItem,
+            this.numberOfDaysInLactationToolStripMenuItem,
+            this.aBloodTestForCowToolStripMenuItem,
+            this.reportOfReproductionToolStripMenuItem,
+            this.reportOnTheOffspringToolStripMenuItem,
+            this.theMilkFlowToolStripMenuItem});
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
             this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // averageYieldToolStripMenuItem
+            // 
+            this.averageYieldToolStripMenuItem.Name = "averageYieldToolStripMenuItem";
+            this.averageYieldToolStripMenuItem.Size = new System.Drawing.Size(301, 22);
+            this.averageYieldToolStripMenuItem.Text = "Средний удой";
+            this.averageYieldToolStripMenuItem.Click += new System.EventHandler(this.AverageYieldToolStripMenuItem_Click);
+            // 
+            // analysisOfMilkToolStripMenuItem
+            // 
+            this.analysisOfMilkToolStripMenuItem.Name = "analysisOfMilkToolStripMenuItem";
+            this.analysisOfMilkToolStripMenuItem.Size = new System.Drawing.Size(301, 22);
+            this.analysisOfMilkToolStripMenuItem.Text = "Анализ молока по корове";
+            // 
+            // cowsLactatingInTheMonthToolStripMenuItem
+            // 
+            this.cowsLactatingInTheMonthToolStripMenuItem.Name = "cowsLactatingInTheMonthToolStripMenuItem";
+            this.cowsLactatingInTheMonthToolStripMenuItem.Size = new System.Drawing.Size(301, 22);
+            this.cowsLactatingInTheMonthToolStripMenuItem.Text = "Коровы, проходящие лактацию в месяце";
+            // 
+            // numberOfDaysInLactationToolStripMenuItem
+            // 
+            this.numberOfDaysInLactationToolStripMenuItem.Name = "numberOfDaysInLactationToolStripMenuItem";
+            this.numberOfDaysInLactationToolStripMenuItem.Size = new System.Drawing.Size(301, 22);
+            this.numberOfDaysInLactationToolStripMenuItem.Text = "Количество дней в лактации по корове";
+            // 
+            // aBloodTestForCowToolStripMenuItem
+            // 
+            this.aBloodTestForCowToolStripMenuItem.Name = "aBloodTestForCowToolStripMenuItem";
+            this.aBloodTestForCowToolStripMenuItem.Size = new System.Drawing.Size(301, 22);
+            this.aBloodTestForCowToolStripMenuItem.Text = "Анализ крови по корове";
+            // 
+            // reportOfReproductionToolStripMenuItem
+            // 
+            this.reportOfReproductionToolStripMenuItem.Name = "reportOfReproductionToolStripMenuItem";
+            this.reportOfReproductionToolStripMenuItem.Size = new System.Drawing.Size(301, 22);
+            this.reportOfReproductionToolStripMenuItem.Text = "Репродуктивность по корове";
+            // 
+            // reportOnTheOffspringToolStripMenuItem
+            // 
+            this.reportOnTheOffspringToolStripMenuItem.Name = "reportOnTheOffspringToolStripMenuItem";
+            this.reportOnTheOffspringToolStripMenuItem.Size = new System.Drawing.Size(301, 22);
+            this.reportOnTheOffspringToolStripMenuItem.Text = "Приплод коровы";
+            // 
+            // theMilkFlowToolStripMenuItem
+            // 
+            this.theMilkFlowToolStripMenuItem.Name = "theMilkFlowToolStripMenuItem";
+            this.theMilkFlowToolStripMenuItem.Size = new System.Drawing.Size(301, 22);
+            this.theMilkFlowToolStripMenuItem.Text = "Молокоотдача коровы";
             // 
             // диаграToolStripMenuItem
             // 
             this.диаграToolStripMenuItem.Name = "диаграToolStripMenuItem";
             this.диаграToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.диаграToolStripMenuItem.Text = "Диаграммы";
-            // 
-            // averageYieldToolStripMenuItem
-            // 
-            this.averageYieldToolStripMenuItem.Name = "averageYieldToolStripMenuItem";
-            this.averageYieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.averageYieldToolStripMenuItem.Text = "Средний удой";
-            this.averageYieldToolStripMenuItem.Click += new System.EventHandler(this.AverageYieldToolStripMenuItem_Click);
             // 
             // UCTableCattle
             // 
@@ -429,5 +485,12 @@
         private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem диаграToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem averageYieldToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem analysisOfMilkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cowsLactatingInTheMonthToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem numberOfDaysInLactationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aBloodTestForCowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportOfReproductionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportOnTheOffspringToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theMilkFlowToolStripMenuItem;
     }
 }
