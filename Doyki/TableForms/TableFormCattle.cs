@@ -40,7 +40,7 @@ namespace Doyki
             }
             else
             {
-                adapter.FillMain(dataTable);
+                //adapter.FillMain(dataTable);
             }
         }
         override protected void Apply_Click(object sender, EventArgs e)
