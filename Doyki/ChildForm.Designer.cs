@@ -41,15 +41,7 @@
             this.closeButton.BackgroundImage = global::Doyki.Properties.Resources.close_icon_b;
             this.closeButton.FlatAppearance.BorderSize = 0;
             this.closeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            // 
-            // minimizeButton
-            // 
-            this.minimizeButton.BackColor = System.Drawing.Color.White;
-            this.minimizeButton.BackgroundImage = global::Doyki.Properties.Resources.minim_icon_b;
-            this.minimizeButton.FlatAppearance.BorderSize = 0;
-            this.minimizeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.minimizeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.closeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             // 
             // plusWindowButton
             // 
@@ -57,11 +49,28 @@
             this.plusWindowButton.BackgroundImage = global::Doyki.Properties.Resources.plus_icon_b;
             this.plusWindowButton.FlatAppearance.BorderSize = 0;
             this.plusWindowButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.plusWindowButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.plusWindowButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             // 
             // nameLabel
             // 
+            this.nameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.ForeColor = System.Drawing.Color.Black;
+            // 
+            // fullScreenButton
+            // 
+            this.fullScreenButton.BackColor = System.Drawing.Color.White;
+            this.fullScreenButton.BackgroundImage = global::Doyki.Properties.Resources.full_icon_b;
+            this.fullScreenButton.FlatAppearance.BorderSize = 0;
+            this.fullScreenButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.fullScreenButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            // 
+            // minimizeButton
+            // 
+            this.minimizeButton.BackColor = System.Drawing.Color.White;
+            this.minimizeButton.BackgroundImage = global::Doyki.Properties.Resources.minim_icon_b;
+            this.minimizeButton.FlatAppearance.BorderSize = 0;
+            this.minimizeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.minimizeButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
             // 
             // ChildForm
             // 
@@ -71,7 +80,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

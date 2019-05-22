@@ -12,15 +12,11 @@ namespace Doyki
 {
     public partial class UCTableCattle : UserControl
     {
-        Uchot_udoevDataSet1TableAdapters.CattleTableAdapter adapter;
-        protected Uchot_udoevDataSet1.CattleDataTable dataTable;
-        public UCTableCattle(Uchot_udoevDataSet1.CattleDataTable dataTable, Uchot_udoevDataSet1TableAdapters.CattleTableAdapter adapter)
+        public UCTableCattle()
         {
             InitializeComponent();
-            this.dataTable = dataTable;
-            this.adapter = adapter;
-            adapter.Fill(dataTable);
-            this.cattleDataGridView.DataSource = dataTable;
+            MainForm parent = (MainForm)this.Parent;
+            this.cattleTableAdapter.Fill(this.uchot_udoevDataSet1.Cattle);
         }
 
         private void CattleBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -28,6 +24,28 @@ namespace Doyki
             this.Validate();
             this.cattleBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.uchot_udoevDataSet1);
+        }
+
+        private void SearchStripButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < cattleDataGridView.RowCount; i++)
+            {
+                cattleDataGridView.Rows[i].Selected = false;
+                for (int j = 0; j < cattleDataGridView.ColumnCount; j++)
+                    if (cattleDataGridView.Rows[i].Cells[j].Value != null)
+                        if (cattleDataGridView.Rows[i].Cells[j].Value.ToString().Contains(searchStripTextBox.Text))
+                        {
+                            cattleDataGridView.Rows[i].Selected = true;
+                            break;
+                        }
+            }
+        }
+
+        private void BackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MainForm main = (MainForm)this.Parent;
+            main.tableLayoutPanel1.Show();
         }
     }
 }

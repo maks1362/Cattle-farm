@@ -26,11 +26,11 @@ namespace Doyki.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"46.47.38.236, 1433\";Initial Catalog=Uchot_udoev;Persist Security Inf" +
-            "o=True;User ID=elita;Password=KQxFl7F0")]
-        public string Uchot_udoevConnectionString1 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"109.195.115.165,1433\";Initial Catalog=Uchot_udoev;Persist Security I" +
+            "nfo=True;User ID=elita;Password=KQxFl7F0")]
+        public string sqlConnectionString {
             get {
-                return ((string)(this["Uchot_udoevConnectionString1"]));
+                return ((string)(this["sqlConnectionString"]));
             }
         }
     }

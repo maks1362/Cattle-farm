@@ -75,7 +75,7 @@ namespace Doyki
             //Всё остальное
             ErrorPictureBox.Hide();
             statusLabel.Text = "\r\nПодключение...";
-            SqlConnection testConnection = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);   //Переменная прописана в Settings.settings
+            SqlConnection testConnection = new SqlConnection(global::Doyki.Properties.Settings.Default.sqlConnectionString);   //Переменная прописана в Settings.settings
             try
             {
                await Task.Run(() => testConnection.Open());  //Мультипоток

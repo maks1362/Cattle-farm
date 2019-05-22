@@ -111,11 +111,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Uchot_udoevDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Uchot_udoevDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Uchot_udoevDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UCTableCattle.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCTableCattle.Designer.cs">
       <DependentUpon>UCTableCattle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTableLactation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTableLactation.Designer.cs">
+      <DependentUpon>UCTableLactation.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ChildForm.resx">
       <DependentUpon>ChildForm.cs</DependentUpon>
@@ -157,6 +168,9 @@
     <EmbeddedResource Include="UCTableCattle.resx">
       <DependentUpon>UCTableCattle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCTableLactation.resx">
+      <DependentUpon>UCTableLactation.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,6 +191,17 @@
     <None Include="Uchot_udoevDataSet1.xss">
       <DependentUpon>Uchot_udoevDataSet1.xsd</DependentUpon>
     </None>
+    <None Include="Uchot_udoevDataSet2.xsc">
+      <DependentUpon>Uchot_udoevDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Uchot_udoevDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Uchot_udoevDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Uchot_udoevDataSet2.xss">
+      <DependentUpon>Uchot_udoevDataSet2.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -186,6 +211,9 @@
     <Content Include="images\close_icon_b.png" />
     <Content Include="images\cow_logo.png" />
     <Content Include="images\error.png" />
+    <Content Include="images\full_icon.png" />
+    <Content Include="images\full_icon_b.png" />
+    <Content Include="images\icons8-search-96.png" />
     <Content Include="images\minim_icon.png" />
     <Content Include="images\minim_icon_b.png" />
     <Content Include="images\plus_icon.png" />

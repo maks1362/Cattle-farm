@@ -47,6 +47,9 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.cattleBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.searchStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.searchStripButton = new System.Windows.Forms.ToolStripButton();
             this.cattleDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +68,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.диаграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingNavigator)).BeginInit();
@@ -119,16 +123,19 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.cattleBindingNavigatorSaveItem});
+            this.cattleBindingNavigatorSaveItem,
+            this.toolStripSeparator1,
+            this.searchStripTextBox,
+            this.searchStripButton});
             this.cattleBindingNavigator.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.cattleBindingNavigator.Location = new System.Drawing.Point(91, 0);
+            this.cattleBindingNavigator.Location = new System.Drawing.Point(126, 0);
             this.cattleBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.cattleBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.cattleBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.cattleBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.cattleBindingNavigator.Name = "cattleBindingNavigator";
             this.cattleBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.cattleBindingNavigator.Size = new System.Drawing.Size(911, 30);
+            this.cattleBindingNavigator.Size = new System.Drawing.Size(876, 30);
             this.cattleBindingNavigator.TabIndex = 0;
             this.cattleBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -226,6 +233,26 @@
             this.cattleBindingNavigatorSaveItem.Text = "Save Data";
             this.cattleBindingNavigatorSaveItem.Click += new System.EventHandler(this.CattleBindingNavigatorSaveItem_Click);
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
+            // 
+            // searchStripTextBox
+            // 
+            this.searchStripTextBox.Name = "searchStripTextBox";
+            this.searchStripTextBox.Size = new System.Drawing.Size(100, 30);
+            // 
+            // searchStripButton
+            // 
+            this.searchStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.searchStripButton.Image = global::Doyki.Properties.Resources.icons8_search_96;
+            this.searchStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.searchStripButton.Name = "searchStripButton";
+            this.searchStripButton.Size = new System.Drawing.Size(23, 27);
+            this.searchStripButton.Text = "toolStripButton1";
+            this.searchStripButton.Click += new System.EventHandler(this.SearchStripButton_Click);
+            // 
             // cattleDataGridView
             // 
             this.cattleDataGridView.AutoGenerateColumns = false;
@@ -246,9 +273,9 @@
             this.dataGridViewTextBoxColumn13});
             this.cattleDataGridView.DataSource = this.cattleBindingSource;
             this.cattleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cattleDataGridView.Location = new System.Drawing.Point(91, 30);
+            this.cattleDataGridView.Location = new System.Drawing.Point(126, 30);
             this.cattleDataGridView.Name = "cattleDataGridView";
-            this.cattleDataGridView.Size = new System.Drawing.Size(911, 544);
+            this.cattleDataGridView.Size = new System.Drawing.Size(876, 544);
             this.cattleDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -339,24 +366,32 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.отчётыToolStripMenuItem,
-            this.диаграToolStripMenuItem});
+            this.диаграToolStripMenuItem,
+            this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(91, 574);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // отчётыToolStripMenuItem
             // 
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
-            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(78, 19);
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
             // 
             // диаграToolStripMenuItem
             // 
             this.диаграToolStripMenuItem.Name = "диаграToolStripMenuItem";
-            this.диаграToolStripMenuItem.Size = new System.Drawing.Size(78, 19);
+            this.диаграToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.диаграToolStripMenuItem.Text = "Диаграммы";
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.backToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
             // UCTableCattle
             // 
@@ -418,5 +453,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem диаграToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox searchStripTextBox;
+        private System.Windows.Forms.ToolStripButton searchStripButton;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
     }
 }

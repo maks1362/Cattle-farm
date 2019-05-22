@@ -130,7 +130,7 @@
             this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.close.FlatAppearance.BorderSize = 0;
             this.close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close.ForeColor = System.Drawing.SystemColors.Control;
             this.close.Location = new System.Drawing.Point(370, 0);
