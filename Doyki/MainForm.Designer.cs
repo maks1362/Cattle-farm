@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.cattleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.uchot_udoevDataSet1 = new Doyki.Uchot_udoevDataSet1();
             this.cattleTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.CattleTableAdapter();
@@ -222,7 +223,7 @@
             this.CattleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
             this.CattleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.CattleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CattleButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CattleButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CattleButton.ForeColor = System.Drawing.Color.White;
             this.CattleButton.Location = new System.Drawing.Point(3, 3);
             this.CattleButton.Name = "CattleButton";
@@ -240,7 +241,7 @@
             this.AnalysOfBloodButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
             this.AnalysOfBloodButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.AnalysOfBloodButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AnalysOfBloodButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AnalysOfBloodButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AnalysOfBloodButton.ForeColor = System.Drawing.Color.White;
             this.AnalysOfBloodButton.Location = new System.Drawing.Point(3, 96);
             this.AnalysOfBloodButton.Name = "AnalysOfBloodButton";
@@ -258,7 +259,7 @@
             this.LactationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
             this.LactationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.LactationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LactationButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LactationButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LactationButton.ForeColor = System.Drawing.Color.White;
             this.LactationButton.Location = new System.Drawing.Point(3, 189);
             this.LactationButton.Name = "LactationButton";
@@ -276,7 +277,7 @@
             this.ApparatButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
             this.ApparatButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ApparatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ApparatButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ApparatButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ApparatButton.ForeColor = System.Drawing.Color.White;
             this.ApparatButton.Location = new System.Drawing.Point(3, 282);
             this.ApparatButton.Name = "ApparatButton";
@@ -294,7 +295,7 @@
             this.ReproductiveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
             this.ReproductiveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ReproductiveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReproductiveButton.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ReproductiveButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ReproductiveButton.ForeColor = System.Drawing.Color.White;
             this.ReproductiveButton.Location = new System.Drawing.Point(3, 375);
             this.ReproductiveButton.Name = "ReproductiveButton";
@@ -314,12 +315,12 @@
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(640, 360);
             this.Name = "MainForm";
             this.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "l";
-            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Text = "Выберите таблицу";
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);

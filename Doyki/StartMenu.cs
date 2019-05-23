@@ -15,7 +15,7 @@ namespace Doyki
 {
     public partial class StartMenu : Form
     {
-        Timer timer1 = new Timer();     //Таймер для анимации
+        readonly Timer timer1 = new Timer();     //Таймер для анимации
         private int offset = 2;
 
         public StartMenu()
@@ -39,9 +39,9 @@ namespace Doyki
         }
 
         //Функця смещения полосы загрузки
-        private void move(object sender, EventArgs e)
+        private void Moving(object sender, EventArgs e)
         {
-            loadingLinePanel.Left = loadingLinePanel.Left + offset;
+            loadingLinePanel.Left += offset;
             if (loadingLinePanel.Left > 320)
             {
                 loadingLinePanel.Left = -80;
@@ -53,7 +53,7 @@ namespace Doyki
         }
 
         //Ивент кнопки "Закрыть"
-        private void close_Click(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -61,7 +61,7 @@ namespace Doyki
         private void StartMenu_Load(object sender, EventArgs e)
         {
             loadingLinePanel.Left = 0;
-            timer1.Tick += new EventHandler(move);
+            timer1.Tick += new EventHandler(Moving);
             timer1.Interval = 5;
             timer1.Start();
         }

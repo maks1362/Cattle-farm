@@ -10,31 +10,32 @@ using System.Windows.Forms;
 
 namespace Doyki
 {
-    public partial class UCTableLactation : UserControl
+    public partial class UCTableApparat : UserControl
     {
-        public UCTableLactation()
+        public UCTableApparat()
         {
             InitializeComponent();
-            this.lactationTableAdapter.Fill(this.uchot_udoevDataSet2.Lactation);
+            this.apparatTableAdapter.Fill(this.uchot_udoevDataSet2.Apparat);
         }
 
-        private void LactationBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void ApparatBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.lactationBindingSource.EndEdit();
+            this.apparatBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.uchot_udoevDataSet2);
+
         }
 
         private void SearchStripButton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < lactationDataGridView.RowCount; i++)
+            for (int i = 0; i < apparatDataGridView.RowCount; i++)
             {
-                lactationDataGridView.Rows[i].Selected = false;
-                for (int j = 0; j < lactationDataGridView.ColumnCount; j++)
-                    if (lactationDataGridView.Rows[i].Cells[j].Value != null)
-                        if (lactationDataGridView.Rows[i].Cells[j].Value.ToString().Contains(searchStripTextBox.Text))
+                apparatDataGridView.Rows[i].Selected = false;
+                for (int j = 0; j < apparatDataGridView.ColumnCount; j++)
+                    if (apparatDataGridView.Rows[i].Cells[j].Value != null)
+                        if (apparatDataGridView.Rows[i].Cells[j].Value.ToString().Contains(searchStripTextBox.Text))
                         {
-                            lactationDataGridView.Rows[i].Selected = true;
+                            apparatDataGridView.Rows[i].Selected = true;
                             break;
                         }
             }
@@ -46,6 +47,5 @@ namespace Doyki
             MainForm main = (MainForm)this.Parent;
             main.tableLayoutPanel1.Show();
         }
-
     }
 }

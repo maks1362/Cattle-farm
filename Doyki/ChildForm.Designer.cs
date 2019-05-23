@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChildForm));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +54,6 @@
             // 
             // nameLabel
             // 
-            this.nameLabel.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.nameLabel.ForeColor = System.Drawing.Color.Black;
             // 
             // fullScreenButton
@@ -76,6 +76,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChildForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.panel1.ResumeLayout(false);

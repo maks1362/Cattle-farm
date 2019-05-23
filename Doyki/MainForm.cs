@@ -13,11 +13,13 @@ namespace Doyki
 {
     public partial class MainForm : Form
     {
-        private UCTableCattle UCT1 = new UCTableCattle();
-        //private UCTableCattle UCT1 = new UCTableCattle();
-        private UCTableLactation UCT3 = new UCTableLactation();
-        //private UCTableCattle UCT1 = new UCTableCattle();
-        //private UCTableCattle UCT1 = new UCTableCattle();
+        //Загрузка котролов с таблицами
+        private readonly UCTableCattle UCT1 = new UCTableCattle();
+        private readonly UCTableAnalysisOfBlood UCT2 = new UCTableAnalysisOfBlood();
+        private readonly UCTableLactation UCT3 = new UCTableLactation();
+        private readonly UCTableApparat UCT4 = new UCTableApparat();
+        private readonly UCTableReproductive UCT5 = new UCTableReproductive();
+
         //Для захвата позиции мышки
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
@@ -66,25 +68,22 @@ namespace Doyki
                 base.WndProc(ref m);
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        //Закрыть
         protected virtual void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //Сверенуть
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        //Создание доч. окна
         private void PlusWindowButton_Click(object sender, EventArgs e)
         {
-            Form Child  = new ChildForm();
-            Child.Owner = this;
+            Form Child = new ChildForm();
             Child.Show();
         }
 
@@ -114,14 +113,33 @@ namespace Doyki
             tableLayoutPanel1.Hide();
             this.Text = "Скот";
             nameLabel.Text = "Скот";
-            this.Controls.Add(UCT1);
-            this.UCT1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UCT1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.UCT1.Show();
+            if (this.UCT1.Parent == null)
+            {
+                this.Controls.Add(UCT1);
+                this.UCT1.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            }
+            else
+            {
+                this.UCT1.Show();
+            }
         }
 
         private void AnalysOfBloodButton_Click(object sender, EventArgs e)
         {
+            tableLayoutPanel1.Hide();
+            this.Text = "Анализ крови";
+            nameLabel.Text = "Анализ крови";
+            if (this.UCT2.Parent == null)
+            {
+                this.Controls.Add(UCT2);
+                this.UCT2.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT2.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            }
+            else
+            {
+                this.UCT2.Show();
+            }
 
         }
 
@@ -130,19 +148,50 @@ namespace Doyki
             tableLayoutPanel1.Hide();
             this.Text = "Лактация";
             nameLabel.Text = "Лактация";
-            this.Controls.Add(UCT3);
-            this.UCT3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.UCT3.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            if (this.UCT3.Parent == null)
+            {
+                this.Controls.Add(UCT3);
+                this.UCT3.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT3.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            }
+            else
+            {
+                this.UCT3.Show();
+            }
         }
 
         private void ApparatButton_Click(object sender, EventArgs e)
         {
-
+            tableLayoutPanel1.Hide();
+            this.Text = "Доильный аппарат";
+            nameLabel.Text = "Доильный аппарат";
+            if (this.UCT4.Parent == null)
+            {
+                this.Controls.Add(UCT4);
+                this.UCT4.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT4.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            }
+            else
+            {
+                this.UCT4.Show();
+            }
         }
 
         private void ReproductiveButton_Click(object sender, EventArgs e)
         {
-
+            tableLayoutPanel1.Hide();
+            this.Text = "Репродуктивность";
+            nameLabel.Text = "Репродуктивность";
+            if (this.UCT5.Parent == null)
+            {
+                this.Controls.Add(UCT5);
+                this.UCT5.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT5.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            }
+            else
+            {
+                this.UCT5.Show();
+            }
         }
 
         private void TableLayoutPanel1_VisibleChanged(object sender, EventArgs e)

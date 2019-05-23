@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartMenu));
             this.connectButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ErrorPictureBox = new System.Windows.Forms.PictureBox();
@@ -139,7 +140,7 @@
             this.close.Size = new System.Drawing.Size(30, 30);
             this.close.TabIndex = 1;
             this.close.UseVisualStyleBackColor = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.Click += new System.EventHandler(this.Close_Click);
             // 
             // StartMenu
             // 
@@ -155,6 +156,7 @@
             this.Controls.Add(this.close);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";

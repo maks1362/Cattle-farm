@@ -10,32 +10,33 @@ using System.Windows.Forms;
 
 namespace Doyki
 {
-    public partial class UCTableCattle : UserControl
+    public partial class UCTableAnalysisOfBlood : UserControl
     {
-        public UCTableCattle()
+        public UCTableAnalysisOfBlood()
         {
             InitializeComponent();
-            this.cattleTableAdapter.Fill(this.uchot_udoevDataSet2.Cattle);
+            this.analysis_of_bloodTableAdapter.Fill(this.uchot_udoevDataSet2.Analysis_of_blood);
         }
 
-        private void CattleBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void Analysis_of_bloodBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.cattleBindingSource.EndEdit();
+            this.analysis_of_bloodBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.uchot_udoevDataSet2);
+
         }
 
         //Ивент поиска по кнопке
         private void SearchStripButton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < cattleDataGridView.RowCount; i++)
+            for (int i = 0; i < analysis_of_bloodDataGridView.RowCount; i++)
             {
-                cattleDataGridView.Rows[i].Selected = false;
-                for (int j = 0; j < cattleDataGridView.ColumnCount; j++)
-                    if (cattleDataGridView.Rows[i].Cells[j].Value != null)
-                        if (cattleDataGridView.Rows[i].Cells[j].Value.ToString().Contains(searchStripTextBox.Text))
+                analysis_of_bloodDataGridView.Rows[i].Selected = false;
+                for (int j = 0; j < analysis_of_bloodDataGridView.ColumnCount; j++)
+                    if (analysis_of_bloodDataGridView.Rows[i].Cells[j].Value != null)
+                        if (analysis_of_bloodDataGridView.Rows[i].Cells[j].Value.ToString().Contains(searchStripTextBox.Text))
                         {
-                            cattleDataGridView.Rows[i].Selected = true;
+                            analysis_of_bloodDataGridView.Rows[i].Selected = true;
                             break;
                         }
             }

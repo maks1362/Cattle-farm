@@ -116,6 +116,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Uchot_udoevDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="UCTableAnalysisOfBlood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTableAnalysisOfBlood.Designer.cs">
+      <DependentUpon>UCTableAnalysisOfBlood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTableApparat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTableApparat.Designer.cs">
+      <DependentUpon>UCTableApparat.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCTableCattle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -127,6 +139,12 @@
     </Compile>
     <Compile Include="UCTableLactation.Designer.cs">
       <DependentUpon>UCTableLactation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTableReproductive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTableReproductive.Designer.cs">
+      <DependentUpon>UCTableReproductive.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ChildForm.resx">
       <DependentUpon>ChildForm.cs</DependentUpon>
@@ -165,11 +183,20 @@
     <EmbeddedResource Include="TableForms\TableForm.resx">
       <DependentUpon>TableForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCTableAnalysisOfBlood.resx">
+      <DependentUpon>UCTableAnalysisOfBlood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTableApparat.resx">
+      <DependentUpon>UCTableApparat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCTableCattle.resx">
       <DependentUpon>UCTableCattle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCTableLactation.resx">
       <DependentUpon>UCTableLactation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTableReproductive.resx">
+      <DependentUpon>UCTableReproductive.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -210,12 +237,14 @@
     <Content Include="images\close_icon.png" />
     <Content Include="images\close_icon_b.png" />
     <Content Include="images\cow_logo.png" />
+    <Content Include="images\cow_logo_b.png" />
     <Content Include="images\error.png" />
     <Content Include="images\full_icon.png" />
     <Content Include="images\full_icon_b.png" />
     <Content Include="images\icons8-search-96.png" />
     <Content Include="images\minim_icon.png" />
     <Content Include="images\minim_icon_b.png" />
+    <Content Include="images\Oxygen-Icons.org-Oxygen-Actions-insert-table.ico" />
     <Content Include="images\plus_icon.png" />
     <Content Include="images\plus_icon_b.png" />
   </ItemGroup>

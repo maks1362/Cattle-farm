@@ -30,10 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTableCattle));
-            this.uchot_udoevDataSet1 = new Doyki.Uchot_udoevDataSet1();
+            this.uchot_udoevDataSet2 = new Doyki.Uchot_udoevDataSet2();
             this.cattleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cattleTableAdapter = new Doyki.Uchot_udoevDataSet1TableAdapters.CattleTableAdapter();
-            this.tableAdapterManager = new Doyki.Uchot_udoevDataSet1TableAdapters.TableAdapterManager();
+            this.cattleTableAdapter = new Doyki.Uchot_udoevDataSet2TableAdapters.CattleTableAdapter();
+            this.tableAdapterManager = new Doyki.Uchot_udoevDataSet2TableAdapters.TableAdapterManager();
             this.cattleBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -64,29 +64,27 @@
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uchot_udoevDataSet11 = new Doyki.Uchot_udoevDataSet1();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.диаграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingNavigator)).BeginInit();
             this.cattleBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cattleDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet11)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // uchot_udoevDataSet1
+            // uchot_udoevDataSet2
             // 
-            this.uchot_udoevDataSet1.DataSetName = "Uchot_udoevDataSet1";
-            this.uchot_udoevDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.uchot_udoevDataSet2.DataSetName = "Uchot_udoevDataSet2";
+            this.uchot_udoevDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cattleBindingSource
             // 
             this.cattleBindingSource.DataMember = "Cattle";
-            this.cattleBindingSource.DataSource = this.uchot_udoevDataSet1;
+            this.cattleBindingSource.DataSource = this.uchot_udoevDataSet2;
             // 
             // cattleTableAdapter
             // 
@@ -100,7 +98,7 @@
             this.tableAdapterManager.CattleTableAdapter = this.cattleTableAdapter;
             this.tableAdapterManager.LactationTableAdapter = null;
             this.tableAdapterManager.ReproductiveTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = Doyki.Uchot_udoevDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = Doyki.Uchot_udoevDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // cattleBindingNavigator
             // 
@@ -128,14 +126,14 @@
             this.searchStripTextBox,
             this.searchStripButton});
             this.cattleBindingNavigator.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.cattleBindingNavigator.Location = new System.Drawing.Point(126, 0);
+            this.cattleBindingNavigator.Location = new System.Drawing.Point(91, 0);
             this.cattleBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.cattleBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.cattleBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.cattleBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.cattleBindingNavigator.Name = "cattleBindingNavigator";
             this.cattleBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.cattleBindingNavigator.Size = new System.Drawing.Size(876, 30);
+            this.cattleBindingNavigator.Size = new System.Drawing.Size(911, 30);
             this.cattleBindingNavigator.TabIndex = 0;
             this.cattleBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -273,9 +271,9 @@
             this.dataGridViewTextBoxColumn13});
             this.cattleDataGridView.DataSource = this.cattleBindingSource;
             this.cattleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cattleDataGridView.Location = new System.Drawing.Point(126, 30);
+            this.cattleDataGridView.Location = new System.Drawing.Point(91, 30);
             this.cattleDataGridView.Name = "cattleDataGridView";
-            this.cattleDataGridView.Size = new System.Drawing.Size(876, 544);
+            this.cattleDataGridView.Size = new System.Drawing.Size(911, 544);
             this.cattleDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -356,11 +354,6 @@
             this.dataGridViewTextBoxColumn13.HeaderText = "Line";
             this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
-            // uchot_udoevDataSet11
-            // 
-            this.uchot_udoevDataSet11.DataSetName = "Uchot_udoevDataSet1";
-            this.uchot_udoevDataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -370,7 +363,7 @@
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(126, 574);
+            this.menuStrip1.Size = new System.Drawing.Size(91, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -402,13 +395,12 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "UCTableCattle";
             this.Size = new System.Drawing.Size(1002, 574);
-            ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingNavigator)).EndInit();
             this.cattleBindingNavigator.ResumeLayout(false);
             this.cattleBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cattleDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet11)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -418,10 +410,10 @@
 
         #endregion
 
-        private Uchot_udoevDataSet1 uchot_udoevDataSet1;
+        private Uchot_udoevDataSet2 uchot_udoevDataSet2;
         private System.Windows.Forms.BindingSource cattleBindingSource;
-        private Uchot_udoevDataSet1TableAdapters.CattleTableAdapter cattleTableAdapter;
-        private Uchot_udoevDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private Uchot_udoevDataSet2TableAdapters.CattleTableAdapter cattleTableAdapter;
+        private Uchot_udoevDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator cattleBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
@@ -449,7 +441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private Uchot_udoevDataSet1 uchot_udoevDataSet11;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem диаграToolStripMenuItem;
