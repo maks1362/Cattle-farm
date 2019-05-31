@@ -80,5 +80,15 @@ namespace Doyki
             chartForm.ShowDialog();
             this.Show();
         }
+
+        private void AverageMilkYieldToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idChart = 6;
+            idCow = 1001;
+            ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+            this.Hide();
+            chartForm.ShowDialog();
+            this.Show();
+        }
     }
 }

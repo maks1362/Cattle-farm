@@ -40,15 +40,53 @@ namespace Doyki
                 Families();
             else if (idChart == 5)
                 AllAnimals();
+            else if (idChart == 6)
+                Other();
             else
-            {
-
-            }
+                Close();
         }
 
         public async void Lactations()
         {
-
+            sqlConnection = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);
+            try
+            {
+                await Task.Run(() => sqlConnection.Open());
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка \r\n 1. Отсутствует подключение к интернету \r\n 2. SQL сервер не запущен", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (sqlConnection.State == System.Data.ConnectionState.Open)
+            {
+                int i = 0;
+                sqlCommand = new SqlCommand("SELECT * FROM [Analysis_of_blood] WHERE [ID_cow] = @idCow", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("idCow", idCow);
+                sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+                while (sqlDataReader.Read())
+                {
+                    chart2.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Hemoglobin"]));
+                    chart3.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Hematocrit"]));
+                    chart1.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["SOE"]));
+                    chart2.Series[1].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Leukocytes"]));
+                    chart2.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Erythrocytes"]));
+                    chart2.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Protein"]));
+                    chart3.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Selk_reserve"]));
+                    chart1.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Calcium"]));
+                    chart1.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Phosphorus"]));
+                    chart1.Series[3].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Glucose"]));
+                    chart2.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Carotene"]));
+                    chart3.Series[2].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Globulins"]));
+                    chart3.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Albumins"]));
+                    chart2.Series[5].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Lipids"]));
+                    chart3.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Silk_phosphotase"]));
+                    chart1.Series[4].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Magnesium"]));
+                    chart2.Series[6].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Urea"]));
+                    chart3.Series[5].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["ALT"]));
+                    chart3.Series[6].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["AST"]));
+                    i = i + 1;
+                }
+            }
         }
 
         public async void Breeds()
@@ -91,25 +129,25 @@ namespace Doyki
                     sqlDataReader = await sqlCommand.ExecuteReaderAsync();
                     while (sqlDataReader.Read())
                     {
-                        chart1.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Hemoglobin"]));
-                        chart2.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Hematocrit"]));
-                        chart3.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["SOE"]));
-                        chart4.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Leukocytes"]));
-                        chart5.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Erythrocytes"]));
-                        chart6.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Protein"]));
-                        chart7.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Selk_reserve"]));
-                        chart8.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Calcium"]));
-                        chart9.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Phosphorus"]));
-                        chart10.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Glucose"]));
-                        chart11.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Carotene"]));
-                        chart12.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Globulins"]));
-                        chart13.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Albumins"]));
-                        chart14.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Lipids"]));
-                        chart15.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Silk_phosphotase"]));
-                        chart16.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Magnesium"]));
-                        chart17.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Urea"]));
-                        chart18.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["ALT"]));
-                        chart19.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["AST"]));
+                        chart2.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Hemoglobin"]));
+                        chart3.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Hematocrit"]));
+                        chart1.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["SOE"]));
+                        chart2.Series[1].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Leukocytes"]));
+                        chart2.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Erythrocytes"]));
+                        chart2.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Protein"]));
+                        chart3.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Selk_reserve"]));
+                        chart1.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Calcium"]));
+                        chart1.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Phosphorus"]));
+                        chart1.Series[3].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Glucose"]));
+                        chart2.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Carotene"]));
+                        chart3.Series[2].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Globulins"]));
+                        chart3.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Albumins"]));
+                        chart2.Series[5].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Lipids"]));
+                        chart3.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Silk_phosphotase"]));
+                        chart1.Series[4].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Magnesium"]));
+                        chart2.Series[6].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Urea"]));
+                        chart3.Series[5].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["ALT"]));
+                        chart3.Series[6].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["AST"]));
                     }
                     sqlDataReader.Close();
                 }
@@ -156,25 +194,25 @@ namespace Doyki
                     sqlDataReader = await sqlCommand.ExecuteReaderAsync();
                     while (sqlDataReader.Read())
                     {
-                        chart1.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Hemoglobin"]));
-                        chart2.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Hematocrit"]));
-                        chart3.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["SOE"]));
-                        chart4.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Leukocytes"]));
-                        chart5.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Erythrocytes"]));
-                        chart6.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Protein"]));
-                        chart7.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Selk_reserve"]));
-                        chart8.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Calcium"]));
-                        chart9.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Phosphorus"]));
-                        chart10.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Glucose"]));
-                        chart11.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Carotene"]));
-                        chart12.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Globulins"]));
-                        chart13.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Albumins"]));
-                        chart14.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Lipids"]));
-                        chart15.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Silk_phosphotase"]));
-                        chart16.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Magnesium"]));
-                        chart17.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Urea"]));
-                        chart18.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["ALT"]));
-                        chart19.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["AST"]));
+                        chart2.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Hemoglobin"]));
+                        chart3.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Hematocrit"]));
+                        chart1.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["SOE"]));
+                        chart2.Series[1].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Leukocytes"]));
+                        chart2.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Erythrocytes"]));
+                        chart2.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Protein"]));
+                        chart3.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Selk_reserve"]));
+                        chart1.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Calcium"]));
+                        chart1.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Phosphorus"]));
+                        chart1.Series[3].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Glucose"]));
+                        chart2.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Carotene"]));
+                        chart3.Series[2].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Globulins"]));
+                        chart3.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Albumins"]));
+                        chart2.Series[5].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Lipids"]));
+                        chart3.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Silk_phosphotase"]));
+                        chart1.Series[4].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Magnesium"]));
+                        chart2.Series[6].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Urea"]));
+                        chart3.Series[5].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["ALT"]));
+                        chart3.Series[6].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["AST"]));
                     }
                     sqlDataReader.Close();
                 }
@@ -221,25 +259,25 @@ namespace Doyki
                     sqlDataReader = await sqlCommand.ExecuteReaderAsync();
                     while (sqlDataReader.Read())
                     {
-                        chart1.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Hemoglobin"]));
-                        chart2.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Hematocrit"]));
-                        chart3.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["SOE"]));
-                        chart4.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Leukocytes"]));
-                        chart5.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Erythrocytes"]));
-                        chart6.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Protein"]));
-                        chart7.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Selk_reserve"]));
-                        chart8.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Calcium"]));
-                        chart9.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Phosphorus"]));
-                        chart10.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Glucose"]));
-                        chart11.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Carotene"]));
-                        chart12.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Globulins"]));
-                        chart13.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Albumins"]));
-                        chart14.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Lipids"]));
-                        chart15.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Silk_phosphotase"]));
-                        chart16.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Magnesium"]));
-                        chart17.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Urea"]));
-                        chart18.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["ALT"]));
-                        chart19.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["AST"]));
+                        chart2.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Hemoglobin"]));
+                        chart3.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Hematocrit"]));
+                        chart1.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["SOE"]));
+                        chart2.Series[1].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Leukocytes"]));
+                        chart2.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Erythrocytes"]));
+                        chart2.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Protein"]));
+                        chart3.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Selk_reserve"]));
+                        chart1.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Calcium"]));
+                        chart1.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Phosphorus"]));
+                        chart1.Series[3].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Glucose"]));
+                        chart2.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Carotene"]));
+                        chart3.Series[2].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Globulins"]));
+                        chart3.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Albumins"]));
+                        chart2.Series[5].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Lipids"]));
+                        chart3.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Silk_phosphotase"]));
+                        chart1.Series[4].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Magnesium"]));
+                        chart2.Series[6].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Urea"]));
+                        chart3.Series[5].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["ALT"]));
+                        chart3.Series[6].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["AST"]));
                     }
                     sqlDataReader.Close();
                 }
@@ -278,29 +316,116 @@ namespace Doyki
                     sqlDataReader = await sqlCommand.ExecuteReaderAsync();
                     while (sqlDataReader.Read())
                     {
-                        chart1.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Hemoglobin"]));
-                        chart2.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Hematocrit"]));
-                        chart3.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["SOE"]));
-                        chart4.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Leukocytes"]));
-                        chart5.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Erythrocytes"]));
-                        chart6.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Protein"]));
-                        chart7.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Selk_reserve"]));
-                        chart8.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Calcium"]));
-                        chart9.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Phosphorus"]));
-                        chart10.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Glucose"]));
-                        chart11.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Carotene"]));
-                        chart12.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Globulins"]));
-                        chart13.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Albumins"]));
-                        chart14.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Lipids"]));
-                        chart15.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Silk_phosphotase"]));
-                        chart16.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Magnesium"]));
-                        chart17.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Urea"]));
-                        chart18.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["ALT"]));
-                        chart19.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["AST"]));
+                        chart2.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Hemoglobin"]));
+                        chart3.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Hematocrit"]));
+                        chart1.Series[0].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["SOE"]));
+                        chart2.Series[1].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Leukocytes"]));
+                        chart2.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Erythrocytes"]));
+                        chart2.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Protein"]));
+                        chart3.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Selk_reserve"]));
+                        chart1.Series[1].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Calcium"]));
+                        chart1.Series[2].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Phosphorus"]));
+                        chart1.Series[3].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Glucose"]));
+                        chart2.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Carotene"]));
+                        chart3.Series[2].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Globulins"]));
+                        chart3.Series[3].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Albumins"]));
+                        chart2.Series[5].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Lipids"]));
+                        chart3.Series[4].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["Silk_phosphotase"]));
+                        chart1.Series[4].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Magnesium"]));
+                        chart2.Series[6].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["Urea"]));
+                        chart3.Series[5].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["ALT"]));
+                        chart3.Series[6].Points.AddXY(i + 1, Convert.ToInt32(sqlDataReader["AST"]));
                     }
                     sqlDataReader.Close();
                 }
             }
+        }
+
+        public async void Other()
+        {
+            ChartWork();
+            sqlConnection = new SqlConnection(global::Doyki.Properties.Settings.Default.Uchot_udoevConnectionString1);
+            try
+            {
+                await Task.Run(() => sqlConnection.Open());
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка \r\n 1. Отсутствует подключение к интернету \r\n 2. SQL сервер не запущен", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (sqlConnection.State == System.Data.ConnectionState.Open)
+            {
+                int i = 0;
+                sqlCommand = new SqlCommand("SELECT * FROM [Lactation] WHERE [ID_cow] = @idCow", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("idCow", idCow);
+                sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+                while (sqlDataReader.Read())
+                {
+                    chart1.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["MDB"]));
+                    chart2.Series[0].Points.AddXY(i + 1, Convert.ToDecimal(sqlDataReader["MDJ"]));
+                    i = i + 1;
+                }
+                int[] idCows = new int[1];
+                int c = 0;
+                sqlCommand = new SqlCommand("SELECT * FROM [Apparat] WHERE [Date] BETWEEN @dateStart AND @dateEnd", sqlConnection);
+                sqlCommand.Parameters.AddWithValue("dateStart", DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd"));
+                sqlCommand.Parameters.AddWithValue("dateEnd", DateTime.Now.ToString("yyyy-MM-dd"));
+                sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+                while (sqlDataReader.Read())
+                {
+                    bool Check = false;
+                    for (i = 0; i < idCows.Length; i++)
+                    {
+                        if (Convert.ToInt32(sqlDataReader["ID_cow"]) == idCows[i])
+                            Check = true;
+                    }
+                    if (!Check)
+                    {
+                        if (c > 0)
+                            Array.Resize(ref idCows, idCows.Length + 1);
+                        idCows[c] = Convert.ToInt32(sqlDataReader["ID_cow"]);
+                        c = c + 1;
+                    }
+                }
+                sqlDataReader.Close();
+                int[] milkYield = new int[idCows.Length];
+                for (i = 0; i < idCows.Length; i++)
+                {
+                    sqlCommand = new SqlCommand("SELECT * FROM [Apparat] WHERE [ID_cow] = @idCow AND [Date] BETWEEN @dateStart AND @dateEnd", sqlConnection);
+                    sqlCommand.Parameters.AddWithValue("idCow", idCows[i]);
+                    sqlCommand.Parameters.AddWithValue("dateStart", DateTime.Now.AddYears(-1).ToString("yyyy-MM-dd"));
+                    sqlCommand.Parameters.AddWithValue("dateEnd", DateTime.Now.ToString("yyyy-MM-dd"));
+                    sqlDataReader = await sqlCommand.ExecuteReaderAsync();
+                    while (sqlDataReader.Read())
+                        milkYield[i] = milkYield[i] + Convert.ToInt32(sqlDataReader["Count_of_milk"]);
+                    sqlDataReader.Close();
+                    for (i = 0; i < milkYield.Length; i++)
+                        chart3.Series[0].Points.AddXY(i + 1, milkYield[i]);
+                }
+            }
+        }
+
+        public void ChartWork()
+        {
+            chart1.Series[1].Enabled = false;
+            chart1.Series[2].Enabled = false;
+            chart1.Series[3].Enabled = false;
+            chart1.Series[4].Enabled = false;
+            chart2.Series[1].Enabled = false;
+            chart2.Series[2].Enabled = false;
+            chart2.Series[3].Enabled = false;
+            chart2.Series[4].Enabled = false;
+            chart2.Series[5].Enabled = false;
+            chart2.Series[6].Enabled = false;
+            chart3.Series[1].Enabled = false;
+            chart3.Series[2].Enabled = false;
+            chart3.Series[3].Enabled = false;
+            chart3.Series[4].Enabled = false;
+            chart3.Series[5].Enabled = false;
+            chart3.Series[6].Enabled = false;
+            chart1.Series[0].Name = "МДБ (%)";
+            chart2.Series[0].Name = "МДЖ (%)";
+            chart3.Series[0].Name = "Средний удой (кг)";
         }
     }
 }
