@@ -35,18 +35,21 @@
             this.analysis_of_bloodTableAdapter = new Doyki.Uchot_udoevDataSet2TableAdapters.Analysis_of_bloodTableAdapter();
             this.tableAdapterManager = new Doyki.Uchot_udoevDataSet2TableAdapters.TableAdapterManager();
             this.analysis_of_bloodBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.analysis_of_bloodBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.searchStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.searchStripButton = new System.Windows.Forms.ToolStripButton();
             this.analysis_of_bloodDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,10 +75,11 @@
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bloodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.searchStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.searchStripButton = new System.Windows.Forms.ToolStripButton();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.analysis_of_bloodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.analysis_of_bloodBindingNavigator)).BeginInit();
@@ -130,16 +134,41 @@
             this.toolStripSeparator1,
             this.searchStripTextBox,
             this.searchStripButton});
-            this.analysis_of_bloodBindingNavigator.Location = new System.Drawing.Point(57, 0);
+            this.analysis_of_bloodBindingNavigator.Location = new System.Drawing.Point(126, 0);
             this.analysis_of_bloodBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.analysis_of_bloodBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.analysis_of_bloodBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.analysis_of_bloodBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.analysis_of_bloodBindingNavigator.Name = "analysis_of_bloodBindingNavigator";
             this.analysis_of_bloodBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.analysis_of_bloodBindingNavigator.Size = new System.Drawing.Size(945, 25);
+            this.analysis_of_bloodBindingNavigator.Size = new System.Drawing.Size(876, 25);
             this.analysis_of_bloodBindingNavigator.TabIndex = 0;
             this.analysis_of_bloodBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -173,16 +202,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
@@ -205,26 +227,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // analysis_of_bloodBindingNavigatorSaveItem
             // 
@@ -234,6 +238,26 @@
             this.analysis_of_bloodBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
             this.analysis_of_bloodBindingNavigatorSaveItem.Text = "Save Data";
             this.analysis_of_bloodBindingNavigatorSaveItem.Click += new System.EventHandler(this.Analysis_of_bloodBindingNavigatorSaveItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // searchStripTextBox
+            // 
+            this.searchStripTextBox.Name = "searchStripTextBox";
+            this.searchStripTextBox.Size = new System.Drawing.Size(100, 25);
+            // 
+            // searchStripButton
+            // 
+            this.searchStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.searchStripButton.Image = global::Doyki.Properties.Resources.icons8_search_96;
+            this.searchStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.searchStripButton.Name = "searchStripButton";
+            this.searchStripButton.Size = new System.Drawing.Size(23, 22);
+            this.searchStripButton.Text = "toolStripButton1";
+            this.searchStripButton.Click += new System.EventHandler(this.SearchStripButton_Click);
             // 
             // analysis_of_bloodDataGridView
             // 
@@ -265,9 +289,9 @@
             this.dataGridViewTextBoxColumn23});
             this.analysis_of_bloodDataGridView.DataSource = this.analysis_of_bloodBindingSource;
             this.analysis_of_bloodDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.analysis_of_bloodDataGridView.Location = new System.Drawing.Point(57, 25);
+            this.analysis_of_bloodDataGridView.Location = new System.Drawing.Point(126, 25);
             this.analysis_of_bloodDataGridView.Name = "analysis_of_bloodDataGridView";
-            this.analysis_of_bloodDataGridView.Size = new System.Drawing.Size(945, 549);
+            this.analysis_of_bloodDataGridView.Size = new System.Drawing.Size(876, 549);
             this.analysis_of_bloodDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -412,12 +436,28 @@
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отчётыToolStripMenuItem,
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(57, 574);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // отчётыToolStripMenuItem
+            // 
+            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bloodToolStripMenuItem});
+            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // bloodToolStripMenuItem
+            // 
+            this.bloodToolStripMenuItem.Name = "bloodToolStripMenuItem";
+            this.bloodToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bloodToolStripMenuItem.Text = "Группы крови";
+            this.bloodToolStripMenuItem.Click += new System.EventHandler(this.BloodToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem
             // 
@@ -425,26 +465,6 @@
             this.backToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.backToolStripMenuItem.Text = "Назад";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
-            // searchStripTextBox
-            // 
-            this.searchStripTextBox.Name = "searchStripTextBox";
-            this.searchStripTextBox.Size = new System.Drawing.Size(100, 25);
-            // 
-            // searchStripButton
-            // 
-            this.searchStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.searchStripButton.Image = global::Doyki.Properties.Resources.icons8_search_96;
-            this.searchStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.searchStripButton.Name = "searchStripButton";
-            this.searchStripButton.Size = new System.Drawing.Size(23, 22);
-            this.searchStripButton.Text = "toolStripButton1";
-            this.searchStripButton.Click += new System.EventHandler(this.SearchStripButton_Click);
             // 
             // UCTableAnalysisOfBlood
             // 
@@ -516,5 +536,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bloodToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
     }
 }

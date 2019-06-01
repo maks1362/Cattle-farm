@@ -65,7 +65,6 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.диаграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
@@ -126,14 +125,14 @@
             this.searchStripTextBox,
             this.searchStripButton});
             this.cattleBindingNavigator.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.cattleBindingNavigator.Location = new System.Drawing.Point(91, 0);
+            this.cattleBindingNavigator.Location = new System.Drawing.Point(126, 0);
             this.cattleBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.cattleBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.cattleBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.cattleBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.cattleBindingNavigator.Name = "cattleBindingNavigator";
             this.cattleBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.cattleBindingNavigator.Size = new System.Drawing.Size(911, 30);
+            this.cattleBindingNavigator.Size = new System.Drawing.Size(876, 30);
             this.cattleBindingNavigator.TabIndex = 0;
             this.cattleBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -149,8 +148,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 27);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 27);
+            this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -271,9 +270,9 @@
             this.dataGridViewTextBoxColumn13});
             this.cattleDataGridView.DataSource = this.cattleBindingSource;
             this.cattleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cattleDataGridView.Location = new System.Drawing.Point(91, 30);
+            this.cattleDataGridView.Location = new System.Drawing.Point(126, 30);
             this.cattleDataGridView.Name = "cattleDataGridView";
-            this.cattleDataGridView.Size = new System.Drawing.Size(911, 544);
+            this.cattleDataGridView.Size = new System.Drawing.Size(876, 544);
             this.cattleDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -358,20 +357,13 @@
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отчётыToolStripMenuItem,
             this.диаграToolStripMenuItem,
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(91, 574);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // отчётыToolStripMenuItem
-            // 
-            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
-            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.отчётыToolStripMenuItem.Text = "Отчёты";
             // 
             // диаграToolStripMenuItem
             // 
@@ -442,7 +434,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem диаграToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox searchStripTextBox;

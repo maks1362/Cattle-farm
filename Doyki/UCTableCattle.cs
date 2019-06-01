@@ -47,5 +47,10 @@ namespace Doyki
             MainForm main = (MainForm)this.Parent;
             main.tableLayoutPanel1.Show();
         }
+
+        private void ВапToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

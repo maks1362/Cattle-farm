@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iTextSharp;
+using System.IO;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Doyki
 {
@@ -47,6 +51,63 @@ namespace Doyki
             this.Hide();
             MainForm main = (MainForm)this.Parent;
             main.tableLayoutPanel1.Show();
+        }
+
+        private void BloodToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Title = "Сохранение";
+            saveFileDialog1.FileName = "";
+            saveFileDialog1.DefaultExt = "*.pdf";
+            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string SaveFileName = saveFileDialog1.FileName;
+
+                //Объект документа пдф
+                iTextSharp.text.Document doc = new iTextSharp.text.Document();
+                //Создаем объект записи пдф-документа в файл
+                PdfWriter.GetInstance(doc, new FileStream(SaveFileName, FileMode.Create));
+
+                //Открываем документ
+                doc.Open();
+
+                //Определение шрифта необходимо для сохранения кириллического текста
+                //Иначе мы не увидим кириллический текст
+                //Если мы работаем только с англоязычными текстами, то шрифт можно не указывать
+                string FONT_LOCATION = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Fonts), "arial.TTF"); //определяем В СИСТЕМЕ(чтобы не копировать файл) расположение шрифта arial.ttf
+                BaseFont baseFont = BaseFont.CreateFont(FONT_LOCATION, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED); //создаем шрифт
+                iTextSharp.text.Font fontParagraph = new iTextSharp.text.Font(baseFont, 17, iTextSharp.text.Font.NORMAL); //регистрируем + можно задать параметры для него(17 - размер, последний параметр - стиль)
+                                                                                                                          //Создаем объект таблицы и передаем в нее число столбцов таблицы из нашего датасета
+                PdfPTable table = new PdfPTable(2);//MyDataSet.Tables[i].Columns.Count);
+                                                   //Добавим в таблицу общий заголовок
+                PdfPCell cell = new PdfPCell(new Phrase("Группы крови коров"));
+                cell.Colspan = 2;
+                cell.HorizontalAlignment = 1;
+                //Убираем границу первой ячейки, чтобы был как заголовок
+                cell.Border = 0;
+                table.AddCell(cell);
+                //Сначала добавляем заголовки таблицы
+                cell = new PdfPCell(new Phrase(new Phrase("Номер коровы", fontParagraph)));
+                //Фоновый цвет (необязательно, просто сделаем по красивее)
+                cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                table.AddCell(cell);
+                cell = new PdfPCell(new Phrase(new Phrase("Группа крови", fontParagraph)));
+                cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                table.AddCell(cell);
+                //Добавляем все остальные ячейки
+                for (int j = 0; j < analysis_of_bloodDataGridView.RowCount - 1; j++)
+                {
+                    //for (int k = 0; k < 3; k++)
+                    //{
+                    table.AddCell(new Phrase(analysis_of_bloodDataGridView.Rows[j].Cells[1].Value.ToString(), fontParagraph));
+                    table.AddCell(new Phrase(analysis_of_bloodDataGridView.Rows[j].Cells[3].Value.ToString(), fontParagraph));
+                    //}
+                }
+                //Добавляем таблицу в документ
+                doc.Add(table);
+                //Закрываем документ
+                doc.Close();
+            }
         }
     }
 }

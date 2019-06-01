@@ -61,7 +61,13 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.analysisOfMilkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inThisMonthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numberOfDaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lactationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lactationBindingNavigator)).BeginInit();
@@ -116,14 +122,14 @@
             this.toolStripSeparator1,
             this.searchStripTextBox,
             this.searchStripButton});
-            this.lactationBindingNavigator.Location = new System.Drawing.Point(57, 0);
+            this.lactationBindingNavigator.Location = new System.Drawing.Point(126, 0);
             this.lactationBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.lactationBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.lactationBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.lactationBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lactationBindingNavigator.Name = "lactationBindingNavigator";
             this.lactationBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lactationBindingNavigator.Size = new System.Drawing.Size(945, 25);
+            this.lactationBindingNavigator.Size = new System.Drawing.Size(876, 25);
             this.lactationBindingNavigator.TabIndex = 0;
             this.lactationBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -139,8 +145,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
-            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -257,9 +263,9 @@
             this.dataGridViewTextBoxColumn9});
             this.lactationDataGridView.DataSource = this.lactationBindingSource;
             this.lactationDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lactationDataGridView.Location = new System.Drawing.Point(57, 25);
+            this.lactationDataGridView.Location = new System.Drawing.Point(126, 25);
             this.lactationDataGridView.Name = "lactationDataGridView";
-            this.lactationDataGridView.Size = new System.Drawing.Size(945, 549);
+            this.lactationDataGridView.Size = new System.Drawing.Size(876, 549);
             this.lactationDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -320,12 +326,44 @@
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отчётыToolStripMenuItem,
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(57, 574);
+            this.menuStrip1.Size = new System.Drawing.Size(126, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // отчётыToolStripMenuItem
+            // 
+            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.analysisOfMilkToolStripMenuItem,
+            this.inThisMonthToolStripMenuItem,
+            this.numberOfDaysToolStripMenuItem});
+            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // analysisOfMilkToolStripMenuItem
+            // 
+            this.analysisOfMilkToolStripMenuItem.Name = "analysisOfMilkToolStripMenuItem";
+            this.analysisOfMilkToolStripMenuItem.Size = new System.Drawing.Size(343, 22);
+            this.analysisOfMilkToolStripMenuItem.Text = "Анализ молока";
+            this.analysisOfMilkToolStripMenuItem.Click += new System.EventHandler(this.AnalysisOfMilkToolStripMenuItem_Click);
+            // 
+            // inThisMonthToolStripMenuItem
+            // 
+            this.inThisMonthToolStripMenuItem.Name = "inThisMonthToolStripMenuItem";
+            this.inThisMonthToolStripMenuItem.Size = new System.Drawing.Size(343, 22);
+            this.inThisMonthToolStripMenuItem.Text = "Какие коровы проходят лактацию в этом месяце";
+            this.inThisMonthToolStripMenuItem.Click += new System.EventHandler(this.InThisMonthToolStripMenuItem_Click);
+            // 
+            // numberOfDaysToolStripMenuItem
+            // 
+            this.numberOfDaysToolStripMenuItem.Name = "numberOfDaysToolStripMenuItem";
+            this.numberOfDaysToolStripMenuItem.Size = new System.Drawing.Size(343, 22);
+            this.numberOfDaysToolStripMenuItem.Text = "Количество дней в лактации";
+            this.numberOfDaysToolStripMenuItem.Click += new System.EventHandler(this.NumberOfDaysToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem
             // 
@@ -375,7 +413,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton lactationBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView lactationDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -390,5 +427,12 @@
         private System.Windows.Forms.ToolStripTextBox searchStripTextBox;
         private System.Windows.Forms.ToolStripButton searchStripButton;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem analysisOfMilkToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
+        public System.Windows.Forms.DataGridView lactationDataGridView;
+        private System.Windows.Forms.ToolStripMenuItem inThisMonthToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem numberOfDaysToolStripMenuItem;
     }
 }
