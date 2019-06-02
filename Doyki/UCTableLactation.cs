@@ -95,8 +95,10 @@ namespace Doyki
                 cell = new PdfPCell(new Phrase(new Phrase("Дата начала лактации", fontParagraph)));
                 cell.BackgroundColor = BaseColor.LIGHT_GRAY;
                 table.AddCell(cell);
-                cell = new PdfPCell(new Phrase(new Phrase("МДБ", fontParagraph)));
-                cell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                cell = new PdfPCell(new Phrase(new Phrase("МДБ", fontParagraph)))
+                {
+                    BackgroundColor = BaseColor.LIGHT_GRAY
+                };
                 table.AddCell(cell);
                 cell = new PdfPCell(new Phrase(new Phrase("МДЖ", fontParagraph)));
                 cell.BackgroundColor = BaseColor.LIGHT_GRAY;
@@ -248,7 +250,7 @@ namespace Doyki
             }
         }
 
-        private void lactationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void LactationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int temp = lactationDataGridView.CurrentCell.RowIndex;
             idCow = Convert.ToInt32(lactationDataGridView[1, temp].Value);

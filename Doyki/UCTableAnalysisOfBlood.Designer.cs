@@ -299,7 +299,7 @@
             this.analysis_of_bloodDataGridView.Name = "analysis_of_bloodDataGridView";
             this.analysis_of_bloodDataGridView.Size = new System.Drawing.Size(929, 549);
             this.analysis_of_bloodDataGridView.TabIndex = 1;
-            this.analysis_of_bloodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.analysis_of_bloodDataGridView_CellContentClick);
+            this.analysis_of_bloodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Analysis_of_bloodDataGridView_CellContentClick);
             // 
             // menuStrip1
             // 

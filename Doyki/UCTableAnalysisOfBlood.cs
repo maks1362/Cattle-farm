@@ -59,7 +59,7 @@ namespace Doyki
         private void BloodToolStripMenuItem_Click(object sender, EventArgs e)
         {
             saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.FileName = "Группы крови";
             saveFileDialog1.DefaultExt = "*.pdf";
             saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -83,11 +83,13 @@ namespace Doyki
                                                                                                                           //Создаем объект таблицы и передаем в нее число столбцов таблицы из нашего датасета
                 PdfPTable table = new PdfPTable(2);//MyDataSet.Tables[i].Columns.Count);
                                                    //Добавим в таблицу общий заголовок
-                PdfPCell cell = new PdfPCell(new Phrase("Группы крови коров"));
-                cell.Colspan = 2;
-                cell.HorizontalAlignment = 1;
-                //Убираем границу первой ячейки, чтобы был как заголовок
-                cell.Border = 0;
+                PdfPCell cell = new PdfPCell(new Phrase("Группы крови коров"))
+                {
+                    Colspan = 2,
+                    HorizontalAlignment = 1,
+                    //Убираем границу первой ячейки, чтобы был как заголовок
+                    Border = 0
+                };
                 table.AddCell(cell);
                 //Сначала добавляем заголовки таблицы
                 cell = new PdfPCell(new Phrase(new Phrase("Номер коровы", fontParagraph)));
@@ -113,7 +115,7 @@ namespace Doyki
             }
         }
 
-        private void analysis_of_bloodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Analysis_of_bloodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int temp = analysis_of_bloodDataGridView.CurrentCell.RowIndex;
             idCow = Convert.ToInt32(analysis_of_bloodDataGridView[1, temp].Value);
@@ -128,7 +130,7 @@ namespace Doyki
                 idChart = 1;
                 ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
                 this.Hide();
-                chartForm.ShowDialog();
+                chartForm.Show();
                 this.Show();
             }
         }
@@ -142,7 +144,7 @@ namespace Doyki
                 idChart = 2;
                 ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
                 this.Hide();
-                chartForm.ShowDialog();
+                chartForm.Show();
                 this.Show();
             }
         }
@@ -156,7 +158,7 @@ namespace Doyki
                 idChart = 3;
                 ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
                 this.Hide();
-                chartForm.ShowDialog();
+                chartForm.Show();
                 this.Show();
             }
         }
@@ -170,7 +172,7 @@ namespace Doyki
                 idChart = 4;
                 ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
                 this.Hide();
-                chartForm.ShowDialog();
+                chartForm.Show();
                 this.Show();
             }
         }
@@ -180,7 +182,7 @@ namespace Doyki
             idChart = 5;
             ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
             this.Hide();
-            chartForm.ShowDialog();
+            chartForm.Show();
             this.Show();
         }
     }

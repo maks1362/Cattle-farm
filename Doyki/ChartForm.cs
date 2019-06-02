@@ -16,9 +16,8 @@ namespace Doyki
         SqlConnection sqlConnection;
         SqlCommand sqlCommand;
         SqlDataReader sqlDataReader;
-
-        int idChart;
-        int idCow;
+        readonly int idChart;
+        readonly int idCow;
 
         public ChartForm(int idChart, int idCow)
         {
