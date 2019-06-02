@@ -52,5 +52,10 @@ namespace Doyki
         {
 
         }
+
+        private void ГенеалогическоеДеревоToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
