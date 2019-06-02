@@ -10,7 +10,7 @@ namespace Doyki
 {
     public partial class TableFormCattle : Doyki.TableForm
     {
-        private bool AllCattle = false;
+        private bool AllCattle = true;
         Uchot_udoevDataSet1TableAdapters.CattleTableAdapter adapter;
         protected Uchot_udoevDataSet1.CattleDataTable dataTable;
         public TableFormCattle(Uchot_udoevDataSet1.CattleDataTable dataTable, Uchot_udoevDataSet1TableAdapters.CattleTableAdapter adapter) : base()

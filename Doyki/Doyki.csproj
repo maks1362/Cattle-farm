@@ -127,6 +127,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Uchot_udoevDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Uchot_udoevDataSet2.cs">
+      <DependentUpon>Uchot_udoevDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Uchot_udoevDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

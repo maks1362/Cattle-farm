@@ -1998,7 +1998,7 @@ namespace Doyki {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LactationRow AddLactationRow(int ID, CattleRow parentCattleRowByFK__Lactation__ID_co__4CA06362, int Date_start, int Date_end, int Milking_days, int Lactation_number, int Live_weight, decimal MDB, decimal MDJ) {
+            public LactationRow AddLactationRow(int ID, CattleRow parentCattleRowByFK__Lactation__ID_co__4CA06362, System.DateTime Date_start, System.DateTime Date_end, int Milking_days, int Lactation_number, int Live_weight, decimal MDB, decimal MDJ) {
                 LactationRow rowLactationRow = ((LactationRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID,
@@ -2060,9 +2060,9 @@ namespace Doyki {
                 base.Columns.Add(this.columnID);
                 this.columnID_cow = new global::System.Data.DataColumn("ID_cow", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_cow);
-                this.columnDate_start = new global::System.Data.DataColumn("Date_start", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnDate_start = new global::System.Data.DataColumn("Date_start", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate_start);
-                this.columnDate_end = new global::System.Data.DataColumn("Date_end", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnDate_end = new global::System.Data.DataColumn("Date_end", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate_end);
                 this.columnMilking_days = new global::System.Data.DataColumn("Milking_days", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMilking_days);
@@ -3942,10 +3942,10 @@ namespace Doyki {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Date_start {
+            public System.DateTime Date_start {
                 get {
                     try {
-                        return ((int)(this[this.tableLactation.Date_startColumn]));
+                        return ((global::System.DateTime)(this[this.tableLactation.Date_startColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Date_start\' in table \'Lactation\' is DBNull.", e);
@@ -3958,10 +3958,10 @@ namespace Doyki {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Date_end {
+            public System.DateTime Date_end {
                 get {
                     try {
-                        return ((int)(this[this.tableLactation.Date_endColumn]));
+                        return ((global::System.DateTime)(this[this.tableLactation.Date_endColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'Date_end\' in table \'Lactation\' is DBNull.", e);
