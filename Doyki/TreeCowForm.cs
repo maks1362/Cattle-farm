@@ -16,5 +16,9 @@ namespace Doyki
         {
             InitializeComponent();
         }
+        public void RefreshImage(Image image)
+        {
+            pictureBox1.Image = image;
+        }
     }
 }
