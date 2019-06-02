@@ -76,6 +76,7 @@
             this.gLactationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lactationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lactationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yearlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apparatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apparatBindingNavigator)).BeginInit();
@@ -343,6 +344,7 @@
             this.averageyieldToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dailyToolStripMenuItem,
             this.monthlyToolStripMenuItem,
+            this.yearlyToolStripMenuItem,
             this.lactationsToolStripMenuItem,
             this.lactationToolStripMenuItem});
             this.averageyieldToolStripMenuItem.Name = "averageyieldToolStripMenuItem";
@@ -435,14 +437,23 @@
             // lactationsToolStripMenuItem
             // 
             this.lactationsToolStripMenuItem.Name = "lactationsToolStripMenuItem";
-            this.lactationsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.lactationsToolStripMenuItem.Text = "Lactations";
+            this.lactationsToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.lactationsToolStripMenuItem.Text = "По лактациям";
+            this.lactationsToolStripMenuItem.Click += new System.EventHandler(this.LactationsToolStripMenuItem_Click);
             // 
             // lactationToolStripMenuItem
             // 
             this.lactationToolStripMenuItem.Name = "lactationToolStripMenuItem";
-            this.lactationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.lactationToolStripMenuItem.Text = "Lactation";
+            this.lactationToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.lactationToolStripMenuItem.Text = "По последней лактации";
+            this.lactationToolStripMenuItem.Click += new System.EventHandler(this.LactationToolStripMenuItem_Click);
+            // 
+            // yearlyToolStripMenuItem
+            // 
+            this.yearlyToolStripMenuItem.Name = "yearlyToolStripMenuItem";
+            this.yearlyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.yearlyToolStripMenuItem.Text = "Годовые";
+            this.yearlyToolStripMenuItem.Click += new System.EventHandler(this.YearlyToolStripMenuItem_Click);
             // 
             // UCTableApparat
             // 
@@ -514,5 +525,6 @@
         private System.Windows.Forms.ToolStripMenuItem gLactationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lactationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem lactationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yearlyToolStripMenuItem;
     }
 }
