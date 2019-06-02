@@ -165,13 +165,13 @@ namespace Doyki
                     if (lactationDataGridView.Rows[j].Cells[2].Value != null && lactationDataGridView.Rows[j].Cells[2].Value.ToString().Length > 4)
                     {
                         if (Convert.ToDateTime(lactationDataGridView.Rows[j].Cells[2].Value).Date.Month >= DateTime.Today.Month &&
-                            Convert.ToDateTime(lactationDataGridView.Rows[j].Cells[3].Value).Date.Month <= DateTime.Today.Month &&
-                            (Convert.ToDateTime(lactationDataGridView.Rows[j].Cells[2].Value).Date.Year == DateTime.Today.Year || Convert.ToDateTime(lactationDataGridView.Rows[j].Cells[3].Value).Date.Year == DateTime.Today.Year) &&
-                            !id_cows.Contains(Convert.ToInt32(lactationDataGridView.Rows[j].Cells[2].Value)))
+                        Convert.ToDateTime(lactationDataGridView.Rows[j].Cells[3].Value).Date.Month <= DateTime.Today.Month &&
+                        (Convert.ToDateTime(lactationDataGridView.Rows[j].Cells[2].Value).Date.Year == DateTime.Today.Year || Convert.ToDateTime(lactationDataGridView.Rows[j].Cells[3].Value).Date.Year == DateTime.Today.Year) &&
+                        !id_cows.Contains(Convert.ToInt32(lactationDataGridView.Rows[j].Cells[1].Value)))
                         {
                             table.AddCell(new Phrase(lactationDataGridView.Rows[j].Cells[1].Value.ToString(), fontParagraph));
                             table.AddCell(new Phrase(lactationDataGridView.Rows[j].Cells[2].Value.ToString(), fontParagraph));
-                            id_cows[count_cows] = Convert.ToInt32(lactationDataGridView.Rows[j].Cells[2].Value);
+                            id_cows[count_cows] = Convert.ToInt32(lactationDataGridView.Rows[j].Cells[1].Value);
                             count_cows++;
                         }
                     }
@@ -231,12 +231,12 @@ namespace Doyki
                 {
                     if (lactationDataGridView.Rows[j].Cells[2].Value != null && lactationDataGridView.Rows[j].Cells[3].Value != null && lactationDataGridView.Rows[j].Cells[2].Value.ToString().Length > 4)
                     {
-                        if (!id_cows.Contains(Convert.ToInt32(lactationDataGridView.Rows[j].Cells[2].Value)))
+                        if (!id_cows.Contains(Convert.ToInt32(lactationDataGridView.Rows[j].Cells[1].Value)))
                         {
                             table.AddCell(new Phrase(lactationDataGridView.Rows[j].Cells[1].Value.ToString(), fontParagraph));
                             TimeSpan day = Convert.ToDateTime(lactationDataGridView.Rows[j].Cells[3].Value) - Convert.ToDateTime(lactationDataGridView.Rows[j].Cells[2].Value);
                             table.AddCell(new Phrase(day.Days.ToString(), fontParagraph));
-                            id_cows[count_cows] = Convert.ToInt32(lactationDataGridView.Rows[j].Cells[2].Value);
+                            id_cows[count_cows] = Convert.ToInt32(lactationDataGridView.Rows[j].Cells[1].Value);
                             count_cows++;
                         }
                     }
