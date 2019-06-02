@@ -20,5 +20,18 @@ namespace Doyki
         {
             pictureBox1.Image = image;
         }
+
+        private void СохранитьИзображениеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Title = "Сохранение";
+            saveFileDialog1.FileName = "";
+            saveFileDialog1.DefaultExt = "*.png";
+            saveFileDialog1.Filter = "Файлы image (*.img)|*.png|Все файлы (*.*)|*.*";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+
+                pictureBox1.Image.Save(saveFileDialog1.FileName);
+            }
+        }
     }
 }
