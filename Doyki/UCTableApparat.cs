@@ -16,6 +16,9 @@ namespace Doyki
 {
     public partial class UCTableApparat : UserControl
     {
+        int idChart = 0;
+        int idCow = 0;
+
         public UCTableApparat()
         {
             InitializeComponent();
@@ -258,6 +261,51 @@ namespace Doyki
                 //Закрываем документ
                 doc.Close();
             }
+        }
+
+        private void GDailyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idChart = 8;
+            ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+            this.Hide();
+            chartForm.ShowDialog();
+            this.Show();
+        }
+
+        private void GMonthlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idChart = 9;
+            ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+            this.Hide();
+            chartForm.ShowDialog();
+            this.Show();
+        }
+
+        private void GYearlyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idChart = 10;
+            ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+            this.Hide();
+            chartForm.ShowDialog();
+            this.Show();
+        }
+
+        private void GLactationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idChart = 11;
+            ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+            this.Hide();
+            chartForm.ShowDialog();
+            this.Show();
+        }
+
+        private void GLactationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idChart = 12;
+            ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+            this.Hide();
+            chartForm.ShowDialog();
+            this.Show();
         }
     }
 }

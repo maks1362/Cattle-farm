@@ -67,6 +67,15 @@
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.graphicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.averageMilkYieldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gDailyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gMonthlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gYearlyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gLactationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gLactationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lactationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lactationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apparatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.apparatBindingNavigator)).BeginInit();
@@ -312,6 +321,7 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.отчётыToolStripMenuItem,
+            this.graphicsToolStripMenuItem,
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -332,7 +342,9 @@
             // 
             this.averageyieldToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dailyToolStripMenuItem,
-            this.monthlyToolStripMenuItem});
+            this.monthlyToolStripMenuItem,
+            this.lactationsToolStripMenuItem,
+            this.lactationToolStripMenuItem});
             this.averageyieldToolStripMenuItem.Name = "averageyieldToolStripMenuItem";
             this.averageyieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.averageyieldToolStripMenuItem.Text = "Средний удой";
@@ -364,6 +376,73 @@
             this.backToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
             this.backToolStripMenuItem.Text = "Назад";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
+            // 
+            // graphicsToolStripMenuItem
+            // 
+            this.graphicsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.averageMilkYieldToolStripMenuItem});
+            this.graphicsToolStripMenuItem.Name = "graphicsToolStripMenuItem";
+            this.graphicsToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.graphicsToolStripMenuItem.Text = "Графики";
+            // 
+            // averageMilkYieldToolStripMenuItem
+            // 
+            this.averageMilkYieldToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gDailyToolStripMenuItem,
+            this.gMonthlyToolStripMenuItem,
+            this.gYearlyToolStripMenuItem,
+            this.gLactationsToolStripMenuItem,
+            this.gLactationToolStripMenuItem});
+            this.averageMilkYieldToolStripMenuItem.Name = "averageMilkYieldToolStripMenuItem";
+            this.averageMilkYieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.averageMilkYieldToolStripMenuItem.Text = "Средний удой";
+            // 
+            // gDailyToolStripMenuItem
+            // 
+            this.gDailyToolStripMenuItem.Name = "gDailyToolStripMenuItem";
+            this.gDailyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gDailyToolStripMenuItem.Text = "Суточный";
+            this.gDailyToolStripMenuItem.Click += new System.EventHandler(this.GDailyToolStripMenuItem_Click);
+            // 
+            // gMonthlyToolStripMenuItem
+            // 
+            this.gMonthlyToolStripMenuItem.Name = "gMonthlyToolStripMenuItem";
+            this.gMonthlyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gMonthlyToolStripMenuItem.Text = "Месячный";
+            this.gMonthlyToolStripMenuItem.Click += new System.EventHandler(this.GMonthlyToolStripMenuItem_Click);
+            // 
+            // gYearlyToolStripMenuItem
+            // 
+            this.gYearlyToolStripMenuItem.Name = "gYearlyToolStripMenuItem";
+            this.gYearlyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gYearlyToolStripMenuItem.Text = "Годовой";
+            this.gYearlyToolStripMenuItem.Click += new System.EventHandler(this.GYearlyToolStripMenuItem_Click);
+            // 
+            // gLactationsToolStripMenuItem
+            // 
+            this.gLactationsToolStripMenuItem.Name = "gLactationsToolStripMenuItem";
+            this.gLactationsToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gLactationsToolStripMenuItem.Text = "По лактациям";
+            this.gLactationsToolStripMenuItem.Click += new System.EventHandler(this.GLactationsToolStripMenuItem_Click);
+            // 
+            // gLactationToolStripMenuItem
+            // 
+            this.gLactationToolStripMenuItem.Name = "gLactationToolStripMenuItem";
+            this.gLactationToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gLactationToolStripMenuItem.Text = "По последней лактации";
+            this.gLactationToolStripMenuItem.Click += new System.EventHandler(this.GLactationToolStripMenuItem_Click);
+            // 
+            // lactationsToolStripMenuItem
+            // 
+            this.lactationsToolStripMenuItem.Name = "lactationsToolStripMenuItem";
+            this.lactationsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lactationsToolStripMenuItem.Text = "Lactations";
+            // 
+            // lactationToolStripMenuItem
+            // 
+            this.lactationToolStripMenuItem.Name = "lactationToolStripMenuItem";
+            this.lactationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.lactationToolStripMenuItem.Text = "Lactation";
             // 
             // UCTableApparat
             // 
@@ -426,5 +505,14 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
         private System.Windows.Forms.ToolStripMenuItem monthlyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem milkOutputToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem graphicsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem averageMilkYieldToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gDailyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gMonthlyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gYearlyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gLactationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gLactationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lactationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lactationToolStripMenuItem;
     }
 }

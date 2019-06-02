@@ -77,6 +77,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bloodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graphicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lactationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.breedsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.familiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allAnimalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
@@ -293,6 +299,7 @@
             this.analysis_of_bloodDataGridView.Name = "analysis_of_bloodDataGridView";
             this.analysis_of_bloodDataGridView.Size = new System.Drawing.Size(876, 549);
             this.analysis_of_bloodDataGridView.TabIndex = 1;
+            this.analysis_of_bloodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.analysis_of_bloodDataGridView_CellContentClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -437,6 +444,7 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.отчётыToolStripMenuItem,
+            this.graphicsToolStripMenuItem,
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -449,20 +457,67 @@
             this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bloodToolStripMenuItem});
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
-            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
             // 
             // bloodToolStripMenuItem
             // 
             this.bloodToolStripMenuItem.Name = "bloodToolStripMenuItem";
-            this.bloodToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bloodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.bloodToolStripMenuItem.Text = "Группы крови";
             this.bloodToolStripMenuItem.Click += new System.EventHandler(this.BloodToolStripMenuItem_Click);
+            // 
+            // graphicsToolStripMenuItem
+            // 
+            this.graphicsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lactationsToolStripMenuItem,
+            this.breedsToolStripMenuItem,
+            this.linesToolStripMenuItem,
+            this.familiesToolStripMenuItem,
+            this.allAnimalsToolStripMenuItem});
+            this.graphicsToolStripMenuItem.Name = "graphicsToolStripMenuItem";
+            this.graphicsToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
+            this.graphicsToolStripMenuItem.Text = "Графики";
+            // 
+            // lactationsToolStripMenuItem
+            // 
+            this.lactationsToolStripMenuItem.Name = "lactationsToolStripMenuItem";
+            this.lactationsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.lactationsToolStripMenuItem.Text = "По лактациям";
+            this.lactationsToolStripMenuItem.Click += new System.EventHandler(this.LactationsToolStripMenuItem_Click);
+            // 
+            // breedsToolStripMenuItem
+            // 
+            this.breedsToolStripMenuItem.Name = "breedsToolStripMenuItem";
+            this.breedsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.breedsToolStripMenuItem.Text = "По породам";
+            this.breedsToolStripMenuItem.Click += new System.EventHandler(this.BreedsToolStripMenuItem_Click);
+            // 
+            // linesToolStripMenuItem
+            // 
+            this.linesToolStripMenuItem.Name = "linesToolStripMenuItem";
+            this.linesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.linesToolStripMenuItem.Text = "По линиям";
+            this.linesToolStripMenuItem.Click += new System.EventHandler(this.LinesToolStripMenuItem_Click);
+            // 
+            // familiesToolStripMenuItem
+            // 
+            this.familiesToolStripMenuItem.Name = "familiesToolStripMenuItem";
+            this.familiesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.familiesToolStripMenuItem.Text = "По семействам";
+            this.familiesToolStripMenuItem.Click += new System.EventHandler(this.FamiliesToolStripMenuItem_Click);
+            // 
+            // allAnimalsToolStripMenuItem
+            // 
+            this.allAnimalsToolStripMenuItem.Name = "allAnimalsToolStripMenuItem";
+            this.allAnimalsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.allAnimalsToolStripMenuItem.Text = "По всем животным";
+            this.allAnimalsToolStripMenuItem.Click += new System.EventHandler(this.AllAnimalsToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
             this.backToolStripMenuItem.Text = "Назад";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
@@ -540,5 +595,11 @@
         private System.Windows.Forms.ToolStripMenuItem bloodToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
+        private System.Windows.Forms.ToolStripMenuItem graphicsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lactationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem breedsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem linesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem familiesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem allAnimalsToolStripMenuItem;
     }
 }

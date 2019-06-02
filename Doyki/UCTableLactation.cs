@@ -16,6 +16,9 @@ namespace Doyki
 {
     public partial class UCTableLactation : UserControl
     {
+        int idChart = 0;
+        int idCow = 0;
+
         public UCTableLactation()
         {
             InitializeComponent();
@@ -242,6 +245,40 @@ namespace Doyki
                 doc.Add(table);
                 //Закрываем документ
                 doc.Close();
+            }
+        }
+
+        private void lactationDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int temp = lactationDataGridView.CurrentCell.RowIndex;
+            idCow = Convert.ToInt32(lactationDataGridView[1, temp].Value);
+        }
+
+        private void MdbToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (idCow == 0)
+                MessageBox.Show("Для построения графика необходимо выбрать корову из таблицы", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                idChart = 6;
+                ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+                this.Hide();
+                chartForm.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private void MdzhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (idCow == 0)
+                MessageBox.Show("Для построения графика необходимо выбрать корову из таблицы", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                idChart = 7;
+                ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+                this.Hide();
+                chartForm.ShowDialog();
+                this.Show();
             }
         }
     }

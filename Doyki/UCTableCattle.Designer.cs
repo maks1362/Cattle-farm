@@ -65,7 +65,6 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.диаграToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource)).BeginInit();
@@ -357,19 +356,12 @@
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.диаграToolStripMenuItem,
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(126, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // диаграToolStripMenuItem
-            // 
-            this.диаграToolStripMenuItem.Name = "диаграToolStripMenuItem";
-            this.диаграToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.диаграToolStripMenuItem.Text = "Диаграммы";
             // 
             // backToolStripMenuItem
             // 
@@ -434,7 +426,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem диаграToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox searchStripTextBox;
         private System.Windows.Forms.ToolStripButton searchStripButton;

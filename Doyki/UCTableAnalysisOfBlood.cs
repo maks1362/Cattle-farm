@@ -16,6 +16,9 @@ namespace Doyki
 {
     public partial class UCTableAnalysisOfBlood : UserControl
     {
+        int idChart = 0;
+        int idCow = 0;
+
         public UCTableAnalysisOfBlood()
         {
             InitializeComponent();
@@ -108,6 +111,77 @@ namespace Doyki
                 //Закрываем документ
                 doc.Close();
             }
+        }
+
+        private void analysis_of_bloodDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int temp = analysis_of_bloodDataGridView.CurrentCell.RowIndex;
+            idCow = Convert.ToInt32(analysis_of_bloodDataGridView[1, temp].Value);
+        }
+
+        private void LactationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (idCow == 0)
+                MessageBox.Show("Для построения графика необходимо выбрать корову из таблицы", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                idChart = 1;
+                ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+                this.Hide();
+                chartForm.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private void BreedsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (idCow == 0)
+                MessageBox.Show("Для построения графика необходимо выбрать корову из таблицы", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                idChart = 2;
+                ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+                this.Hide();
+                chartForm.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private void LinesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (idCow == 0)
+                MessageBox.Show("Для построения графика необходимо выбрать корову из таблицы", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                idChart = 3;
+                ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+                this.Hide();
+                chartForm.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private void FamiliesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (idCow == 0)
+                MessageBox.Show("Для построения графика необходимо выбрать корову из таблицы", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                idChart = 4;
+                ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+                this.Hide();
+                chartForm.ShowDialog();
+                this.Show();
+            }
+        }
+
+        private void AllAnimalsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            idChart = 5;
+            ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
+            this.Hide();
+            chartForm.ShowDialog();
+            this.Show();
         }
     }
 }
