@@ -113,6 +113,12 @@
     <Compile Include="TableForms\TableForm.Designer.cs">
       <DependentUpon>TableForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TreeCowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TreeCowForm.Designer.cs">
+      <DependentUpon>TreeCowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Uchot_udoevDataSet1.cs">
       <DependentUpon>Uchot_udoevDataSet1.xsd</DependentUpon>
     </Compile>
@@ -198,6 +204,9 @@
     </Compile>
     <EmbeddedResource Include="TableForms\TableForm.resx">
       <DependentUpon>TableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeCowForm.resx">
+      <DependentUpon>TreeCowForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCTableAnalysisOfBlood.resx">
       <DependentUpon>UCTableAnalysisOfBlood.cs</DependentUpon>
