@@ -51,6 +51,12 @@
             this.searchStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchStripButton = new System.Windows.Forms.ToolStripButton();
             this.reproductiveDataGridView = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reproductivityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,12 +67,6 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reproductivityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reproductiveBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reproductiveBindingNavigator)).BeginInit();
@@ -268,66 +268,6 @@
             this.reproductiveDataGridView.Size = new System.Drawing.Size(936, 549);
             this.reproductiveDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID_cow";
-            this.dataGridViewTextBoxColumn2.HeaderText = "ID_cow";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "NOIPF";
-            this.dataGridViewTextBoxColumn3.HeaderText = "NOIPF";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Date_insemination";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Date_insemination";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Date_otella";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Date_otella";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Date_past_otella";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Date_past_otella";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Date_first_otella";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Date_first_otella";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Service_period";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Service_period";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Dry_period";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Dry_period";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "ID_bull";
-            this.dataGridViewTextBoxColumn10.HeaderText = "ID_bull";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -340,19 +280,12 @@
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.backToolStripMenuItem.Text = "Назад";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
-            // 
             // отчётыToolStripMenuItem
             // 
             this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reproductivityToolStripMenuItem});
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
-            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(53, 19);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
             // 
             // reproductivityToolStripMenuItem
@@ -361,6 +294,73 @@
             this.reproductivityToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.reproductivityToolStripMenuItem.Text = "Отчет репродуктивности";
             this.reproductivityToolStripMenuItem.Click += new System.EventHandler(this.ReproductivityToolStripMenuItem_Click);
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(53, 19);
+            this.backToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Номер записи";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID_cow";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Номер коровы";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "NOIPF";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Количество осеменений на одно плодотворное";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Date_insemination";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Дата осеменения";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Date_otella";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Дата отёла";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Date_past_otella";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Дата последнего отёла";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Date_first_otella";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Дата первого отёла";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Service_period";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Сервис период";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Dry_period";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Сухостойный период";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "ID_bull";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Номер быка";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // UCTableReproductive
             // 
@@ -404,6 +404,15 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton reproductiveBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView reproductiveDataGridView;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox searchStripTextBox;
+        private System.Windows.Forms.ToolStripButton searchStripButton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reproductivityToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -414,14 +423,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox searchStripTextBox;
-        private System.Windows.Forms.ToolStripButton searchStripButton;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reproductivityToolStripMenuItem;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
     }
 }
