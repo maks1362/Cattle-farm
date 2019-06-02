@@ -51,6 +51,18 @@
             this.searchStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchStripButton = new System.Windows.Forms.ToolStripButton();
             this.analysis_of_bloodDataGridView = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bloodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graphicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lactationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.breedsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.linesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.familiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.allAnimalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,18 +86,6 @@
             this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bloodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.graphicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lactationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.breedsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.linesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.familiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.allAnimalsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.analysis_of_bloodBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.analysis_of_bloodBindingNavigator)).BeginInit();
@@ -301,6 +301,88 @@
             this.analysis_of_bloodDataGridView.TabIndex = 1;
             this.analysis_of_bloodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.analysis_of_bloodDataGridView_CellContentClick);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отчётыToolStripMenuItem,
+            this.graphicsToolStripMenuItem,
+            this.backToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(73, 574);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // отчётыToolStripMenuItem
+            // 
+            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bloodToolStripMenuItem});
+            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
+            this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // bloodToolStripMenuItem
+            // 
+            this.bloodToolStripMenuItem.Name = "bloodToolStripMenuItem";
+            this.bloodToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.bloodToolStripMenuItem.Text = "Группы крови";
+            this.bloodToolStripMenuItem.Click += new System.EventHandler(this.BloodToolStripMenuItem_Click);
+            // 
+            // graphicsToolStripMenuItem
+            // 
+            this.graphicsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lactationsToolStripMenuItem,
+            this.breedsToolStripMenuItem,
+            this.linesToolStripMenuItem,
+            this.familiesToolStripMenuItem,
+            this.allAnimalsToolStripMenuItem});
+            this.graphicsToolStripMenuItem.Name = "graphicsToolStripMenuItem";
+            this.graphicsToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
+            this.graphicsToolStripMenuItem.Text = "Графики";
+            // 
+            // lactationsToolStripMenuItem
+            // 
+            this.lactationsToolStripMenuItem.Name = "lactationsToolStripMenuItem";
+            this.lactationsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.lactationsToolStripMenuItem.Text = "По лактациям";
+            this.lactationsToolStripMenuItem.Click += new System.EventHandler(this.LactationsToolStripMenuItem_Click);
+            // 
+            // breedsToolStripMenuItem
+            // 
+            this.breedsToolStripMenuItem.Name = "breedsToolStripMenuItem";
+            this.breedsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.breedsToolStripMenuItem.Text = "По породам";
+            this.breedsToolStripMenuItem.Click += new System.EventHandler(this.BreedsToolStripMenuItem_Click);
+            // 
+            // linesToolStripMenuItem
+            // 
+            this.linesToolStripMenuItem.Name = "linesToolStripMenuItem";
+            this.linesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.linesToolStripMenuItem.Text = "По линиям";
+            this.linesToolStripMenuItem.Click += new System.EventHandler(this.LinesToolStripMenuItem_Click);
+            // 
+            // familiesToolStripMenuItem
+            // 
+            this.familiesToolStripMenuItem.Name = "familiesToolStripMenuItem";
+            this.familiesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.familiesToolStripMenuItem.Text = "По семействам";
+            this.familiesToolStripMenuItem.Click += new System.EventHandler(this.FamiliesToolStripMenuItem_Click);
+            // 
+            // allAnimalsToolStripMenuItem
+            // 
+            this.allAnimalsToolStripMenuItem.Name = "allAnimalsToolStripMenuItem";
+            this.allAnimalsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.allAnimalsToolStripMenuItem.Text = "По всем животным";
+            this.allAnimalsToolStripMenuItem.Click += new System.EventHandler(this.AllAnimalsToolStripMenuItem_Click);
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
+            this.backToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
@@ -438,88 +520,6 @@
             this.dataGridViewTextBoxColumn23.DataPropertyName = "AST";
             this.dataGridViewTextBoxColumn23.HeaderText = "АСТ";
             this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отчётыToolStripMenuItem,
-            this.graphicsToolStripMenuItem,
-            this.backToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(73, 574);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // отчётыToolStripMenuItem
-            // 
-            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bloodToolStripMenuItem});
-            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
-            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.отчётыToolStripMenuItem.Text = "Отчёты";
-            // 
-            // bloodToolStripMenuItem
-            // 
-            this.bloodToolStripMenuItem.Name = "bloodToolStripMenuItem";
-            this.bloodToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bloodToolStripMenuItem.Text = "Группы крови";
-            this.bloodToolStripMenuItem.Click += new System.EventHandler(this.BloodToolStripMenuItem_Click);
-            // 
-            // graphicsToolStripMenuItem
-            // 
-            this.graphicsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lactationsToolStripMenuItem,
-            this.breedsToolStripMenuItem,
-            this.linesToolStripMenuItem,
-            this.familiesToolStripMenuItem,
-            this.allAnimalsToolStripMenuItem});
-            this.graphicsToolStripMenuItem.Name = "graphicsToolStripMenuItem";
-            this.graphicsToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.graphicsToolStripMenuItem.Text = "Графики";
-            // 
-            // lactationsToolStripMenuItem
-            // 
-            this.lactationsToolStripMenuItem.Name = "lactationsToolStripMenuItem";
-            this.lactationsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.lactationsToolStripMenuItem.Text = "По лактациям";
-            this.lactationsToolStripMenuItem.Click += new System.EventHandler(this.LactationsToolStripMenuItem_Click);
-            // 
-            // breedsToolStripMenuItem
-            // 
-            this.breedsToolStripMenuItem.Name = "breedsToolStripMenuItem";
-            this.breedsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.breedsToolStripMenuItem.Text = "По породам";
-            this.breedsToolStripMenuItem.Click += new System.EventHandler(this.BreedsToolStripMenuItem_Click);
-            // 
-            // linesToolStripMenuItem
-            // 
-            this.linesToolStripMenuItem.Name = "linesToolStripMenuItem";
-            this.linesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.linesToolStripMenuItem.Text = "По линиям";
-            this.linesToolStripMenuItem.Click += new System.EventHandler(this.LinesToolStripMenuItem_Click);
-            // 
-            // familiesToolStripMenuItem
-            // 
-            this.familiesToolStripMenuItem.Name = "familiesToolStripMenuItem";
-            this.familiesToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.familiesToolStripMenuItem.Text = "По семействам";
-            this.familiesToolStripMenuItem.Click += new System.EventHandler(this.FamiliesToolStripMenuItem_Click);
-            // 
-            // allAnimalsToolStripMenuItem
-            // 
-            this.allAnimalsToolStripMenuItem.Name = "allAnimalsToolStripMenuItem";
-            this.allAnimalsToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
-            this.allAnimalsToolStripMenuItem.Text = "По всем животным";
-            this.allAnimalsToolStripMenuItem.Click += new System.EventHandler(this.AllAnimalsToolStripMenuItem_Click);
-            // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
-            this.backToolStripMenuItem.Text = "Назад";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
             // UCTableAnalysisOfBlood
             // 

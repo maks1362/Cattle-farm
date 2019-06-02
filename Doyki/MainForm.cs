@@ -9,166 +9,81 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-/*
- * Макс 26.03.19: Первая пункт меню будет комбо бокс из выбираемых таблиц(скот или доильные аппараты)
- * Далее пункт изменения данных в текущей таблице
- * Далее пункты отчётов и диаграмм(отдельные формы будут открываться)
- * */
-
-//this.CommandCollection[1] = this.CommandCollection[1].Clone();
-//this.CommandCollection[1].CommandText = "SELECT ID, Breed, Purity_of_breed, Gender, ID_mother, ID_father, Date_of_birth, D" +
-//"ate_of_death, Cause_of_death, Belongs, Place_of_birth, Generation_number, Line F" +
-//"ROM dbo.Cattle WHERE Date_of_birth IS NOT NULL";
-
 namespace Doyki
 {
     public partial class MainForm : Form
     {
+        //Загрузка котролов с таблицами
+        private readonly UCTableCattle UCT1 = new UCTableCattle();
+        private readonly UCTableAnalysisOfBlood UCT2 = new UCTableAnalysisOfBlood();
+        private readonly UCTableLactation UCT3 = new UCTableLactation();
+        private readonly UCTableApparat UCT4 = new UCTableApparat();
+        private readonly UCTableReproductive UCT5 = new UCTableReproductive();
+
         //Для захвата позиции мышки
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
-        private const int cGrip = 300;
-        private const int cCaption = 600;
-        private TableForm TableFormCattle;
 
         [DllImportAttribute("user32.dll")]
         private static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         private static extern bool ReleaseCapture();
 
-        //Переменные
-
-        //static Form form = MainForm.ActiveForm;
-        /*private static IList<string> dataTables = new List<string>
-            {
-                { "Скот" },//cattle
-                { "Доильные аппараты" },//milking machine
-                { "Лактации" },//и анализы молока
-                { "Анализы крови" },//blood analyses
-                { "Репродуктивность" }
-               // new Element() { Symbol="Sc", Name="Scandium", AtomicNumber=21}},
-            };*/
-
-
-
-
-        /// <summary>
-        /// Создаёт генеалогическое TreeView для коровы "cowId"
-        /// </summary>
-        /// <param name="cowId">Корова для которой строиться генеалогическое древо</param>
-        /// <param name="dataGrid">Анализируемая таблица с коровами</param>
-        /// <param name="nodeCountOut">Костыль для счёта общего количества узлов</param>
-        /// <returns></returns>
-        private TreeView MakeTree(int cowId, DataGridView dataGrid, out int nodeCountOut)
-        {
-            int nodeCount = 1;//Ещё один костыль, out переменные нельзя использовать во влож функциях
-            TreeView tree = treeView1; // new TreeView();
-            tree.Nodes.Add(new TreeNode(cowId.ToString()));
-            GetNodes(tree.Nodes[0], cowId.ToString());
-
-            nodeCountOut = nodeCount;
-            return tree;
-
-
-            ///Рекурсивная процедура создания генеологического древа для коровы
-            void GetNodes(TreeNode curNode, string id) 
-            {
-                if (id != null)
-                {
-                    int idGrid = -1;
-                    for (int i = 0; i < dataGrid.RowCount; i++)
-                    {
-                        if (dataGrid[0, i].Value.ToString() == id)
-                        {
-                            idGrid = i;
-                            break;
-                        }
-                    }
-
-                    string newNode = dataGrid[5, idGrid].Value.ToString();
-                    if (newNode != "")
-                    {
-                        curNode.Nodes.Add(newNode, newNode);
-                        nodeCount++;
-                        GetNodes(curNode.Nodes[newNode], newNode);
-                    }
-                    //else
-                        //MessageBox.Show("pizdaaaa2");
-                }
-                else
-                    MessageBox.Show("xyiii1");
-                return;
-
-            }
-        }
-
         public MainForm()
         {
             InitializeComponent();
             this.SetStyle(ControlStyles.ResizeRedraw, true);
-
-            CattleToolStripMenuItem_Click(null, null);
-            pictureBox1.Image = DrawBinaryTree(TableFormCattle.dataGridView1);//
-            
-
-            //dataGrid = ;
-
         }
 
-        /*public void Mess(string mes)
+        //Resize
+        protected override void WndProc(ref Message m)
         {
-            MessageBox.Show(mes);
-        }*/
+            const UInt32 WM_NCHITTEST = 0x0084;
+            const UInt32 WM_MOUSEMOVE = 0x0200;
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+            const UInt32 HTBOTTOMRIGHT = 17;
+
+            const int RESIZE_HANDLE_SIZE = 30;
+            bool handled = false;
+            if (m.Msg == WM_NCHITTEST || m.Msg == WM_MOUSEMOVE)
+            {
+                Size formSize = this.Size;
+                Point screenPoint = new Point(m.LParam.ToInt32());
+                Point clientPoint = this.PointToClient(screenPoint);
+
+                Dictionary<UInt32, Rectangle> boxes = new Dictionary<UInt32, Rectangle>() {{HTBOTTOMRIGHT, new Rectangle(formSize.Width - RESIZE_HANDLE_SIZE, formSize.Height - RESIZE_HANDLE_SIZE, RESIZE_HANDLE_SIZE, RESIZE_HANDLE_SIZE)}};
+
+                foreach (KeyValuePair<UInt32, Rectangle> hitBox in boxes)
+                {
+                    if (hitBox.Value.Contains(clientPoint))
+                    {
+                        m.Result = (IntPtr)hitBox.Key;
+                        handled = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!handled)
+                base.WndProc(ref m);
         }
 
-        private void CattleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //this.cattleTableAdapter1.Update(this.uchot_udoevDataSet1);
-            //this.cattleTableAdapter1.FillMain(this.uchot_udoevDataSet1.Cattle);
-
-            TableFormCattle = new TableFormCattle(this.uchot_udoevDataSet1.Cattle, this.cattleTableAdapter1);
-
-            TableFormCattle.Show();
-
-        }
-        private void ApparatToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TableForm tableForm = new TableFormApparat(this.uchot_udoevDataSet1.Apparat, this.apparatTableAdapter1);
-            tableForm.Show();
-        }
-        private void AnalysisOfBloodToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TableForm tableForm = new TableFormAnalysis_of_blood(this.uchot_udoevDataSet1.Analysis_of_blood, this.analysis_of_bloodTableAdapter1);
-            tableForm.Show();
-        }
-        private void LactationToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TableForm tableForm = new TableFormLactation(this.uchot_udoevDataSet1.Lactation, this.lactationTableAdapter1);
-            tableForm.Show();
-        }
-        private void ReproductiveToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            TableForm tableForm = new TableFormReproductive(this.uchot_udoevDataSet1.Reproductive, this.reproductiveTableAdapter1);
-            tableForm.Show();
-        }
-
+        //Закрыть
         protected virtual void CloseButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //Сверенуть
         private void MinimizeButton_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        //Создание доч. окна
         private void PlusWindowButton_Click(object sender, EventArgs e)
         {
-            Form Child  = new ChildForm();
-            Child.Owner = this;
+            Form Child = new ChildForm();
             Child.Show();
         }
 
@@ -193,25 +108,99 @@ namespace Doyki
             }
         }
 
-        //Resize - не работает  
-        protected override void WndProc(ref Message m)
+        private void CattleButton_Click(object sender, EventArgs e)
         {
-            if (m.Msg == 0x84)
+            tableLayoutPanel1.Hide();
+            this.Text = "Скот";
+            nameLabel.Text = "Скот";
+            if (this.UCT1.Parent == null)
             {
-                Point pos = new Point(m.LParam.ToInt32());
-                pos = this.PointToClient(pos);
-                if (pos.Y < cCaption)
-                {
-                    m.Result = (IntPtr)2;
-                    return;
-                }
-                if (pos.X >= this.ClientSize.Width - cGrip && pos.Y >= this.ClientSize.Height - cGrip)
-                {
-                    m.Result = (IntPtr)17;
-                    return;
-                }
+                this.Controls.Add(UCT1);
+                this.UCT1.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             }
-            base.WndProc(ref m);
+            else
+            {
+                this.UCT1.Show();
+            }
+        }
+
+        private void AnalysOfBloodButton_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.Hide();
+            this.Text = "Анализ крови";
+            nameLabel.Text = "Анализ крови";
+            if (this.UCT2.Parent == null)
+            {
+                this.Controls.Add(UCT2);
+                this.UCT2.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT2.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            }
+            else
+            {
+                this.UCT2.Show();
+            }
+
+        }
+
+        private void LactationButton_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.Hide();
+            this.Text = "Лактация";
+            nameLabel.Text = "Лактация";
+            if (this.UCT3.Parent == null)
+            {
+                this.Controls.Add(UCT3);
+                this.UCT3.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT3.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            }
+            else
+            {
+                this.UCT3.Show();
+            }
+        }
+
+        private void ApparatButton_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.Hide();
+            this.Text = "Доильный аппарат";
+            nameLabel.Text = "Доильный аппарат";
+            if (this.UCT4.Parent == null)
+            {
+                this.Controls.Add(UCT4);
+                this.UCT4.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT4.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            }
+            else
+            {
+                this.UCT4.Show();
+            }
+        }
+
+        private void ReproductiveButton_Click(object sender, EventArgs e)
+        {
+            tableLayoutPanel1.Hide();
+            this.Text = "Репродуктивность";
+            nameLabel.Text = "Репродуктивность";
+            if (this.UCT5.Parent == null)
+            {
+                this.Controls.Add(UCT5);
+                this.UCT5.Dock = System.Windows.Forms.DockStyle.Fill;
+                this.UCT5.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
+            }
+            else
+            {
+                this.UCT5.Show();
+            }
+        }
+
+        private void TableLayoutPanel1_VisibleChanged(object sender, EventArgs e)
+        {
+            if (tableLayoutPanel1.Visible == true)
+            {
+                this.Text = "Выберите таблицу";
+                nameLabel.Text = "Выберите таблицу";
+            }
         }
 
 

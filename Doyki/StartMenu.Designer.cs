@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartMenu));
             this.connectButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.ErrorPictureBox = new System.Windows.Forms.PictureBox();
@@ -54,7 +55,7 @@
             this.connectButton.TabIndex = 2;
             this.connectButton.Text = "Подключиться к БД";
             this.connectButton.UseVisualStyleBackColor = false;
-            this.connectButton.Click += new System.EventHandler(this.connect_Click);
+            this.connectButton.Click += new System.EventHandler(this.Connect_Click);
             // 
             // textBox1
             // 
@@ -130,7 +131,7 @@
             this.close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.close.FlatAppearance.BorderSize = 0;
             this.close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.close.ForeColor = System.Drawing.SystemColors.Control;
             this.close.Location = new System.Drawing.Point(370, 0);
@@ -139,7 +140,7 @@
             this.close.Size = new System.Drawing.Size(30, 30);
             this.close.TabIndex = 1;
             this.close.UseVisualStyleBackColor = false;
-            this.close.Click += new System.EventHandler(this.close_Click);
+            this.close.Click += new System.EventHandler(this.Close_Click);
             // 
             // StartMenu
             // 
@@ -155,6 +156,7 @@
             this.Controls.Add(this.close);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StartMenu";
