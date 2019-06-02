@@ -11,6 +11,7 @@ using iTextSharp;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Diagnostics;
 
 namespace Doyki
 {
@@ -56,10 +57,10 @@ namespace Doyki
 
         private void AnalysisOfMilkToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Анализ молока коров";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -115,15 +116,16 @@ namespace Doyki
                 doc.Add(table);
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 
         private void InThisMonthToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Какие коровы проходят лактацию в этом месяце";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -182,15 +184,16 @@ namespace Doyki
                 doc.Add(table);
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 
         private void NumberOfDaysToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Количество дней в лактации";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -247,6 +250,7 @@ namespace Doyki
                 doc.Add(table);
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 

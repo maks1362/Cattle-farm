@@ -270,7 +270,7 @@
             this.lactationDataGridView.Name = "lactationDataGridView";
             this.lactationDataGridView.Size = new System.Drawing.Size(929, 549);
             this.lactationDataGridView.TabIndex = 1;
-            this.lactationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lactationDataGridView_CellContentClick);
+            this.lactationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LactationDataGridView_CellContentClick);
             // 
             // menuStrip1
             // 

@@ -11,6 +11,7 @@ using iTextSharp;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Diagnostics;
 
 namespace Doyki
 {
@@ -56,10 +57,10 @@ namespace Doyki
 
         private void DailyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Средний удой за сутки";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -127,15 +128,16 @@ namespace Doyki
                 doc.Add(new Paragraph("Погрешность = 0.001", fontParagraph));
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 
         private void MonthlyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Средний удой за месяц";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -203,15 +205,16 @@ namespace Doyki
                 doc.Add(new Paragraph("Погрешность = 0.001", fontParagraph));
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 
         private void YearlyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Средний удой за год";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -279,15 +282,16 @@ namespace Doyki
                 doc.Add(new Paragraph("Погрешность = 0.001", fontParagraph));
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 
         private void LactationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Cредний удой по всем лактациям";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -355,15 +359,16 @@ namespace Doyki
                 doc.Add(new Paragraph("Погрешность = 0.001", fontParagraph));
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 
         private void LactationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Cредний удой по последней лактации";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -431,15 +436,16 @@ namespace Doyki
                 doc.Add(new Paragraph("Погрешность = 0.001", fontParagraph));
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 
         private void MilkOutputToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Молокоотдача коров";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -488,6 +494,7 @@ namespace Doyki
                 doc.Add(table);
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 

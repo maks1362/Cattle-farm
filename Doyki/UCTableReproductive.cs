@@ -11,6 +11,7 @@ using iTextSharp;
 using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using System.Diagnostics;
 
 namespace Doyki
 {
@@ -54,10 +55,10 @@ namespace Doyki
 
         private void ReproductivityToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение документа";
+            saveFileDialog1.FileName = "Молокоотдача коров";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -124,6 +125,7 @@ namespace Doyki
                 doc.Add(table);
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
     }

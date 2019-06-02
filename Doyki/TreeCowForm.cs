@@ -23,13 +23,12 @@ namespace Doyki
 
         private void СохранитьИзображениеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
-            saveFileDialog1.FileName = "";
+            saveFileDialog1.Title = "Сохранение изображения";
+            saveFileDialog1.FileName = "Picture";
             saveFileDialog1.DefaultExt = "*.png";
-            saveFileDialog1.Filter = "Файлы image (*.img)|*.png|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файл PNG|*.png|Файл JPG|*.jpg|Файл JPEG|*.jpeg|Файл BMP|*.bmp|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
-
                 pictureBox1.Image.Save(saveFileDialog1.FileName);
             }
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -58,10 +59,10 @@ namespace Doyki
 
         private void BloodToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialog1.Title = "Сохранение";
+            saveFileDialog1.Title = "Сохранение документа";
             saveFileDialog1.FileName = "Группы крови";
             saveFileDialog1.DefaultExt = "*.pdf";
-            saveFileDialog1.Filter = "Файлы pdf (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
+            saveFileDialog1.Filter = "Файлы PDF (*.pdf)|*.pdf|Все файлы (*.*)|*.*";
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 string SaveFileName = saveFileDialog1.FileName;
@@ -112,6 +113,7 @@ namespace Doyki
                 doc.Add(table);
                 //Закрываем документ
                 doc.Close();
+                Process.Start(saveFileDialog1.FileName);
             }
         }
 
