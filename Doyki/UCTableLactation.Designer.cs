@@ -1,6 +1,6 @@
 ﻿namespace Doyki
 {
-    partial class UCTableCattle
+    partial class UCTableLactation
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTableCattle));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCTableLactation));
             this.uchot_udoevDataSet2 = new Doyki.Uchot_udoevDataSet2();
-            this.cattleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cattleTableAdapter = new Doyki.Uchot_udoevDataSet2TableAdapters.CattleTableAdapter();
+            this.lactationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lactationTableAdapter = new Doyki.Uchot_udoevDataSet2TableAdapters.LactationTableAdapter();
             this.tableAdapterManager = new Doyki.Uchot_udoevDataSet2TableAdapters.TableAdapterManager();
-            this.cattleBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.lactationBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -46,13 +46,22 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.cattleBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.lactationBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.searchStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchStripButton = new System.Windows.Forms.ToolStripButton();
-            this.cattleDataGridView = new System.Windows.Forms.DataGridView();
+            this.lactationDataGridView = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.analysisOfMilkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inThisMonthToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.numberOfDaysToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.graphicsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mdbToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mdzhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,15 +71,11 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cattleBindingNavigator)).BeginInit();
-            this.cattleBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cattleDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lactationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lactationBindingNavigator)).BeginInit();
+            this.lactationBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lactationDataGridView)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,35 +84,32 @@
             this.uchot_udoevDataSet2.DataSetName = "Uchot_udoevDataSet2";
             this.uchot_udoevDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cattleBindingSource
+            // lactationBindingSource
             // 
-            this.cattleBindingSource.DataMember = "Cattle";
-            this.cattleBindingSource.DataSource = this.uchot_udoevDataSet2;
+            this.lactationBindingSource.DataMember = "Lactation";
+            this.lactationBindingSource.DataSource = this.uchot_udoevDataSet2;
             // 
-            // cattleTableAdapter
+            // lactationTableAdapter
             // 
-            this.cattleTableAdapter.ClearBeforeFill = true;
+            this.lactationTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.Analysis_of_bloodTableAdapter = null;
             this.tableAdapterManager.ApparatTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CattleTableAdapter = this.cattleTableAdapter;
-            this.tableAdapterManager.LactationTableAdapter = null;
+            this.tableAdapterManager.CattleTableAdapter = null;
+            this.tableAdapterManager.LactationTableAdapter = this.lactationTableAdapter;
             this.tableAdapterManager.ReproductiveTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = Doyki.Uchot_udoevDataSet2TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // cattleBindingNavigator
+            // lactationBindingNavigator
             // 
-            this.cattleBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.cattleBindingNavigator.AutoSize = false;
-            this.cattleBindingNavigator.BackColor = System.Drawing.SystemColors.Control;
-            this.cattleBindingNavigator.BindingSource = this.cattleBindingSource;
-            this.cattleBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.cattleBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.cattleBindingNavigator.GripMargin = new System.Windows.Forms.Padding(0);
-            this.cattleBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lactationBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.lactationBindingNavigator.BindingSource = this.lactationBindingSource;
+            this.lactationBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.lactationBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.lactationBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -119,21 +121,20 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.cattleBindingNavigatorSaveItem,
+            this.lactationBindingNavigatorSaveItem,
             this.toolStripSeparator1,
             this.searchStripTextBox,
             this.searchStripButton});
-            this.cattleBindingNavigator.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.cattleBindingNavigator.Location = new System.Drawing.Point(57, 0);
-            this.cattleBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.cattleBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.cattleBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.cattleBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.cattleBindingNavigator.Name = "cattleBindingNavigator";
-            this.cattleBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.cattleBindingNavigator.Size = new System.Drawing.Size(945, 30);
-            this.cattleBindingNavigator.TabIndex = 0;
-            this.cattleBindingNavigator.Text = "bindingNavigator1";
+            this.lactationBindingNavigator.Location = new System.Drawing.Point(73, 0);
+            this.lactationBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.lactationBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.lactationBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.lactationBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.lactationBindingNavigator.Name = "lactationBindingNavigator";
+            this.lactationBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.lactationBindingNavigator.Size = new System.Drawing.Size(929, 25);
+            this.lactationBindingNavigator.TabIndex = 0;
+            this.lactationBindingNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -141,13 +142,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 27);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 27);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
             this.bindingNavigatorCountItem.Text = "для {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -157,7 +158,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 27);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -166,7 +167,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 27);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -175,13 +176,13 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 27);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 30);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -195,7 +196,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 30);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -203,7 +204,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 27);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -212,32 +213,32 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 27);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // cattleBindingNavigatorSaveItem
+            // lactationBindingNavigatorSaveItem
             // 
-            this.cattleBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.cattleBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("cattleBindingNavigatorSaveItem.Image")));
-            this.cattleBindingNavigatorSaveItem.Name = "cattleBindingNavigatorSaveItem";
-            this.cattleBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 27);
-            this.cattleBindingNavigatorSaveItem.Text = "Save Data";
-            this.cattleBindingNavigatorSaveItem.Click += new System.EventHandler(this.CattleBindingNavigatorSaveItem_Click);
+            this.lactationBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.lactationBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("lactationBindingNavigatorSaveItem.Image")));
+            this.lactationBindingNavigatorSaveItem.Name = "lactationBindingNavigatorSaveItem";
+            this.lactationBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 22);
+            this.lactationBindingNavigatorSaveItem.Text = "Save Data";
+            this.lactationBindingNavigatorSaveItem.Click += new System.EventHandler(this.LactationBindingNavigatorSaveItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // searchStripTextBox
             // 
             this.searchStripTextBox.Name = "searchStripTextBox";
-            this.searchStripTextBox.Size = new System.Drawing.Size(100, 30);
+            this.searchStripTextBox.Size = new System.Drawing.Size(100, 25);
             // 
             // searchStripButton
             // 
@@ -245,15 +246,15 @@
             this.searchStripButton.Image = global::Doyki.Properties.Resources.icons8_search_96;
             this.searchStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.searchStripButton.Name = "searchStripButton";
-            this.searchStripButton.Size = new System.Drawing.Size(23, 27);
+            this.searchStripButton.Size = new System.Drawing.Size(23, 22);
             this.searchStripButton.Text = "toolStripButton1";
             this.searchStripButton.Click += new System.EventHandler(this.SearchStripButton_Click);
             // 
-            // cattleDataGridView
+            // lactationDataGridView
             // 
-            this.cattleDataGridView.AutoGenerateColumns = false;
-            this.cattleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cattleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lactationDataGridView.AutoGenerateColumns = false;
+            this.lactationDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.lactationDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -262,33 +263,86 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13});
-            this.cattleDataGridView.DataSource = this.cattleBindingSource;
-            this.cattleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cattleDataGridView.Location = new System.Drawing.Point(57, 30);
-            this.cattleDataGridView.Name = "cattleDataGridView";
-            this.cattleDataGridView.Size = new System.Drawing.Size(945, 544);
-            this.cattleDataGridView.TabIndex = 1;
+            this.dataGridViewTextBoxColumn9});
+            this.lactationDataGridView.DataSource = this.lactationBindingSource;
+            this.lactationDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lactationDataGridView.Location = new System.Drawing.Point(73, 25);
+            this.lactationDataGridView.Name = "lactationDataGridView";
+            this.lactationDataGridView.Size = new System.Drawing.Size(929, 549);
+            this.lactationDataGridView.TabIndex = 1;
+            this.lactationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lactationDataGridView_CellContentClick);
             // 
             // menuStrip1
             // 
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отчётыToolStripMenuItem,
+            this.graphicsToolStripMenuItem,
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(57, 574);
+            this.menuStrip1.Size = new System.Drawing.Size(73, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // отчётыToolStripMenuItem
+            // 
+            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.analysisOfMilkToolStripMenuItem,
+            this.inThisMonthToolStripMenuItem,
+            this.numberOfDaysToolStripMenuItem});
+            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
+            this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // analysisOfMilkToolStripMenuItem
+            // 
+            this.analysisOfMilkToolStripMenuItem.Name = "analysisOfMilkToolStripMenuItem";
+            this.analysisOfMilkToolStripMenuItem.Size = new System.Drawing.Size(343, 22);
+            this.analysisOfMilkToolStripMenuItem.Text = "Анализ молока";
+            this.analysisOfMilkToolStripMenuItem.Click += new System.EventHandler(this.AnalysisOfMilkToolStripMenuItem_Click);
+            // 
+            // inThisMonthToolStripMenuItem
+            // 
+            this.inThisMonthToolStripMenuItem.Name = "inThisMonthToolStripMenuItem";
+            this.inThisMonthToolStripMenuItem.Size = new System.Drawing.Size(343, 22);
+            this.inThisMonthToolStripMenuItem.Text = "Какие коровы проходят лактацию в этом месяце";
+            this.inThisMonthToolStripMenuItem.Click += new System.EventHandler(this.InThisMonthToolStripMenuItem_Click);
+            // 
+            // numberOfDaysToolStripMenuItem
+            // 
+            this.numberOfDaysToolStripMenuItem.Name = "numberOfDaysToolStripMenuItem";
+            this.numberOfDaysToolStripMenuItem.Size = new System.Drawing.Size(343, 22);
+            this.numberOfDaysToolStripMenuItem.Text = "Количество дней в лактации";
+            this.numberOfDaysToolStripMenuItem.Click += new System.EventHandler(this.NumberOfDaysToolStripMenuItem_Click);
+            // 
+            // graphicsToolStripMenuItem
+            // 
+            this.graphicsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mdbToolStripMenuItem,
+            this.mdzhToolStripMenuItem});
+            this.graphicsToolStripMenuItem.Name = "graphicsToolStripMenuItem";
+            this.graphicsToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
+            this.graphicsToolStripMenuItem.Text = "Графики";
+            // 
+            // mdbToolStripMenuItem
+            // 
+            this.mdbToolStripMenuItem.Name = "mdbToolStripMenuItem";
+            this.mdbToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.mdbToolStripMenuItem.Text = "МДБ";
+            this.mdbToolStripMenuItem.Click += new System.EventHandler(this.MdbToolStripMenuItem_Click);
+            // 
+            // mdzhToolStripMenuItem
+            // 
+            this.mdzhToolStripMenuItem.Name = "mdzhToolStripMenuItem";
+            this.mdzhToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.mdzhToolStripMenuItem.Text = "МДЖ";
+            this.mdzhToolStripMenuItem.Click += new System.EventHandler(this.MdzhToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(44, 19);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
             this.backToolStripMenuItem.Text = "Назад";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
@@ -300,91 +354,67 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Breed";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Порода";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "ID_cow";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Номер коровы";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Purity_of_breed";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Чистокровность";
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Date_start";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Дата начала";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Gender";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Пол";
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Date_end";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Дата конца";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
             // dataGridViewTextBoxColumn5
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ID_mother";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Номер матери";
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Milking_days";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Дойных дней";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // dataGridViewTextBoxColumn6
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ID_father";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Номер отца";
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Lactation_number";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Номер лактации";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // dataGridViewTextBoxColumn7
             // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Date_of_birth";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Дата рождения";
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Live_weight";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Живой вес";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             // 
             // dataGridViewTextBoxColumn8
             // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Date_of_death";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Дата смерти";
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "MDB";
+            this.dataGridViewTextBoxColumn8.HeaderText = "МДБ";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
             // dataGridViewTextBoxColumn9
             // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Cause_of_death";
-            this.dataGridViewTextBoxColumn9.HeaderText = "Причина смерти";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "MDJ";
+            this.dataGridViewTextBoxColumn9.HeaderText = "МДЖ";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Belongs";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Кому принадлежит";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Place_of_birth";
-            this.dataGridViewTextBoxColumn11.HeaderText = "Место рождения";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "Generation_number";
-            this.dataGridViewTextBoxColumn12.HeaderText = "Номер поколения";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Line";
-            this.dataGridViewTextBoxColumn13.HeaderText = "Линия";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // UCTableCattle
+            // UCTableLactation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.cattleDataGridView);
-            this.Controls.Add(this.cattleBindingNavigator);
+            this.Controls.Add(this.lactationDataGridView);
+            this.Controls.Add(this.lactationBindingNavigator);
             this.Controls.Add(this.menuStrip1);
-            this.Name = "UCTableCattle";
+            this.Name = "UCTableLactation";
             this.Size = new System.Drawing.Size(1002, 574);
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cattleBindingNavigator)).EndInit();
-            this.cattleBindingNavigator.ResumeLayout(false);
-            this.cattleBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cattleDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lactationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lactationBindingNavigator)).EndInit();
+            this.lactationBindingNavigator.ResumeLayout(false);
+            this.lactationBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lactationDataGridView)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -395,10 +425,10 @@
         #endregion
 
         private Uchot_udoevDataSet2 uchot_udoevDataSet2;
-        private System.Windows.Forms.BindingSource cattleBindingSource;
-        private Uchot_udoevDataSet2TableAdapters.CattleTableAdapter cattleTableAdapter;
+        private System.Windows.Forms.BindingSource lactationBindingSource;
+        private Uchot_udoevDataSet2TableAdapters.LactationTableAdapter lactationTableAdapter;
         private Uchot_udoevDataSet2TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator cattleBindingNavigator;
+        private System.Windows.Forms.BindingNavigator lactationBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -410,13 +440,22 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton cattleBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView cattleDataGridView;
+        private System.Windows.Forms.ToolStripButton lactationBindingNavigatorSaveItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox searchStripTextBox;
         private System.Windows.Forms.ToolStripButton searchStripButton;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem analysisOfMilkToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog2;
+        public System.Windows.Forms.DataGridView lactationDataGridView;
+        private System.Windows.Forms.ToolStripMenuItem inThisMonthToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem numberOfDaysToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem graphicsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mdbToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mdzhToolStripMenuItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -426,9 +465,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
     }
 }

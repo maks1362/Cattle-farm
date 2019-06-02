@@ -37,11 +37,7 @@ namespace Doyki
             if (AllCattle)
             {
                 adapter.Fill(dataTable);
-            }
-            else
-            {
-                adapter.FillMain(dataTable);
-            }
+            } 
         }
         override protected void Apply_Click(object sender, EventArgs e)
         {
