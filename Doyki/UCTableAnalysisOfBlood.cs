@@ -24,6 +24,7 @@ namespace Doyki
         {
             InitializeComponent();
             this.analysis_of_bloodTableAdapter.Fill(this.uchot_udoevDataSet2.Analysis_of_blood);
+            analysis_of_bloodDataGridView.DoubleBuffered(true);
         }
 
         private void Analysis_of_bloodBindingNavigatorSaveItem_Click(object sender, EventArgs e)

@@ -125,14 +125,14 @@
             this.toolStripSeparator1,
             this.searchStripTextBox,
             this.searchStripButton});
-            this.lactationBindingNavigator.Location = new System.Drawing.Point(120, 0);
+            this.lactationBindingNavigator.Location = new System.Drawing.Point(111, 0);
             this.lactationBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.lactationBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.lactationBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.lactationBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lactationBindingNavigator.Name = "lactationBindingNavigator";
             this.lactationBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lactationBindingNavigator.Size = new System.Drawing.Size(882, 25);
+            this.lactationBindingNavigator.Size = new System.Drawing.Size(891, 25);
             this.lactationBindingNavigator.TabIndex = 0;
             this.lactationBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -266,9 +266,9 @@
             this.dataGridViewTextBoxColumn9});
             this.lactationDataGridView.DataSource = this.lactationBindingSource;
             this.lactationDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lactationDataGridView.Location = new System.Drawing.Point(120, 25);
+            this.lactationDataGridView.Location = new System.Drawing.Point(111, 25);
             this.lactationDataGridView.Name = "lactationDataGridView";
-            this.lactationDataGridView.Size = new System.Drawing.Size(882, 549);
+            this.lactationDataGridView.Size = new System.Drawing.Size(891, 549);
             this.lactationDataGridView.TabIndex = 1;
             this.lactationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LactationDataGridView_CellContentClick);
             // 
@@ -337,7 +337,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.menuStrip1.Size = new System.Drawing.Size(120, 574);
+            this.menuStrip1.Size = new System.Drawing.Size(111, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 

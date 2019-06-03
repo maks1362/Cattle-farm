@@ -102,7 +102,7 @@
             // reproductiveBindingNavigator
             // 
             this.reproductiveBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.reproductiveBindingNavigator.BackColor = System.Drawing.Color.Silver;
+            this.reproductiveBindingNavigator.BackColor = System.Drawing.SystemColors.Control;
             this.reproductiveBindingNavigator.BindingSource = this.reproductiveBindingSource;
             this.reproductiveBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.reproductiveBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -122,14 +122,14 @@
             this.toolStripSeparator1,
             this.searchStripTextBox,
             this.searchStripButton});
-            this.reproductiveBindingNavigator.Location = new System.Drawing.Point(120, 0);
+            this.reproductiveBindingNavigator.Location = new System.Drawing.Point(101, 0);
             this.reproductiveBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.reproductiveBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.reproductiveBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.reproductiveBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.reproductiveBindingNavigator.Name = "reproductiveBindingNavigator";
             this.reproductiveBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.reproductiveBindingNavigator.Size = new System.Drawing.Size(882, 25);
+            this.reproductiveBindingNavigator.Size = new System.Drawing.Size(901, 25);
             this.reproductiveBindingNavigator.TabIndex = 0;
             this.reproductiveBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -264,9 +264,9 @@
             this.dataGridViewTextBoxColumn10});
             this.reproductiveDataGridView.DataSource = this.reproductiveBindingSource;
             this.reproductiveDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reproductiveDataGridView.Location = new System.Drawing.Point(120, 25);
+            this.reproductiveDataGridView.Location = new System.Drawing.Point(101, 25);
             this.reproductiveDataGridView.Name = "reproductiveDataGridView";
-            this.reproductiveDataGridView.Size = new System.Drawing.Size(882, 549);
+            this.reproductiveDataGridView.Size = new System.Drawing.Size(901, 549);
             this.reproductiveDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -339,7 +339,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.menuStrip1.Size = new System.Drawing.Size(120, 574);
+            this.menuStrip1.Size = new System.Drawing.Size(101, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 

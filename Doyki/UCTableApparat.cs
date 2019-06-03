@@ -24,6 +24,7 @@ namespace Doyki
         {
             InitializeComponent();
             this.apparatTableAdapter.Fill(this.uchot_udoevDataSet2.Apparat);
+            apparatDataGridView.DoubleBuffered(true);
         }
 
         private void ApparatBindingNavigatorSaveItem_Click(object sender, EventArgs e)

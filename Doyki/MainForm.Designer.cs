@@ -31,12 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.cattleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.uchot_udoevDataSet1 = new Doyki.Uchot_udoevDataSet1();
-            this.cattleTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.CattleTableAdapter();
-            this.apparatTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.ApparatTableAdapter();
-            this.lactationTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.LactationTableAdapter();
-            this.analysis_of_bloodTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.Analysis_of_bloodTableAdapter();
-            this.reproductiveTableAdapter1 = new Doyki.Uchot_udoevDataSet1TableAdapters.ReproductiveTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
             this.minimizeButton = new System.Windows.Forms.Button();
             this.fullScreenButton = new System.Windows.Forms.Button();
@@ -50,40 +44,9 @@
             this.ApparatButton = new System.Windows.Forms.Button();
             this.ReproductiveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cattleBindingSource1
-            // 
-            this.cattleBindingSource1.DataMember = "Cattle";
-            this.cattleBindingSource1.DataSource = this.uchot_udoevDataSet1;
-            // 
-            // uchot_udoevDataSet1
-            // 
-            this.uchot_udoevDataSet1.DataSetName = "Uchot_udoevDataSet1";
-            this.uchot_udoevDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cattleTableAdapter1
-            // 
-            this.cattleTableAdapter1.ClearBeforeFill = true;
-            // 
-            // apparatTableAdapter1
-            // 
-            this.apparatTableAdapter1.ClearBeforeFill = true;
-            // 
-            // lactationTableAdapter1
-            // 
-            this.lactationTableAdapter1.ClearBeforeFill = true;
-            // 
-            // analysis_of_bloodTableAdapter1
-            // 
-            this.analysis_of_bloodTableAdapter1.ClearBeforeFill = true;
-            // 
-            // reproductiveTableAdapter1
-            // 
-            this.reproductiveTableAdapter1.ClearBeforeFill = true;
             // 
             // panel1
             // 
@@ -217,10 +180,10 @@
             // 
             // CattleButton
             // 
-            this.CattleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.CattleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.CattleButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CattleButton.FlatAppearance.BorderSize = 0;
-            this.CattleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.CattleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.CattleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.CattleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CattleButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -235,10 +198,10 @@
             // 
             // AnalysOfBloodButton
             // 
-            this.AnalysOfBloodButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.AnalysOfBloodButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.AnalysOfBloodButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AnalysOfBloodButton.FlatAppearance.BorderSize = 0;
-            this.AnalysOfBloodButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.AnalysOfBloodButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.AnalysOfBloodButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.AnalysOfBloodButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnalysOfBloodButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -253,10 +216,10 @@
             // 
             // LactationButton
             // 
-            this.LactationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.LactationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.LactationButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LactationButton.FlatAppearance.BorderSize = 0;
-            this.LactationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.LactationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.LactationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.LactationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LactationButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -271,10 +234,10 @@
             // 
             // ApparatButton
             // 
-            this.ApparatButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ApparatButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ApparatButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ApparatButton.FlatAppearance.BorderSize = 0;
-            this.ApparatButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.ApparatButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.ApparatButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ApparatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApparatButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -289,10 +252,10 @@
             // 
             // ReproductiveButton
             // 
-            this.ReproductiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.ReproductiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.ReproductiveButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReproductiveButton.FlatAppearance.BorderSize = 0;
-            this.ReproductiveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
+            this.ReproductiveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.ReproductiveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ReproductiveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReproductiveButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -322,7 +285,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Выберите таблицу";
             ((System.ComponentModel.ISupportInitialize)(this.cattleBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -332,13 +294,7 @@
         #endregion
 
         //private System.Windows.Forms.BindingSource cattleBindingSource;
-        private Uchot_udoevDataSet1 uchot_udoevDataSet1;
         private System.Windows.Forms.BindingSource cattleBindingSource1;
-        private Uchot_udoevDataSet1TableAdapters.CattleTableAdapter cattleTableAdapter1;
-        private Uchot_udoevDataSet1TableAdapters.ApparatTableAdapter apparatTableAdapter1;
-        private Uchot_udoevDataSet1TableAdapters.LactationTableAdapter lactationTableAdapter1;
-        private Uchot_udoevDataSet1TableAdapters.Analysis_of_bloodTableAdapter analysis_of_bloodTableAdapter1;
-        private Uchot_udoevDataSet1TableAdapters.ReproductiveTableAdapter reproductiveTableAdapter1;
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Button closeButton;
         protected System.Windows.Forms.Button plusWindowButton;

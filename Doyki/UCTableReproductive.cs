@@ -21,6 +21,7 @@ namespace Doyki
         {
             InitializeComponent();
             this.reproductiveTableAdapter.Fill(this.uchot_udoevDataSet2.Reproductive);
+            reproductiveDataGridView.DoubleBuffered(true);
         }
 
         private void ReproductiveBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -29,6 +30,7 @@ namespace Doyki
             this.reproductiveBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.uchot_udoevDataSet2);
         }
+
 
         private void SearchStripButton_Click(object sender, EventArgs e)
         {

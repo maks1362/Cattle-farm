@@ -24,6 +24,7 @@ namespace Doyki
         {
             InitializeComponent();
             this.lactationTableAdapter.Fill(this.uchot_udoevDataSet2.Lactation);
+            lactationDataGridView.DoubleBuffered(true);
         }
 
         private void LactationBindingNavigatorSaveItem_Click(object sender, EventArgs e)

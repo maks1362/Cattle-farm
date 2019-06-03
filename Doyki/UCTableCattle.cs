@@ -17,6 +17,7 @@ namespace Doyki
         {
             InitializeComponent();
             this.cattleTableAdapter.Fill(this.uchot_udoevDataSet2.Cattle);
+            cattleDataGridView.DoubleBuffered(true);
         }
 
         private void CattleBindingNavigatorSaveItem_Click(object sender, EventArgs e)
