@@ -51,12 +51,6 @@
             this.searchStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchStripButton = new System.Windows.Forms.ToolStripButton();
             this.reproductiveDataGridView = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reproductivityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,6 +61,12 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+            this.отчётРепродуктивностиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reproductiveBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reproductiveBindingNavigator)).BeginInit();
@@ -102,6 +102,7 @@
             // reproductiveBindingNavigator
             // 
             this.reproductiveBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.reproductiveBindingNavigator.BackColor = System.Drawing.Color.Silver;
             this.reproductiveBindingNavigator.BindingSource = this.reproductiveBindingSource;
             this.reproductiveBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.reproductiveBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -121,14 +122,14 @@
             this.toolStripSeparator1,
             this.searchStripTextBox,
             this.searchStripButton});
-            this.reproductiveBindingNavigator.Location = new System.Drawing.Point(66, 0);
+            this.reproductiveBindingNavigator.Location = new System.Drawing.Point(120, 0);
             this.reproductiveBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.reproductiveBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.reproductiveBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.reproductiveBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.reproductiveBindingNavigator.Name = "reproductiveBindingNavigator";
             this.reproductiveBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.reproductiveBindingNavigator.Size = new System.Drawing.Size(936, 25);
+            this.reproductiveBindingNavigator.Size = new System.Drawing.Size(882, 25);
             this.reproductiveBindingNavigator.TabIndex = 0;
             this.reproductiveBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -144,8 +145,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -263,44 +264,10 @@
             this.dataGridViewTextBoxColumn10});
             this.reproductiveDataGridView.DataSource = this.reproductiveBindingSource;
             this.reproductiveDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reproductiveDataGridView.Location = new System.Drawing.Point(66, 25);
+            this.reproductiveDataGridView.Location = new System.Drawing.Point(120, 25);
             this.reproductiveDataGridView.Name = "reproductiveDataGridView";
-            this.reproductiveDataGridView.Size = new System.Drawing.Size(936, 549);
+            this.reproductiveDataGridView.Size = new System.Drawing.Size(882, 549);
             this.reproductiveDataGridView.TabIndex = 1;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отчётыToolStripMenuItem,
-            this.backToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(66, 574);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // отчётыToolStripMenuItem
-            // 
-            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reproductivityToolStripMenuItem});
-            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
-            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(53, 19);
-            this.отчётыToolStripMenuItem.Text = "Отчёты";
-            // 
-            // reproductivityToolStripMenuItem
-            // 
-            this.reproductivityToolStripMenuItem.Name = "reproductivityToolStripMenuItem";
-            this.reproductivityToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
-            this.reproductivityToolStripMenuItem.Text = "Отчет репродуктивности";
-            this.reproductivityToolStripMenuItem.Click += new System.EventHandler(this.ReproductivityToolStripMenuItem_Click);
-            // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(53, 19);
-            this.backToolStripMenuItem.Text = "Назад";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -362,6 +329,49 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Номер быка";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отчётыToolStripMenuItem,
+            this.backToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0);
+            this.menuStrip1.Size = new System.Drawing.Size(120, 574);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // отчётыToolStripMenuItem
+            // 
+            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отчётРепродуктивностиToolStripMenuItem});
+            this.отчётыToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.отчётыToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
+            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
+            this.отчётыToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(119, 69);
+            this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.backToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(119, 69);
+            this.backToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
+            // 
+            // отчётРепродуктивностиToolStripMenuItem
+            // 
+            this.отчётРепродуктивностиToolStripMenuItem.Name = "отчётРепродуктивностиToolStripMenuItem";
+            this.отчётРепродуктивностиToolStripMenuItem.Size = new System.Drawing.Size(305, 30);
+            this.отчётРепродуктивностиToolStripMenuItem.Text = "Отчёт репродуктивности";
+            this.отчётРепродуктивностиToolStripMenuItem.Click += new System.EventHandler(this.ReproductivityToolStripMenuItem_Click);
+            // 
             // UCTableReproductive
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -410,7 +420,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem отчётыToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reproductivityToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -423,5 +432,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.ToolStripMenuItem отчётРепродуктивностиToolStripMenuItem;
     }
 }

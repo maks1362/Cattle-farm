@@ -131,14 +131,14 @@
             this.toolStripSeparator1,
             this.searchStripTextBox,
             this.searchStripButton});
-            this.apparatBindingNavigator.Location = new System.Drawing.Point(126, 0);
+            this.apparatBindingNavigator.Location = new System.Drawing.Point(111, 0);
             this.apparatBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.apparatBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.apparatBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.apparatBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.apparatBindingNavigator.Name = "apparatBindingNavigator";
             this.apparatBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.apparatBindingNavigator.Size = new System.Drawing.Size(876, 25);
+            this.apparatBindingNavigator.Size = new System.Drawing.Size(891, 25);
             this.apparatBindingNavigator.TabIndex = 0;
             this.apparatBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -154,8 +154,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -270,9 +270,9 @@
             this.dataGridViewTextBoxColumn7});
             this.apparatDataGridView.DataSource = this.apparatBindingSource;
             this.apparatDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.apparatDataGridView.Location = new System.Drawing.Point(126, 25);
+            this.apparatDataGridView.Location = new System.Drawing.Point(111, 25);
             this.apparatDataGridView.Name = "apparatDataGridView";
-            this.apparatDataGridView.Size = new System.Drawing.Size(876, 549);
+            this.apparatDataGridView.Size = new System.Drawing.Size(891, 549);
             this.apparatDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -319,6 +319,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.отчётыToolStripMenuItem,
@@ -326,7 +327,8 @@
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(126, 574);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0);
+            this.menuStrip1.Size = new System.Drawing.Size(111, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -335,8 +337,11 @@
             this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.averageyieldToolStripMenuItem,
             this.milkOutputToolStripMenuItem});
+            this.отчётыToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.отчётыToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
-            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.отчётыToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(110, 69);
             this.отчётыToolStripMenuItem.Text = "Отчёты";
             // 
             // averageyieldToolStripMenuItem
@@ -348,48 +353,48 @@
             this.lactationsToolStripMenuItem,
             this.lactationToolStripMenuItem});
             this.averageyieldToolStripMenuItem.Name = "averageyieldToolStripMenuItem";
-            this.averageyieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.averageyieldToolStripMenuItem.Size = new System.Drawing.Size(217, 30);
             this.averageyieldToolStripMenuItem.Text = "Средний удой";
             // 
             // dailyToolStripMenuItem
             // 
             this.dailyToolStripMenuItem.Name = "dailyToolStripMenuItem";
-            this.dailyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.dailyToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.dailyToolStripMenuItem.Text = "Суточные";
             this.dailyToolStripMenuItem.Click += new System.EventHandler(this.DailyToolStripMenuItem_Click);
             // 
             // monthlyToolStripMenuItem
             // 
             this.monthlyToolStripMenuItem.Name = "monthlyToolStripMenuItem";
-            this.monthlyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.monthlyToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.monthlyToolStripMenuItem.Text = "Месячные";
             this.monthlyToolStripMenuItem.Click += new System.EventHandler(this.MonthlyToolStripMenuItem_Click);
             // 
             // yearlyToolStripMenuItem
             // 
             this.yearlyToolStripMenuItem.Name = "yearlyToolStripMenuItem";
-            this.yearlyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.yearlyToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.yearlyToolStripMenuItem.Text = "Годовые";
             this.yearlyToolStripMenuItem.Click += new System.EventHandler(this.YearlyToolStripMenuItem_Click);
             // 
             // lactationsToolStripMenuItem
             // 
             this.lactationsToolStripMenuItem.Name = "lactationsToolStripMenuItem";
-            this.lactationsToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.lactationsToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.lactationsToolStripMenuItem.Text = "По лактациям";
             this.lactationsToolStripMenuItem.Click += new System.EventHandler(this.LactationsToolStripMenuItem_Click);
             // 
             // lactationToolStripMenuItem
             // 
             this.lactationToolStripMenuItem.Name = "lactationToolStripMenuItem";
-            this.lactationToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.lactationToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.lactationToolStripMenuItem.Text = "По последней лактации";
             this.lactationToolStripMenuItem.Click += new System.EventHandler(this.LactationToolStripMenuItem_Click);
             // 
             // milkOutputToolStripMenuItem
             // 
             this.milkOutputToolStripMenuItem.Name = "milkOutputToolStripMenuItem";
-            this.milkOutputToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.milkOutputToolStripMenuItem.Size = new System.Drawing.Size(217, 30);
             this.milkOutputToolStripMenuItem.Text = "Молокоотдача";
             this.milkOutputToolStripMenuItem.Click += new System.EventHandler(this.MilkOutputToolStripMenuItem_Click);
             // 
@@ -397,8 +402,11 @@
             // 
             this.graphicsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.averageMilkYieldToolStripMenuItem});
+            this.graphicsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.graphicsToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.graphicsToolStripMenuItem.Name = "graphicsToolStripMenuItem";
-            this.graphicsToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.graphicsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.graphicsToolStripMenuItem.Size = new System.Drawing.Size(110, 69);
             this.graphicsToolStripMenuItem.Text = "Графики";
             // 
             // averageMilkYieldToolStripMenuItem
@@ -410,48 +418,52 @@
             this.gLactationsToolStripMenuItem,
             this.gLactationToolStripMenuItem});
             this.averageMilkYieldToolStripMenuItem.Name = "averageMilkYieldToolStripMenuItem";
-            this.averageMilkYieldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.averageMilkYieldToolStripMenuItem.Size = new System.Drawing.Size(208, 30);
             this.averageMilkYieldToolStripMenuItem.Text = "Средний удой";
             // 
             // gDailyToolStripMenuItem
             // 
             this.gDailyToolStripMenuItem.Name = "gDailyToolStripMenuItem";
-            this.gDailyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gDailyToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.gDailyToolStripMenuItem.Text = "Суточный";
             this.gDailyToolStripMenuItem.Click += new System.EventHandler(this.GDailyToolStripMenuItem_Click);
             // 
             // gMonthlyToolStripMenuItem
             // 
             this.gMonthlyToolStripMenuItem.Name = "gMonthlyToolStripMenuItem";
-            this.gMonthlyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gMonthlyToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.gMonthlyToolStripMenuItem.Text = "Месячный";
             this.gMonthlyToolStripMenuItem.Click += new System.EventHandler(this.GMonthlyToolStripMenuItem_Click);
             // 
             // gYearlyToolStripMenuItem
             // 
             this.gYearlyToolStripMenuItem.Name = "gYearlyToolStripMenuItem";
-            this.gYearlyToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gYearlyToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.gYearlyToolStripMenuItem.Text = "Годовой";
             this.gYearlyToolStripMenuItem.Click += new System.EventHandler(this.GYearlyToolStripMenuItem_Click);
             // 
             // gLactationsToolStripMenuItem
             // 
             this.gLactationsToolStripMenuItem.Name = "gLactationsToolStripMenuItem";
-            this.gLactationsToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gLactationsToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.gLactationsToolStripMenuItem.Text = "По лактациям";
             this.gLactationsToolStripMenuItem.Click += new System.EventHandler(this.GLactationsToolStripMenuItem_Click);
             // 
             // gLactationToolStripMenuItem
             // 
             this.gLactationToolStripMenuItem.Name = "gLactationToolStripMenuItem";
-            this.gLactationToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.gLactationToolStripMenuItem.Size = new System.Drawing.Size(297, 30);
             this.gLactationToolStripMenuItem.Text = "По последней лактации";
             this.gLactationToolStripMenuItem.Click += new System.EventHandler(this.GLactationToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem
             // 
+            this.backToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.backToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(113, 19);
+            this.backToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(110, 69);
             this.backToolStripMenuItem.Text = "Назад";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 

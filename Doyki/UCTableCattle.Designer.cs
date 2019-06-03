@@ -126,14 +126,14 @@
             this.searchStripTextBox,
             this.searchStripButton});
             this.cattleBindingNavigator.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.cattleBindingNavigator.Location = new System.Drawing.Point(73, 0);
+            this.cattleBindingNavigator.Location = new System.Drawing.Point(120, 0);
             this.cattleBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.cattleBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.cattleBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.cattleBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.cattleBindingNavigator.Name = "cattleBindingNavigator";
             this.cattleBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.cattleBindingNavigator.Size = new System.Drawing.Size(929, 30);
+            this.cattleBindingNavigator.Size = new System.Drawing.Size(882, 30);
             this.cattleBindingNavigator.TabIndex = 0;
             this.cattleBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -271,9 +271,9 @@
             this.dataGridViewTextBoxColumn13});
             this.cattleDataGridView.DataSource = this.cattleBindingSource;
             this.cattleDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cattleDataGridView.Location = new System.Drawing.Point(73, 30);
+            this.cattleDataGridView.Location = new System.Drawing.Point(120, 30);
             this.cattleDataGridView.Name = "cattleDataGridView";
-            this.cattleDataGridView.Size = new System.Drawing.Size(929, 544);
+            this.cattleDataGridView.Size = new System.Drawing.Size(882, 544);
             this.cattleDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -356,13 +356,15 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.графикиToolStripMenuItem,
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(73, 574);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0);
+            this.menuStrip1.Size = new System.Drawing.Size(120, 574);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -370,21 +372,28 @@
             // 
             this.графикиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.генеалогическоеДеревоToolStripMenuItem});
+            this.графикиToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.графикиToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
             this.графикиToolStripMenuItem.Name = "графикиToolStripMenuItem";
-            this.графикиToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
+            this.графикиToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.графикиToolStripMenuItem.Size = new System.Drawing.Size(119, 69);
             this.графикиToolStripMenuItem.Text = "Графики";
             // 
             // генеалогическоеДеревоToolStripMenuItem
             // 
             this.генеалогическоеДеревоToolStripMenuItem.Name = "генеалогическоеДеревоToolStripMenuItem";
-            this.генеалогическоеДеревоToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.генеалогическоеДеревоToolStripMenuItem.Size = new System.Drawing.Size(303, 30);
             this.генеалогическоеДеревоToolStripMenuItem.Text = "Генеалогическое дерево";
             this.генеалогическоеДеревоToolStripMenuItem.Click += new System.EventHandler(this.ГенеалогическоеДеревоToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem
             // 
+            this.backToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.backToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
+            this.backToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(119, 69);
             this.backToolStripMenuItem.Text = "Назад";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 

@@ -51,6 +51,15 @@
             this.searchStripTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.searchStripButton = new System.Windows.Forms.ToolStripButton();
             this.lactationDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.отчётыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.analysisOfMilkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,15 +71,6 @@
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.uchot_udoevDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lactationBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lactationBindingNavigator)).BeginInit();
@@ -125,14 +125,14 @@
             this.toolStripSeparator1,
             this.searchStripTextBox,
             this.searchStripButton});
-            this.lactationBindingNavigator.Location = new System.Drawing.Point(73, 0);
+            this.lactationBindingNavigator.Location = new System.Drawing.Point(120, 0);
             this.lactationBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.lactationBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.lactationBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.lactationBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.lactationBindingNavigator.Name = "lactationBindingNavigator";
             this.lactationBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.lactationBindingNavigator.Size = new System.Drawing.Size(929, 25);
+            this.lactationBindingNavigator.Size = new System.Drawing.Size(882, 25);
             this.lactationBindingNavigator.TabIndex = 0;
             this.lactationBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -148,8 +148,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 22);
-            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
             // bindingNavigatorDeleteItem
@@ -266,85 +266,11 @@
             this.dataGridViewTextBoxColumn9});
             this.lactationDataGridView.DataSource = this.lactationBindingSource;
             this.lactationDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lactationDataGridView.Location = new System.Drawing.Point(73, 25);
+            this.lactationDataGridView.Location = new System.Drawing.Point(120, 25);
             this.lactationDataGridView.Name = "lactationDataGridView";
-            this.lactationDataGridView.Size = new System.Drawing.Size(929, 549);
+            this.lactationDataGridView.Size = new System.Drawing.Size(882, 549);
             this.lactationDataGridView.TabIndex = 1;
             this.lactationDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.LactationDataGridView_CellContentClick);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.отчётыToolStripMenuItem,
-            this.graphicsToolStripMenuItem,
-            this.backToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(73, 574);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // отчётыToolStripMenuItem
-            // 
-            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.analysisOfMilkToolStripMenuItem,
-            this.inThisMonthToolStripMenuItem,
-            this.numberOfDaysToolStripMenuItem});
-            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
-            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
-            this.отчётыToolStripMenuItem.Text = "Отчёты";
-            // 
-            // analysisOfMilkToolStripMenuItem
-            // 
-            this.analysisOfMilkToolStripMenuItem.Name = "analysisOfMilkToolStripMenuItem";
-            this.analysisOfMilkToolStripMenuItem.Size = new System.Drawing.Size(343, 22);
-            this.analysisOfMilkToolStripMenuItem.Text = "Анализ молока";
-            this.analysisOfMilkToolStripMenuItem.Click += new System.EventHandler(this.AnalysisOfMilkToolStripMenuItem_Click);
-            // 
-            // inThisMonthToolStripMenuItem
-            // 
-            this.inThisMonthToolStripMenuItem.Name = "inThisMonthToolStripMenuItem";
-            this.inThisMonthToolStripMenuItem.Size = new System.Drawing.Size(343, 22);
-            this.inThisMonthToolStripMenuItem.Text = "Какие коровы проходят лактацию в этом месяце";
-            this.inThisMonthToolStripMenuItem.Click += new System.EventHandler(this.InThisMonthToolStripMenuItem_Click);
-            // 
-            // numberOfDaysToolStripMenuItem
-            // 
-            this.numberOfDaysToolStripMenuItem.Name = "numberOfDaysToolStripMenuItem";
-            this.numberOfDaysToolStripMenuItem.Size = new System.Drawing.Size(343, 22);
-            this.numberOfDaysToolStripMenuItem.Text = "Количество дней в лактации";
-            this.numberOfDaysToolStripMenuItem.Click += new System.EventHandler(this.NumberOfDaysToolStripMenuItem_Click);
-            // 
-            // graphicsToolStripMenuItem
-            // 
-            this.graphicsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mdbToolStripMenuItem,
-            this.mdzhToolStripMenuItem});
-            this.graphicsToolStripMenuItem.Name = "graphicsToolStripMenuItem";
-            this.graphicsToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
-            this.graphicsToolStripMenuItem.Text = "Графики";
-            // 
-            // mdbToolStripMenuItem
-            // 
-            this.mdbToolStripMenuItem.Name = "mdbToolStripMenuItem";
-            this.mdbToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
-            this.mdbToolStripMenuItem.Text = "МДБ";
-            this.mdbToolStripMenuItem.Click += new System.EventHandler(this.MdbToolStripMenuItem_Click);
-            // 
-            // mdzhToolStripMenuItem
-            // 
-            this.mdzhToolStripMenuItem.Name = "mdzhToolStripMenuItem";
-            this.mdzhToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
-            this.mdzhToolStripMenuItem.Text = "МДЖ";
-            this.mdzhToolStripMenuItem.Click += new System.EventHandler(this.MdzhToolStripMenuItem_Click);
-            // 
-            // backToolStripMenuItem
-            // 
-            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(60, 19);
-            this.backToolStripMenuItem.Text = "Назад";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -399,6 +325,92 @@
             this.dataGridViewTextBoxColumn9.DataPropertyName = "MDJ";
             this.dataGridViewTextBoxColumn9.HeaderText = "МДЖ";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.отчётыToolStripMenuItem,
+            this.graphicsToolStripMenuItem,
+            this.backToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0);
+            this.menuStrip1.Size = new System.Drawing.Size(120, 574);
+            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // отчётыToolStripMenuItem
+            // 
+            this.отчётыToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.analysisOfMilkToolStripMenuItem,
+            this.inThisMonthToolStripMenuItem,
+            this.numberOfDaysToolStripMenuItem});
+            this.отчётыToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.отчётыToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
+            this.отчётыToolStripMenuItem.Name = "отчётыToolStripMenuItem";
+            this.отчётыToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.отчётыToolStripMenuItem.Size = new System.Drawing.Size(119, 69);
+            this.отчётыToolStripMenuItem.Text = "Отчёты";
+            // 
+            // analysisOfMilkToolStripMenuItem
+            // 
+            this.analysisOfMilkToolStripMenuItem.Name = "analysisOfMilkToolStripMenuItem";
+            this.analysisOfMilkToolStripMenuItem.Size = new System.Drawing.Size(524, 30);
+            this.analysisOfMilkToolStripMenuItem.Text = "Анализ молока";
+            this.analysisOfMilkToolStripMenuItem.Click += new System.EventHandler(this.AnalysisOfMilkToolStripMenuItem_Click);
+            // 
+            // inThisMonthToolStripMenuItem
+            // 
+            this.inThisMonthToolStripMenuItem.Name = "inThisMonthToolStripMenuItem";
+            this.inThisMonthToolStripMenuItem.Size = new System.Drawing.Size(524, 30);
+            this.inThisMonthToolStripMenuItem.Text = "Какие коровы проходят лактацию в этом месяце";
+            this.inThisMonthToolStripMenuItem.Click += new System.EventHandler(this.InThisMonthToolStripMenuItem_Click);
+            // 
+            // numberOfDaysToolStripMenuItem
+            // 
+            this.numberOfDaysToolStripMenuItem.Name = "numberOfDaysToolStripMenuItem";
+            this.numberOfDaysToolStripMenuItem.Size = new System.Drawing.Size(524, 30);
+            this.numberOfDaysToolStripMenuItem.Text = "Количество дней в лактации";
+            this.numberOfDaysToolStripMenuItem.Click += new System.EventHandler(this.NumberOfDaysToolStripMenuItem_Click);
+            // 
+            // graphicsToolStripMenuItem
+            // 
+            this.graphicsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mdbToolStripMenuItem,
+            this.mdzhToolStripMenuItem});
+            this.graphicsToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.graphicsToolStripMenuItem.ForeColor = System.Drawing.Color.OrangeRed;
+            this.graphicsToolStripMenuItem.Name = "graphicsToolStripMenuItem";
+            this.graphicsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.graphicsToolStripMenuItem.Size = new System.Drawing.Size(119, 69);
+            this.graphicsToolStripMenuItem.Text = "Графики";
+            // 
+            // mdbToolStripMenuItem
+            // 
+            this.mdbToolStripMenuItem.Name = "mdbToolStripMenuItem";
+            this.mdbToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.mdbToolStripMenuItem.Text = "МДБ";
+            this.mdbToolStripMenuItem.Click += new System.EventHandler(this.MdbToolStripMenuItem_Click);
+            // 
+            // mdzhToolStripMenuItem
+            // 
+            this.mdzhToolStripMenuItem.Name = "mdzhToolStripMenuItem";
+            this.mdzhToolStripMenuItem.Size = new System.Drawing.Size(180, 30);
+            this.mdzhToolStripMenuItem.Text = "МДЖ";
+            this.mdzhToolStripMenuItem.Click += new System.EventHandler(this.MdzhToolStripMenuItem_Click);
+            // 
+            // backToolStripMenuItem
+            // 
+            this.backToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.backToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(119, 69);
+            this.backToolStripMenuItem.Text = "Назад";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.BackToolStripMenuItem_Click);
             // 
             // UCTableLactation
             // 

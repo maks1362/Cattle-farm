@@ -28,7 +28,6 @@ namespace Doyki
             this.Validate();
             this.reproductiveBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.uchot_udoevDataSet2);
-
         }
 
         private void SearchStripButton_Click(object sender, EventArgs e)

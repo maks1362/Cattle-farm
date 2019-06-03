@@ -269,7 +269,7 @@ namespace Doyki
                 idChart = 6;
                 ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
                 this.Hide();
-                chartForm.ShowDialog();
+                chartForm.Show();
                 this.Show();
             }
         }
@@ -283,7 +283,7 @@ namespace Doyki
                 idChart = 7;
                 ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
                 this.Hide();
-                chartForm.ShowDialog();
+                chartForm.Show();
                 this.Show();
             }
         }

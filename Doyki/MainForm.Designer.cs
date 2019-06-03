@@ -220,7 +220,7 @@
             this.CattleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.CattleButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CattleButton.FlatAppearance.BorderSize = 0;
-            this.CattleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.CattleButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.CattleButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.CattleButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CattleButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -238,7 +238,7 @@
             this.AnalysOfBloodButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.AnalysOfBloodButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AnalysOfBloodButton.FlatAppearance.BorderSize = 0;
-            this.AnalysOfBloodButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.AnalysOfBloodButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.AnalysOfBloodButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.AnalysOfBloodButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AnalysOfBloodButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -256,7 +256,7 @@
             this.LactationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.LactationButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LactationButton.FlatAppearance.BorderSize = 0;
-            this.LactationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.LactationButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.LactationButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.LactationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LactationButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -274,7 +274,7 @@
             this.ApparatButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ApparatButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ApparatButton.FlatAppearance.BorderSize = 0;
-            this.ApparatButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.ApparatButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.ApparatButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ApparatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApparatButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -292,7 +292,7 @@
             this.ReproductiveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.ReproductiveButton.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ReproductiveButton.FlatAppearance.BorderSize = 0;
-            this.ReproductiveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.ReproductiveButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.OrangeRed;
             this.ReproductiveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.ReproductiveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReproductiveButton.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

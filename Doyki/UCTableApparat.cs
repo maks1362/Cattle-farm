@@ -503,7 +503,7 @@ namespace Doyki
             idChart = 8;
             ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
             this.Hide();
-            chartForm.ShowDialog();
+            chartForm.Show();
             this.Show();
         }
 
@@ -512,7 +512,7 @@ namespace Doyki
             idChart = 9;
             ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
             this.Hide();
-            chartForm.ShowDialog();
+            chartForm.Show();
             this.Show();
         }
 
@@ -521,7 +521,7 @@ namespace Doyki
             idChart = 10;
             ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
             this.Hide();
-            chartForm.ShowDialog();
+            chartForm.Show();
             this.Show();
         }
 
@@ -530,7 +530,7 @@ namespace Doyki
             idChart = 11;
             ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
             this.Hide();
-            chartForm.ShowDialog();
+            chartForm.Show();
             this.Show();
         }
 
@@ -539,7 +539,7 @@ namespace Doyki
             idChart = 12;
             ChartForm chartForm = new ChartForm(this.idChart, this.idCow);
             this.Hide();
-            chartForm.ShowDialog();
+            chartForm.Show();
             this.Show();
         }
     }
