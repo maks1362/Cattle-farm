@@ -15,4 +15,4 @@
 
 [![vk_link 1](https://img.shields.io/badge/--white.svg?style=social&logo=VK)](https://vk.com/maks1362) Maksim Smirnov - Code, initial interface
 
-[![vk_link 2](https://img.shields.io/badge/--shields.svg?style=social&logo=VK)](https://vk.com/michaeldeco) Mikhail Tkachenko - Code, interface
+[![vk_link 2](https://img.shields.io/badge/--shields.svg?style=social&logo=VK)](https://vk.com/michaeldecortix) Mikhail Tkachenko - Code, interface
